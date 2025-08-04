@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block language_title %}Български{% endblock %}
+
+{% block content %}
+<!-- About -->
+<section class="about">
+  <h2 class="about__title">За видеото</h2>
+  <p class="about__description">
+    Това е примерен текст на български език. Можете да добавите реално описание тук.
+  </p>
+</section>
+
+<!-- Partners -->
+<section class="partners">
+  <div class="partners__container">
+    <h2 class="partners__title">Нашите партньори</h2>
+    <div class="partners__list">
+      {% for i in "123" %}
+      <div class="partners__card">
+        <img src="{% static 'img/partner1.jpg' %}" alt="Partner Logo" class="partners__image"/>
+        <p class="partners__description">
+          Текст за партньор {{ forloop.counter }} на български.
+        </p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Video -->
+<section class="video">
+  <div class="video__container">
+    <div class="video__player-wrapper">
+      <video
+          id="video360"
+          class="video__element"
+          playsinline
+          crossorigin="anonymous"
+          webkit-playsinline
+          muted
+      ></video>
+
+      <a-scene vr-mode-ui="enabled: true" embedded class="video__scene">
+        <a-videosphere
+            id="videosphere"
+            src="#video360"
+            rotation="0 -90 0"
+            visible="false"
+        ></a-videosphere>
+        <a-camera
+            look-controls="pointerLockEnabled: true"
+            wasd-controls-enabled="false"
+        ></a-camera>
+      </a-scene>
+
+      <div class="video__play-button" id="playButton" aria-label="Пусни"></div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+

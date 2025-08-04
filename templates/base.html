@@ -1,0 +1,100 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8"/>
+  <title>{% block title %}360° Video Player{% endblock %}</title>
+  <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+  <script src="https://cdn.dashjs.org/latest/dash.all.min.js"></script>
+  <link rel="stylesheet" href="{% static 'css/video360.css' %}">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+  <div class="header__container">
+    <h1 class="header__title">360 Video</h1>
+    <nav class="header__lang">
+      <ul class="header__lang-list">
+        <li class="header__lang-item"><a href="?lang=tr" class="header__lang-link">TR</a></li>
+        <li class="header__lang-item"><a href="?lang=en" class="header__lang-link">EN</a></li>
+        <li class="header__lang-item"><a href="?lang=fr" class="header__lang-link">FR</a></li>
+        <li class="header__lang-item"><a href="?lang=ua" class="header__lang-link">UA</a></li>
+        <li class="header__lang-item"><a href="?lang=bg" class="header__lang-link">BG</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- Main Content -->
+<main>
+  {% block content %}{% endblock %}
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer__container">
+    <div class="footer__column">
+      <h3 class="footer__title">Контакт</h3>
+      <p class="footer__text">Email: example@vrps.com</p>
+      <p class="footer__text">Телефон: +359 123 456 789</p>
+    </div>
+    <div class="footer__column">
+      <h3 class="footer__title">Контакт</h3>
+      <p class="footer__text">Email: example@vrps.com</p>
+      <p class="footer__text">Телефон: +359 123 456 789</p>
+    </div>
+    <div class="footer__column">
+      <h3 class="footer__title">Контакт</h3>
+      <p class="footer__text">Email: example@vrps.com</p>
+      <p class="footer__text">Телефон: +359 123 456 789</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+    const video = document.getElementById('video360');
+    const playButton = document.getElementById('playButton');
+    const videosphere = document.getElementById('videosphere');
+    const url = "{{ dash_manifest_url }}";
+
+    const player = dashjs.MediaPlayer().create();
+
+    player.updateSettings({
+        streaming: {
+            buffer: {
+                stableBufferTime: 3,
+                bufferTimeAtTopQuality: 5,
+                bufferTimeAtTopQualityLongForm: 8,
+                fastSwitchEnabled: true
+            }
+        }
+    });
+
+    player.initialize(video, url, false);
+
+    player.on(dashjs.MediaPlayer.events.ERROR, (e) => {
+        console.error('Dash.js error:', e);
+        if (e.error && e.error.code === 'QuotaExceededError') {
+            player.reset();
+            player.initialize(video, url, false);
+            video.pause();
+            if (videosphere) videosphere.setAttribute('visible', 'false');
+        }
+    });
+
+    video.addEventListener('loadeddata', () => {
+        if (videosphere) videosphere.setAttribute('visible', 'true');
+    });
+
+    playButton.addEventListener('click', () => {
+        player.play();
+        video.muted = false;
+        video.play().catch(e => console.error('Video play failed:', e));
+        playButton.style.display = 'none';
+    });
+</script>
+
+</body>
+</html>
