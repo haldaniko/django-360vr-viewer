@@ -4,59 +4,65 @@
 {% block language_title %}Türkçe{% endblock %}
 
 {% block content %}
-<!-- About -->
-<section class="about">
-  <h2 class="about__title">Hakkımızda</h2>
-  <p class="about__description">
-    Proje hakkında Türkçe bir açıklama burada olacak.
-  </p>
-</section>
+  <!-- About -->
+  <section class="about">
+    <h2 class="about__title">Турецкий</h2>
+    <p class="about__description">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum ante, non hendrerit mauris
+      convallis id. Maecenas in lorem eu quam malesuada gravida et ut nulla. Nam dignissim ex ut quam rhoncus tristique.
+      Nunc posuere nisl eget orci porttitor, eget finibus nibh aliquam. Donec a elit pretium, accumsan velit luctus,
+      congue est. Aliquam et lacinia massa. Nullam non sagittis arcu. Mauris tristique purus vitae tempus cursus. Nunc
+      faucibus nisi vitae lectus condimentum dignissim. Praesent at turpis a quam aliquet sollicitudin sed et metus.
+      Proin dignissim consectetur velit nec finibus. Praesent gravida tincidunt lacus nec eleifend. Ut vel blandit
+      lectus.
+    </p>
+  </section>
 
-<!-- Partners -->
-<section class="partners">
-  <div class="partners__container">
-    <h2 class="partners__title">Ortaklarımız</h2>
-    <div class="partners__list">
-      {% for i in "123" %}
-      <div class="partners__card">
-        <img src="{% static 'img/partner1.jpg' %}" alt="Ortak Logo" class="partners__image"/>
-        <p class="partners__description">
-          Ortak {{ forloop.counter }} hakkında Türkçe metin.
-        </p>
+  <!-- Partners -->
+  <section class="partners">
+    <div class="partners__container">
+      <h2 class="partners__title">Ortaklarımız</h2>
+      <div class="partners__list">
+        {% for i in "123" %}
+          <div class="partners__card">
+            <img src="{% static 'img/partner1.jpg' %}" alt="Ortak Logo" class="partners__image"/>
+            <p class="partners__description">
+              Ortak {{ forloop.counter }} hakkında Türkçe metin.
+            </p>
+          </div>
+        {% endfor %}
       </div>
-      {% endfor %}
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Video -->
-<section class="video">
-  <div class="video__container">
-    <div class="video__player-wrapper">
-      <video
-          id="video360"
-          class="video__element"
-          playsinline
-          crossorigin="anonymous"
-          webkit-playsinline
-          muted
-      ></video>
+  <!-- Video -->
+  <section class="video">
+    <div class="video__container">
+      <div class="video__player-wrapper">
+        <video
+            id="video360"
+            class="video__element"
+            playsinline
+            crossorigin="anonymous"
+            webkit-playsinline
+            muted
+        ></video>
 
-      <a-scene vr-mode-ui="enabled: true" embedded class="video__scene">
-        <a-videosphere
-            id="videosphere"
-            src="#video360"
-            rotation="0 -90 0"
-            visible="false"
-        ></a-videosphere>
-        <a-camera
-            look-controls="pointerLockEnabled: true"
-            wasd-controls-enabled="false"
-        ></a-camera>
-      </a-scene>
+        <a-scene vr-mode-ui="enabled: true" embedded class="video__scene">
+          <a-videosphere
+              id="videosphere"
+              src="#video360"
+              rotation="0 -90 0"
+              visible="false"
+          ></a-videosphere>
+          <a-camera
+              look-controls="pointerLockEnabled: true"
+              wasd-controls-enabled="false"
+          ></a-camera>
+        </a-scene>
 
-      <div class="video__play-button" id="playButton" aria-label="Oynat"></div>
+        <div class="video__play-button" id="playButton" aria-label="Oynat"></div>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 {% endblock %}
