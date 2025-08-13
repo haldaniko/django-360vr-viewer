@@ -449,4 +449,8 @@ header {
   margin: 6px 0;
 }
 
+.footer__link {
+  text-decoration: underline;
+}
+
 /* endregion */
