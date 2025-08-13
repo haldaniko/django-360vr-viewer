@@ -6,6 +6,13 @@ body {
   color: #3c4858;
 }
 
+a {
+  all: unset;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
 /* region Header styles */
 header {
   position: fixed;
