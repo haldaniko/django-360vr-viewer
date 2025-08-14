@@ -15,5 +15,9 @@ def video_view(request):
     template_name = template_map.get(lang, 'video_en.html')
 
     return render(request, template_name, {
-        'dash_manifest_url': '/media/video1/manifest.mpd'
+        'cinema_dash_manifest_url': '/media/ua_cinema/manifest.mpd',
+        'grounding_dash_manifest_url': '/media/ua_grounding/manifest.mpd',
+        'scan_dash_manifest_url': '/media/ua_scan/manifest.mpd',
+        'triangle_dash_manifest_url': '/media/ua_triangle/manifest.mpd',
+        'waterfall_dash_manifest_url': '/media/ua_waterfall/manifest.mpd',
     })

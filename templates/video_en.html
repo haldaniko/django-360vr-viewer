@@ -110,6 +110,33 @@
   <!-- Video -->
   <section class="video">
     <div class="video__container">
+
+      <!-- Thumbnails (centered above the player) -->
+      <div class="video__thumbnails">
+        <button class="video__thumbnail video__thumbnail--active"
+                aria-label="Video 1">
+          <img src="{% static 'img/cinema.png' %}" alt="Video 1">
+          <span class="video__label">Waterfall</span>
+        </button>
+        <button class="video__thumbnail" aria-label="Video 2">
+          <img src="{% static 'img/grounding.png' %}" alt="Video 2">
+          <span class="video__label">Grounding</span>
+        </button>
+        <button class="video__thumbnail" aria-label="Video 3">
+          <img src="{% static 'img/scan.png' %}" alt="Video 3">
+          <span class="video__label">Cinema</span>
+        </button>
+        <button class="video__thumbnail"  aria-label="Video 4">
+          <img src="{% static 'img/triangle.png' %}" alt="Video 4">
+          <span class="video__label">Scanning</span>
+        </button>
+        <button class="video__thumbnail" aria-label="Video 5">
+          <img src="{% static 'img/waterfall.png' %}" alt="Video 5">
+          <span class="video__label">Triangle Breath</span>
+        </button>
+      </div>
+
+
       <!-- Player -->
       <div class="video__player-wrapper">
         <video
@@ -138,92 +165,89 @@
       </div>
     </div>
   </section>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__container">
+      <div class="footer__column">
+        <h3 class="footer__title">FSCOD contacts</h3>
+        <p class="footer__text">Email: contact@opendoors.center</p>
+        <p class="footer__text">Phone: +359 884 013 786</p>
+        <p class="footer__text">Website:
+          <a class="footer__link" target="_blank" href="https://opendoors.center/">
+            opendoors.center
+          </a>
+        </p>
+
+      </div>
+      <div class="footer__column">
+        <h3 class="footer__title">ABU contacts</h3>
+        <p class="footer__text">Email: info@ankarabilim.edu.tr</p>
+        <p class="footer__text">Phone: +90 552 899 84 11</p>
+        <p class="footer__text">Website:
+          <a class="footer__link" target="_blank" href="https://ankarabilim.edu.tr/en/index">
+            ankarabilim.edu.tr
+          </a>
+        </p>
+
+      </div>
+      <div class="footer__column">
+        <h3 class="footer__title">URC contacts</h3>
+        <p class="footer__text">Email: olena.vyshnev@gmail.com</p>
+        <p class="footer__text">Phone: +33 065 245 56 39</p>
+        <p class="footer__text">Instagram:
+          <a class="footer__link" target="_blank" href="https://www.instagram.com/ukrrcenter/">
+            @ukrrcenter
+          </a>
+        </p>
+
+      </div>
+      <div class="footer__column">
+        <h3 class="footer__title">Guides & Docs</h3>
+        <p class="footer__text">
+          <a href="{% static 'docs/VR videos guide for direct users.pdf' %}" target="_blank">
+            📄 Guide for direct users.pdf
+          </a>
+        </p>
+        <p class="footer__text">
+          <a href="{% static 'docs/VR videos guide for professionals.pdf' %}" target="_blank">
+            📄 Guide for professionals.pdf
+          </a>
+        </p>
+        <p class="footer__text">
+          <a href="{% static 'docs/Who-5English.pdf' %}" target="_blank">
+            📄 Who-5English.pdf
+          </a>
+        </p>
+      </div>
+      <div class="footer__column">
+        <h3 class="footer__title">Regulations</h3>
+        <p class="footer__text">
+          <a href="{% static 'docs/Privacy Policy.pdf' %}" target="_blank">
+            📄 Privacy Policy.pdf
+          </a>
+        </p>
+        <p class="footer__text">
+          <a href="{% static 'docs/Terms of Use.pdf' %}" target="_blank">
+            📄 Terms of Use.pdf
+          </a>
+        </p>
+        <p class="footer__text">
+          <a href="{% static 'docs/Incident Report template.docx' %}" target="_blank">
+            📄 Incident Report template.docx
+          </a>
+        </p>
+      </div>
+    </div>
+  </footer>
 
 </main>
-
-<!-- Footer -->
-<footer class="footer">
-  <div class="footer__container">
-    <div class="footer__column">
-      <h3 class="footer__title">FSCOD contacts</h3>
-      <p class="footer__text">Email: contact@opendoors.center</p>
-      <p class="footer__text">Phone: +359 884 013 786</p>
-      <p class="footer__text">Website:
-        <a class="footer__link" target="_blank" href="https://opendoors.center/">
-          opendoors.center
-        </a>
-      </p>
-
-    </div>
-    <div class="footer__column">
-      <h3 class="footer__title">ABU contacts</h3>
-      <p class="footer__text">Email: info@ankarabilim.edu.tr</p>
-      <p class="footer__text">Phone: +90 552 899 84 11</p>
-      <p class="footer__text">Website:
-        <a class="footer__link" target="_blank" href="https://ankarabilim.edu.tr/en/index">
-          ankarabilim.edu.tr
-        </a>
-      </p>
-
-    </div>
-    <div class="footer__column">
-      <h3 class="footer__title">URC contacts</h3>
-      <p class="footer__text">Email: olena.vyshnev@gmail.com</p>
-      <p class="footer__text">Phone: +33 065 245 56 39</p>
-      <p class="footer__text">Instagram:
-        <a class="footer__link" target="_blank" href="https://www.instagram.com/ukrrcenter/">
-          @ukrrcenter
-        </a>
-      </p>
-
-    </div>
-    <div class="footer__column">
-      <h3 class="footer__title">Guides & Docs</h3>
-      <p class="footer__text">
-        <a href="{% static 'docs/VR videos guide for direct users.pdf' %}" target="_blank">
-          📄 Guide for direct users.pdf
-        </a>
-      </p>
-      <p class="footer__text">
-        <a href="{% static 'docs/VR videos guide for professionals.pdf' %}" target="_blank">
-          📄 Guide for professionals.pdf
-        </a>
-      </p>
-      <p class="footer__text">
-        <a href="{% static 'docs/Who-5English.pdf' %}" target="_blank">
-          📄 Who-5English.pdf
-        </a>
-      </p>
-    </div>
-    <div class="footer__column">
-      <h3 class="footer__title">Regulations</h3>
-      <p class="footer__text">
-        <a href="{% static 'docs/Privacy Policy.pdf' %}" target="_blank">
-          📄 Privacy Policy.pdf
-        </a>
-      </p>
-      <p class="footer__text">
-        <a href="{% static 'docs/Terms of Use.pdf' %}" target="_blank">
-          📄 Terms of Use.pdf
-        </a>
-      </p>
-      <p class="footer__text">
-        <a href="{% static 'docs/Incident Report template.docx' %}" target="_blank">
-          📄 Incident Report template.docx
-        </a>
-      </p>
-    </div>
-  </div>
-</footer>
 
 <script>
     const video = document.getElementById('video360');
     const playButton = document.getElementById('playButton');
     const videosphere = document.getElementById('videosphere');
-    const url = "{{ dash_manifest_url }}";
 
-    const player = dashjs.MediaPlayer().create();
-
+    let player = dashjs.MediaPlayer().create();
     player.updateSettings({
         streaming: {
             buffer: {
@@ -235,15 +259,17 @@
         }
     });
 
-    player.initialize(video, url, false);
+    let currentUrl = "{{ cinema_dash_manifest_url }}";
+    player.initialize(video, currentUrl, false);
 
     player.on(dashjs.MediaPlayer.events.ERROR, (e) => {
         console.error('Dash.js error:', e);
         if (e.error && e.error.code === 'QuotaExceededError') {
             player.reset();
-            player.initialize(video, url, false);
+            player.initialize(video, currentUrl, false);
             video.pause();
             if (videosphere) videosphere.setAttribute('visible', 'false');
+            playButton.style.display = '';
         }
     });
 
@@ -257,7 +283,35 @@
         video.play().catch(e => console.error('Video play failed:', e));
         playButton.style.display = 'none';
     });
+
+    const urlMap = {
+        0: "{{ cinema_dash_manifest_url }}",
+        1: "{{ grounding_dash_manifest_url }}",
+        2: "{{ scan_dash_manifest_url }}",
+        3: "{{ triangle_dash_manifest_url }}",
+        4: "{{ waterfall_dash_manifest_url }}"
+    };
+
+    const thumbnails = document.querySelectorAll('.video__thumbnail');
+    thumbnails.forEach((thumb, index) => {
+        thumb.addEventListener('click', () => {
+            thumbnails.forEach(t => t.classList.remove('video__thumbnail--active'));
+            thumb.classList.add('video__thumbnail--active');
+
+            const url = urlMap[index];
+            currentUrl = url;
+
+            player.reset();
+            player.initialize(video, url, false);
+            video.muted = false;
+
+            if (videosphere) videosphere.setAttribute('visible', 'true');
+
+            playButton.style.display = '';
+        });
+    });
 </script>
+
 
 </body>
 </html>
