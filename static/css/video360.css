@@ -139,7 +139,7 @@ header {
 }
 
 .about__description {
-    max-width: 900px;
+    max-width: 1100px;
     margin: 0 auto;
     font-size: 1.125rem;
     line-height: 1.6;
@@ -279,7 +279,7 @@ header {
 .video__thumbnail:hover {
     transform: translateY(-2px);
     filter: brightness(1);
-}
+}я
 
 .video__thumbnail--active {
     border-color: #04a1c4;
@@ -352,7 +352,7 @@ header {
 .footer {
     background-color: #111;
     color: #eee;
-    padding: 30px 20px;
+    padding: 5px 20px;
     font-size: 14px;
     width: 100%;
     box-sizing: border-box;
@@ -389,5 +389,24 @@ header {
 .footer__link {
     text-decoration: underline;
 }
+
+.footer__bottom {
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 10px;
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.footer__divider {
+  border: none;
+  height: 1px;
+  background-color: #ccc;
+}
+
+.footer__copy {
+  line-height: 1.4;
+}
+
 
 /* endregion */
