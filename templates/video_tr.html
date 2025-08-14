@@ -1,36 +1,107 @@
-{% extends "base.html" %}
 {% load static %}
 
-{% block language_title %}Türkçe{% endblock %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Inner World</title>
+  <link rel="icon" type="image/x-icon" href="{% static 'img/favicon.ico' %}">
+  <link rel="stylesheet" href="{% static 'css/video360.css' %}">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
-{% block content %}
+  <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+  <script src="https://cdn.dashjs.org/latest/dash.all.min.js"></script>
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+  <div class="header__container">
+    <div class="header__info">
+      <img class="header__erasmus" alt="AB" src="{% static 'img/Erasmus.jpg' %}">
+      <img class="header__logo" alt="logo" src="{% static 'img/inner_world_logo.png' %}">
+      <h1 class="header__title">Psikososyal Destek için<br> Sanal Gerçeklik Platformu</h1>
+    </div>
+    <nav class="header__lang">
+      <ul class="header__lang-list">
+        <li class="header__lang-item"><a href="?lang=tr" class="header__lang-link--active">TR</a></li>
+        <li class="header__lang-item"><a href="?lang=en" class="header__lang-link">EN</a></li>
+        <li class="header__lang-item"><a href="?lang=fr" class="header__lang-link">FR</a></li>
+        <li class="header__lang-item"><a href="?lang=ua" class="header__lang-link">UA</a></li>
+        <li class="header__lang-item"><a href="?lang=bg" class="header__lang-link">BG</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- Main Content -->
+<main>
   <!-- About -->
   <section class="about">
-    <h2 class="about__title">Турецкий</h2>
+    <h2 class="about__title">Hakkında</h2>
     <p class="about__description">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum ante, non hendrerit mauris
-      convallis id. Maecenas in lorem eu quam malesuada gravida et ut nulla. Nam dignissim ex ut quam rhoncus tristique.
-      Nunc posuere nisl eget orci porttitor, eget finibus nibh aliquam. Donec a elit pretium, accumsan velit luctus,
-      congue est. Aliquam et lacinia massa. Nullam non sagittis arcu. Mauris tristique purus vitae tempus cursus. Nunc
-      faucibus nisi vitae lectus condimentum dignissim. Praesent at turpis a quam aliquet sollicitudin sed et metus.
-      Proin dignissim consectetur velit nec finibus. Praesent gravida tincidunt lacus nec eleifend. Ut vel blandit
-      lectus.
+      Psikososyal Destek için Sanal Gerçeklik, Erasmus+ programı kapsamında oluşturulan KA210 projesidir ve savaş
+      nedeniyle yerinden edilmiş gençlere yönelik ruh sağlığı desteğinin sunulma biçimini dönüştürmeyi amaçlamaktadır.
+      Proje, özellikle Ukrayna'daki savaşın etkilediği gençlere odaklanmaktadır. Yenilikçi sanal gerçeklik (VR)
+      teknolojisi kullanımıyla, projenin amacı 13–20 yaş aralığındaki kişilerin çeşitli ihtiyaçlarına yanıt veren
+      güvenli, çekici ve engellerden arınmış bir psikososyal destek ortamı oluşturmaktır.<br><br>
+
+      18 ay boyunca Bulgaristan, Fransa ve Türkiye'den oluşan uluslararası ekibimiz, ruh sağlığı desteğinin kalitesini
+      ve erişilebilirliğini artırmak için bir VR aracı tasarladı, test etti ve paylaştı. Altmış yerinden edilmiş genç,
+      pilot aşamada kişiselleştirilmiş, yüksek kaliteli VR tabanlı destek aldı. Altı eğitimli ruh sağlığı uzmanı ise bu
+      aracı uygulamalarına entegre etmeyi öğrendi. InnerWorld yaklaşımı, dil, maliyet ve coğrafya gibi yaygın engelleri
+      ortadan kaldırarak, daha fazla gencin ihtiyaç duyduğu anda ve yerde desteğe ulaşmasını sağlıyor. Proje, VR
+      yönteminin Avrupa’da ve ötesinde geniş çapta benimsenmesini sağlamak için uzun vadeli etkiye de yatırım yaptı.
+      Dijital yenilik, ruh sağlığı uzmanlığı ve uluslararası işbirliğini birleştirerek InnerWorld, kapsayıcılığı teşvik
+      eder, iyileşmeyi destekler ve gençlerin yeni ortamlarında öğrenme, çalışma ve toplumsal yaşam becerileri
+      geliştirmelerini güçlendirir.
     </p>
   </section>
 
   <!-- Partners -->
   <section class="partners">
     <div class="partners__container">
-      <h2 class="partners__title">Ortaklarımız</h2>
+      <h2 class="partners__title">Ortak Kuruluşlar</h2>
       <div class="partners__list">
-        {% for i in "123" %}
-          <div class="partners__card">
-            <img src="{% static 'img/partner_CentreDeRessourcesUkrainen.jpg' %}" alt="Ortak Logo" class="partners__image"/>
+        <div class="partners__card">
+          <a target="_blank" href="https://opendoors.center/">
+
+            <img src="{% static 'img/partner_OpenDoors.jpg' %}" alt="Ortak Logo" class="partners__image"/>
+            <h1 class="partners__header">Durumsal Merkez Açık Kapılar</h1>
             <p class="partners__description">
-              Ortak {{ forloop.counter }} hakkında Türkçe metin.
+              Misyonumuz, Ukrayna’daki savaş nedeniyle yerinden edilmiş kişilerin, bağımsızlıklarını, kendi kendine
+              yeterliliklerini ve aktif vatandaşlık katılımlarını teşvik edecek şekilde ev sahibi toplumlarda güvenlik
+              ve istikrar bulmalarına yardımcı olmaktır.
             </p>
-          </div>
-        {% endfor %}
+
+          </a>
+        </div>
+        <div class="partners__card">
+          <a target="_blank" href="https://ankarabilim.edu.tr/en/index">
+
+            <img src="{% static 'img/partner_AnkaraScienceUniversity.jpg' %}" alt="Ortak Logo" class="partners__image"/>
+            <h1 class="partners__header">Ankara Bilim Üniversitesi</h1>
+            <p class="partners__description">
+              Ankara Bilim Üniversitesi, 21 Nisan 2016 tarihinde Türk Verimlilik Vakfı tarafından kurulmuş bir vakıf
+              üniversitesidir. Bireysel ve kurumsal düzeyde "sürdürülebilir kalkınma" bilinci ve kültürünü geliştirmeyi
+              hedeflemektedir.
+            </p>
+          </a>
+        </div>
+        <div class="partners__card">
+          <a target="_blank" href="https://www.instagram.com/ukrrcenter/">
+
+            <img src="{% static 'img/partner_CentreDeRessourcesUkrainen.png' %}" alt="Ortak Logo"
+                 class="partners__image"/>
+            <h1 class="partners__header">Ukrayna Kaynak Merkezi</h1>
+            <p class="partners__description">
+              Ekim 2022'de kurulan UKM, başlangıçta resmi olmayan bir grup olarak faaliyet gösterdi ve Eylül 2023’te
+              resmi statü kazandı. Misyonu, Ukraynalı yerinden edilmiş kişileri kapsamlı programlar ve topluluk
+              girişimleriyle desteklemek, engelleri aşmak ve uyumu kolaylaştırmaktır.
+            </p>
+          </a>
+        </div>
       </div>
     </div>
   </section>
@@ -38,6 +109,34 @@
   <!-- Video -->
   <section class="video">
     <div class="video__container">
+
+      <!-- Thumbnails (centered above the player) -->
+      <div class="video__thumbnails">
+        <button class="video__thumbnail video__thumbnail--active"
+                aria-label="Video 1">
+          <img src="{% static 'img/cinema.png' %}" alt="Video 1">
+          <span class="video__label">Şelale</span>
+        </button>
+        <button class="video__thumbnail" aria-label="Video 2">
+          <img src="{% static 'img/grounding.png' %}" alt="Video 2">
+          <span class="video__label">Topraklama</span>
+        </button>
+        <button class="video__thumbnail" aria-label="Video 3">
+          <img src="{% static 'img/scan.png' %}" alt="Video 3">
+          <span class="video__label">Sinema</span>
+        </button>
+        <button class="video__thumbnail" aria-label="Video 4">
+          <img src="{% static 'img/triangle.png' %}" alt="Video 4">
+          <span class="video__label">Taramak</span>
+        </button>
+        <button class="video__thumbnail" aria-label="Video 5">
+          <img src="{% static 'img/waterfall.png' %}" alt="Video 5">
+          <span class="video__label">Üçgen Nefesi</span>
+        </button>
+      </div>
+
+
+      <!-- Player -->
       <div class="video__player-wrapper">
         <video
             id="video360"
@@ -65,4 +164,153 @@
       </div>
     </div>
   </section>
-{% endblock %}
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__container">
+      <div class="footer__column">
+        <h3 class="footer__title">FSCOD İletişim</h3>
+        <p class="footer__text">E-posta: contact@opendoors.center</p>
+        <p class="footer__text">Telefon: +359 884 013 786</p>
+        <p class="footer__text">Web sitesi:
+          <a class="footer__link" target="_blank" href="https://opendoors.center/">
+            opendoors.center
+          </a>
+        </p>
+
+      </div>
+      <div class="footer__column">
+        <h3 class="footer__title">ABU İletişim</h3>
+        <p class="footer__text">E-posta: info@ankarabilim.edu.tr</p>
+        <p class="footer__text">Telefon: +90 552 899 84 11</p>
+        <p class="footer__text">Web sitesi:
+          <a class="footer__link" target="_blank" href="https://ankarabilim.edu.tr/en/index">
+            ankarabilim.edu.tr
+          </a>
+        </p>
+
+      </div>
+      <div class="footer__column">
+        <h3 class="footer__title">URC İletişim</h3>
+        <p class="footer__text">E-posta: olena.vyshnev@gmail.com</p>
+        <p class="footer__text">Telefon: +33 065 245 56 39</p>
+        <p class="footer__text">Instagram:
+          <a class="footer__link" target="_blank" href="https://www.instagram.com/ukrrcenter/">
+            @ukrrcenter
+          </a>
+        </p>
+
+      </div>
+      <div class="footer__column">
+        <h3 class="footer__title">Kılavuzlar & <Belgeler></Belgeler></h3>
+        <p class="footer__text">
+          <a href="{% static 'docs/VR videos guide for direct users.pdf' %}" target="_blank">
+            📄 Guide for direct users.pdf
+          </a>
+        </p>
+        <p class="footer__text">
+          <a href="{% static 'docs/VR videos guide for professionals.pdf' %}" target="_blank">
+            📄 Guide for professionals.pdf
+          </a>
+        </p>
+        <p class="footer__text">
+          <a href="{% static 'docs/Who-5Turkish.pdf' %}" target="_blank">
+            📄 Who-5Turkish.pdf
+          </a>
+        </p>
+      </div>
+      <div class="footer__column">
+        <h3 class="footer__title">Yönetmelikler</h3>
+        <p class="footer__text">
+          <a href="{% static 'docs/Privacy Policy.pdf' %}" target="_blank">
+            📄 Privacy Policy.pdf
+          </a>
+        </p>
+        <p class="footer__text">
+          <a href="{% static 'docs/Terms of Use.pdf' %}" target="_blank">
+            📄 Terms of Use.pdf
+          </a>
+        </p>
+        <p class="footer__text">
+          <a href="{% static 'docs/Incident Report template.docx' %}" target="_blank">
+            📄 Incident Report template.docx
+          </a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+</main>
+
+<script>
+    const video = document.getElementById('video360');
+    const playButton = document.getElementById('playButton');
+    const videosphere = document.getElementById('videosphere');
+
+    let player = dashjs.MediaPlayer().create();
+    player.updateSettings({
+        streaming: {
+            buffer: {
+                stableBufferTime: 3,
+                bufferTimeAtTopQuality: 5,
+                bufferTimeAtTopQualityLongForm: 8,
+                fastSwitchEnabled: true
+            }
+        }
+    });
+
+    let currentUrl = "{{ cinema_dash_manifest_url }}";
+    player.initialize(video, currentUrl, false);
+
+    player.on(dashjs.MediaPlayer.events.ERROR, (e) => {
+        console.error('Dash.js error:', e);
+        if (e.error && e.error.code === 'QuotaExceededError') {
+            player.reset();
+            player.initialize(video, currentUrl, false);
+            video.pause();
+            if (videosphere) videosphere.setAttribute('visible', 'false');
+            playButton.style.display = '';
+        }
+    });
+
+    video.addEventListener('loadeddata', () => {
+        if (videosphere) videosphere.setAttribute('visible', 'true');
+    });
+
+    playButton.addEventListener('click', () => {
+        player.play();
+        video.muted = false;
+        video.play().catch(e => console.error('Video play failed:', e));
+        playButton.style.display = 'none';
+    });
+
+    const urlMap = {
+        0: "{{ cinema_dash_manifest_url }}",
+        1: "{{ grounding_dash_manifest_url }}",
+        2: "{{ scan_dash_manifest_url }}",
+        3: "{{ triangle_dash_manifest_url }}",
+        4: "{{ waterfall_dash_manifest_url }}"
+    };
+
+    const thumbnails = document.querySelectorAll('.video__thumbnail');
+    thumbnails.forEach((thumb, index) => {
+        thumb.addEventListener('click', () => {
+            thumbnails.forEach(t => t.classList.remove('video__thumbnail--active'));
+            thumb.classList.add('video__thumbnail--active');
+
+            const url = urlMap[index];
+            currentUrl = url;
+
+            player.reset();
+            player.initialize(video, url, false);
+            video.muted = false;
+
+            if (videosphere) videosphere.setAttribute('visible', 'true');
+
+            playButton.style.display = '';
+        });
+    });
+</script>
+
+
+</body>
+</html>
