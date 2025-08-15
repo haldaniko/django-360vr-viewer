@@ -276,8 +276,6 @@ header {
     max-width: 100%;
 }
 
-
-
 .partners__description {
     padding: 0 12px 12px 12px;
     font-size: 1rem;
@@ -286,6 +284,11 @@ header {
     text-align: center;
 }
 
+@media (max-width: 325px) {
+    .partners__header {
+        font-size: 20px;
+    }
+}
 
 /* endregion */
 
@@ -427,7 +430,7 @@ header {
         flex-wrap: wrap;
         justify-content: center;
         gap: 8px;
-        padding: 8px 12px;
+        padding: 0;
         width: 100%;
         max-width: 500px;
     }
