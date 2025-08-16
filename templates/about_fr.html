@@ -18,11 +18,13 @@
 <!-- En-tête -->
 <header class="header">
   <div class="header__container">
-    <div class="header__info">
-      <img class="header__erasmus" alt="UE" src="{% static 'img/Erasmus.jpg' %}">
-      <img class="header__logo" alt="logo" src="{% static 'img/inner_world_logo.png' %}">
-      <h1 class="header__title">Plateforme de Réalité Virtuelle<br> pour le Soutien Psychosocial</h1>
-    </div>
+    <a href="{% url 'website:about' %}?lang=fr">
+      <div class="header__info">
+        <img class="header__erasmus" alt="UE" src="{% static 'img/Erasmus.jpg' %}">
+        <img class="header__logo" alt="logo" src="{% static 'img/inner_world_logo.png' %}">
+        <h1 class="header__title">Plateforme de Réalité Virtuelle<br> pour le Soutien Psychosocial</h1>
+      </div>
+    </a>
     <nav class="header__lang">
       <ul class="header__lang-list">
         <li class="header__lang-item"><a href="?lang=tr" class="header__lang-link">TR</a></li>
@@ -64,7 +66,7 @@
     </p>
 
     <div class="proceed-button-container">
-      <a href="{% url 'website:video' %}?lang=fr" class="proceed-button">Proceed to Video</a>
+      <a href="{% url 'website:video' %}?lang=fr" class="proceed-button">Passer à la vidéo</a>
     </div>
 
   </section>
