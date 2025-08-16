@@ -5,6 +5,7 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Inner World</title>
   <link rel="icon" type="image/x-icon" href="{% static 'img/favicon.ico' %}">
   <link rel="stylesheet" href="{% static 'css/video360.css' %}">
@@ -18,11 +19,13 @@
 <!-- Header -->
 <header class="header">
   <div class="header__container">
-    <div class="header__info">
-      <img class="header__erasmus" alt="AB" src="{% static 'img/Erasmus.jpg' %}">
-      <img class="header__logo" alt="logo" src="{% static 'img/inner_world_logo.png' %}">
-      <h1 class="header__title">Psikososyal Destek için<br> Sanal Gerçeklik Platformu</h1>
-    </div>
+    <a href="{% url 'website:about' %}?lang=tr">
+      <div class="header__info">
+        <img class="header__erasmus" alt="AB" src="{% static 'img/Erasmus.jpg' %}">
+        <img class="header__logo" alt="logo" src="{% static 'img/inner_world_logo.png' %}">
+        <h1 class="header__title">Psikososyal Destek için<br> Sanal Gerçeklik Platformu</h1>
+      </div>
+    </a>
     <nav class="header__lang">
       <ul class="header__lang-list">
         <li class="header__lang-item"><a href="?lang=tr" class="header__lang-link--active">TR</a></li>
@@ -37,71 +40,36 @@
 
 <!-- Main Content -->
 <main>
-  <!-- About -->
+
+  <!-- Instructions -->
   <section class="about">
-    <h2 class="about__title">Hakkında</h2>
-    <p class="about__description">
-      Psikososyal Destek için Sanal Gerçeklik, Erasmus+ programı kapsamında oluşturulan KA210 projesidir ve savaş
-      nedeniyle yerinden edilmiş gençlere yönelik ruh sağlığı desteğinin sunulma biçimini dönüştürmeyi amaçlamaktadır.
-      Proje, özellikle Ukrayna'daki savaşın etkilediği gençlere odaklanmaktadır. Yenilikçi sanal gerçeklik (VR)
-      teknolojisi kullanımıyla, projenin amacı 13–20 yaş aralığındaki kişilerin çeşitli ihtiyaçlarına yanıt veren
-      güvenli, çekici ve engellerden arınmış bir psikososyal destek ortamı oluşturmaktır.<br><br>
+    <h2 class="about__title">VRPS Talimatları</h2>
+    <div class="about__description">
+      <p>InnerWorld projesi, erişilebilir ve genç dostu ruh sağlığı destek yöntemleri geliştirdi. Bu beş kısa VR
+        videosu, ruh sağlığınızı desteklemek için kendi başınıza kullanabileceğiniz basit, beceriye dayalı araçlardır.
+        Terapi veya klinik tedavi değildirler. Krizdeyseniz, kendinize veya bir başkasına zarar verebileceğinizi
+        düşünüyorsanız veya semptomlarınız kötüleşirse, yerel acil servislerle veya kalifiye bir ruh sağlığı uzmanıyla
+        iletişime geçin.<br><br>
 
-      18 ay boyunca Bulgaristan, Fransa ve Türkiye'den oluşan uluslararası ekibimiz, ruh sağlığı desteğinin kalitesini
-      ve erişilebilirliğini artırmak için bir VR aracı tasarladı, test etti ve paylaştı. Altmış yerinden edilmiş genç,
-      pilot aşamada kişiselleştirilmiş, yüksek kaliteli VR tabanlı destek aldı. Altı eğitimli ruh sağlığı uzmanı ise bu
-      aracı uygulamalarına entegre etmeyi öğrendi. InnerWorld yaklaşımı, dil, maliyet ve coğrafya gibi yaygın engelleri
-      ortadan kaldırarak, daha fazla gencin ihtiyaç duyduğu anda ve yerde desteğe ulaşmasını sağlıyor. Proje, VR
-      yönteminin Avrupa’da ve ötesinde geniş çapta benimsenmesini sağlamak için uzun vadeli etkiye de yatırım yaptı.
-      Dijital yenilik, ruh sağlığı uzmanlığı ve uluslararası işbirliğini birleştirerek InnerWorld, kapsayıcılığı teşvik
-      eder, iyileşmeyi destekler ve gençlerin yeni ortamlarında öğrenme, çalışma ve toplumsal yaşam becerileri
-      geliştirmelerini güçlendirir.
-    </p>
-  </section>
+        Oturabileceğiniz veya uzanabileceğiniz güvenli ve rahat bir yer seçin. Herhangi bir noktada başınız dönerse,
+        mide bulantısı hissederseniz, uyuşukluk hissederseniz veya bağlantınız kesilirse, videoyu durdurun, gözlerinizi
+        açın, odanın etrafına bakın ve aşağıdaki topraklama egzersizine geçin. Kulaklık veya VR başlığı kullanıyorsanız
+        ve kendinizi iyi hissetmiyorsanız, bunları hemen çıkarın. Solunum veya kalp rahatsızlığınız varsa, hamileyseniz
+        veya nefes tutmayı rahatsız edici buluyorsanız, sayımları kısaltın veya nefes tutma adımlarını atlayın.</p>
 
-  <!-- Partners -->
-  <section class="partners">
-    <div class="partners__container">
-      <h2 class="partners__title">Ortak Kuruluşlar</h2>
-      <div class="partners__list">
-        <div class="partners__card">
-          <a target="_blank" href="https://opendoors.center/">
+      <div class="about__cards">
+        <a href="{% static 'docs/VR videos guide for direct users.pdf' %}" target="_blank">
+          <div class="about__card">
+            📄 Guide for direct users.pdf
+          </div>
+        </a>
 
-            <img src="{% static 'img/partner_OpenDoors.jpg' %}" alt="Ortak Logo" class="partners__image"/>
-            <h1 class="partners__header">Durumsal Merkez Açık Kapılar</h1>
-            <p class="partners__description">
-              Misyonumuz, Ukrayna’daki savaş nedeniyle yerinden edilmiş kişilerin, bağımsızlıklarını, kendi kendine
-              yeterliliklerini ve aktif vatandaşlık katılımlarını teşvik edecek şekilde ev sahibi toplumlarda güvenlik
-              ve istikrar bulmalarına yardımcı olmaktır.
-            </p>
+        <a href="{% static 'docs/VR videos guide for professionals.pdf' %}" target="_blank">
+          <div class="about__card">
+            📄 Guide for professionals.pdf
+          </div>
+        </a>
 
-          </a>
-        </div>
-        <div class="partners__card">
-          <a target="_blank" href="https://ankarabilim.edu.tr/en/index">
-
-            <img src="{% static 'img/partner_AnkaraScienceUniversity.jpg' %}" alt="Ortak Logo" class="partners__image"/>
-            <h1 class="partners__header">Ankara Bilim Üniversitesi</h1>
-            <p class="partners__description">
-              Ankara Bilim Üniversitesi, 21 Nisan 2016 tarihinde Türk Verimlilik Vakfı tarafından kurulmuş bir vakıf
-              üniversitesidir. Bireysel ve kurumsal düzeyde "sürdürülebilir kalkınma" bilinci ve kültürünü geliştirmeyi
-              hedeflemektedir.
-            </p>
-          </a>
-        </div>
-        <div class="partners__card">
-          <a target="_blank" href="https://www.instagram.com/ukrrcenter/">
-
-            <img src="{% static 'img/partner_CentreDeRessourcesUkrainen.png' %}" alt="Ortak Logo"
-                 class="partners__image"/>
-            <h1 class="partners__header">Ukrayna Kaynak Merkezi</h1>
-            <p class="partners__description">
-              Ekim 2022'de kurulan UKM, başlangıçta resmi olmayan bir grup olarak faaliyet gösterdi ve Eylül 2023’te
-              resmi statü kazandı. Misyonu, Ukraynalı yerinden edilmiş kişileri kapsamlı programlar ve topluluk
-              girişimleriyle desteklemek, engelleri aşmak ve uyumu kolaylaştırmaktır.
-            </p>
-          </a>
-        </div>
       </div>
     </div>
   </section>
@@ -164,6 +132,7 @@
       </div>
     </div>
   </section>
+
   <!-- Footer -->
   <footer class="footer">
     <div class="footer__container">
@@ -201,7 +170,7 @@
 
       </div>
       <div class="footer__column">
-        <h3 class="footer__title">Kılavuzlar & <Belgeler></Belgeler></h3>
+        <h3 class="footer__title">Kılavuzlar & Belgeler</h3>
         <p class="footer__text">
           <a href="{% static 'docs/VR videos guide for direct users.pdf' %}" target="_blank">
             📄 Guide for direct users.pdf
@@ -245,7 +214,6 @@
         © 2025 Tüm hakları saklıdır.
       </p>
     </div>
-  </footer>
   </footer>
 
 </main>
@@ -319,7 +287,6 @@
         });
     });
 </script>
-
 
 </body>
 </html>
