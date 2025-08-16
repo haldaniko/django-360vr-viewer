@@ -4,6 +4,7 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Inner World</title>
   <link rel="icon" type="image/x-icon" href="{% static 'img/favicon.ico' %}">
   <link rel="stylesheet" href="{% static 'css/video360.css' %}">
@@ -17,11 +18,13 @@
 <!-- En-tête -->
 <header class="header">
   <div class="header__container">
-    <div class="header__info">
-      <img class="header__erasmus" alt="UE" src="{% static 'img/Erasmus.jpg' %}">
-      <img class="header__logo" alt="logo" src="{% static 'img/inner_world_logo.png' %}">
-      <h1 class="header__title">Plateforme de Réalité Virtuelle<br> pour le Soutien Psychosocial</h1>
-    </div>
+    <a href="{% url 'website:about' %}">
+      <div class="header__info">
+        <img class="header__erasmus" alt="UE" src="{% static 'img/Erasmus.jpg' %}">
+        <img class="header__logo" alt="logo" src="{% static 'img/inner_world_logo.png' %}">
+        <h1 class="header__title">Plateforme de Réalité Virtuelle<br> pour le Soutien Psychosocial</h1>
+      </div>
+    </a>
     <nav class="header__lang">
       <ul class="header__lang-list">
         <li class="header__lang-item"><a href="?lang=tr" class="header__lang-link">TR</a></li>
@@ -36,71 +39,39 @@
 
 <!-- Contenu principal -->
 <main>
-  <!-- À propos -->
+
+  <!-- Instructions -->
   <section class="about">
-    <h2 class="about__title">À propos</h2>
-    <p class="about__description">
-      La Réalité Virtuelle pour le Soutien Psychosocial est un projet KA210 créé dans le cadre du programme Erasmus+,
-      dédié à transformer la manière dont le soutien en santé mentale est apporté aux jeunes déplacés.
-      Le projet se concentre sur les jeunes touchés par la guerre en Ukraine.
-      Grâce à l’utilisation innovante de la technologie de réalité virtuelle (VR),
-      le projet vise à construire un environnement sûr, engageant et sans barrières pour le soutien psychosocial,
-      répondant aux besoins variés des personnes âgées de 13 à 20 ans.<br><br>
+    <h2 class="about__title">VRPS Instructions</h2>
+    <div class="about__description">
+      <p>Le projet InnerWorld a développé des méthodes de soutien en santé mentale accessibles et adaptées aux jeunes.
+        Ces cinq courtes vidéos de réalité virtuelle sont des outils simples et axés sur les compétences que vous pouvez
+        utiliser seul pour soutenir votre santé mentale. Elles ne constituent ni une thérapie ni un traitement clinique.
+        Si vous êtes en crise, si vous pensez que vous pourriez vous faire du mal ou faire du mal à quelqu'un d'autre,
+        ou si vos symptômes s'aggravent, contactez les services d'urgence locaux ou un professionnel de la santé mentale
+        qualifié.<br><br>
 
-      Pendant 18 mois, notre équipe internationale composée de membres de Bulgarie, de France et de Turquie a créé,
-      testé et partagé un outil VR conçu pour améliorer la qualité et l’accessibilité de l’assistance en santé mentale.
-      Soixante jeunes déplacés ont participé à la phase pilote, recevant un soutien personnalisé et de haute qualité basé sur la VR,
-      tandis que six professionnels de santé mentale formés ont appris à intégrer cet outil dans leur pratique.
-      L’approche d’InnerWorld supprime les barrières courantes telles que la langue, le coût et la géographie,
-      permettant à davantage de jeunes d’accéder à l’aide quand et où ils en ont besoin.
-      Le projet a également investi dans un impact à long terme, en veillant à ce que la méthode VR puisse être largement adoptée
-      en Europe et au-delà. En combinant l’innovation numérique, l’expertise en santé mentale et la collaboration internationale,
-      InnerWorld promeut l’inclusion, soutient le rétablissement et donne aux jeunes les moyens de développer
-      des compétences pour l’apprentissage, le travail et la vie communautaire dans leurs nouveaux environnements.
-    </p>
-  </section>
+        Choisissez un endroit sûr et confortable où vous pouvez vous asseoir ou vous allonger. Si vous ressentez des
+        étourdissements, des nausées, un engourdissement ou une perte de connexion, arrêtez la vidéo, ouvrez les yeux,
+        regardez autour de vous et passez à l'exercice d'ancrage ci-dessous. Si vous utilisez un casque audio ou un
+        casque de réalité virtuelle, retirez-le immédiatement en cas de malaise. Si vous souffrez d'une affection
+        respiratoire ou cardiaque, si vous êtes enceinte ou si vous trouvez l'apnée inconfortable, réduisez le nombre de
+        secondes ou sautez les étapes d'apnée.
+      </p>
 
-  <!-- Partenaires -->
-  <section class="partners">
-    <div class="partners__container">
-      <h2 class="partners__title">Organisations partenaires</h2>
-      <div class="partners__list">
-        <div class="partners__card">
-          <a target="_blank" href="https://opendoors.center/">
+      <div class="about__cards">
+        <a href="{% static 'docs/VR videos guide for direct users.pdf' %}" target="_blank">
+          <div class="about__card">
+            📄 Guide for direct users.pdf
+          </div>
+        </a>
 
-            <img src="{% static 'img/partner_OpenDoors.jpg' %}" alt="Logo partenaire" class="partners__image"/>
-            <h1 class="partners__header">Centre Portes Ouvertes</h1>
-            <p class="partners__description">
-              Notre mission est d’aider les personnes déplacées par la guerre en Ukraine à trouver sécurité et stabilité
-              dans les sociétés d’accueil, d’une manière qui favorise leur indépendance, leur autonomie et leur participation civique active.
-            </p>
+        <a href="{% static 'docs/VR videos guide for professionals.pdf' %}" target="_blank">
+          <div class="about__card">
+            📄 Guide for professionals.pdf
+          </div>
+        </a>
 
-          </a>
-        </div>
-        <div class="partners__card">
-          <a target="_blank" href="https://ankarabilim.edu.tr/en/index">
-
-            <img src="{% static 'img/partner_AnkaraScienceUniversity.jpg' %}" alt="Logo partenaire" class="partners__image"/>
-            <h1 class="partners__header">Université des Sciences d’Ankara</h1>
-            <p class="partners__description">
-              L’Université Ankara Bilim est une université fondation créée le 21 avril 2016 par la Fondation Turque pour l’Efficacité,
-              qui vise à développer la sensibilisation et la culture favorisant le « développement durable » au niveau individuel et institutionnel.
-            </p>
-          </a>
-        </div>
-        <div class="partners__card">
-          <a target="_blank" href="https://www.instagram.com/ukrrcenter/">
-
-            <img src="{% static 'img/partner_CentreDeRessourcesUkrainen.png' %}" alt="Logo partenaire"
-                 class="partners__image"/>
-            <h1 class="partners__header">Centre de ressources ukrainien</h1>
-            <p class="partners__description">
-              Créé en octobre 2022, le CRU a d’abord agi comme un groupe informel, jusqu’à obtenir un statut officiel en septembre 2023.
-              La mission du CRU est de soutenir les personnes ukrainiennes déplacées grâce à des programmes complets
-              et des initiatives communautaires, afin de lever les barrières et de faciliter l’adaptation.
-            </p>
-          </a>
-        </div>
       </div>
     </div>
   </section>
