@@ -2,9 +2,10 @@
 
 {% load static %}
 <!DOCTYPE html>
-<html lang="bg">
+<html lang="en">
 <head>
   <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Inner World</title>
   <link rel="icon" type="image/x-icon" href="{% static 'img/favicon.ico' %}">
   <link rel="stylesheet" href="{% static 'css/video360.css' %}">
@@ -15,14 +16,15 @@
 </head>
 <body>
 
-<!-- Header -->
 <header class="header">
   <div class="header__container">
-    <div class="header__info">
-      <img class="header__erasmus" alt="EU" src="{% static 'img/Erasmus.jpg' %}">
-      <img class="header__logo" alt="logo" src="{% static 'img/inner_world_logo.png' %}">
-      <h1 class="header__title">Virtual Reality Platform<br> for Psychosocial Support</h1>
-    </div>
+    <a href="{% url 'website:about' %}">
+      <div class="header__info">
+        <img class="header__erasmus" alt="EU" src="{% static 'img/Erasmus.jpg' %}">
+        <img class="header__logo" alt="logo" src="{% static 'img/inner_world_logo.png' %}">
+        <h1 class="header__title">Virtual Reality Platform<br> for Psychosocial Support</h1>
+      </div>
+    </a>
     <nav class="header__lang">
       <ul class="header__lang-list">
         <li class="header__lang-item"><a href="?lang=tr" class="header__lang-link">TR</a></li>
@@ -37,72 +39,36 @@
 
 <!-- Main Content -->
 <main>
-  <!-- About -->
+
+  <!-- Instructions -->
   <section class="about">
-    <h2 class="about__title">About</h2>
-    <p class="about__description">
-      Virtual Reality for Psychosocial Support is a KA210 project created within the framework of the
-      Erasmus+ programme, dedicated to transforming the way mental health support is delivered to displaced youth. The
-      project has a focus on youth affected by the war in Ukraine. Through innovative use of virtual reality (VR)
-      technology, the project aims to build a safe, engaging, and barrier-free environment for psychosocial support that
-      responds to the diverse needs of people aged 13–20.<br><br>
+    <h2 class="about__title">VRPS Instructions</h2>
+    <div class="about__description">
+      <p>The InnerWorld project developed accessible, youth‑friendly mental-health support methods. These five short VR
+        videos are simple, skills‑based tools you can use on your own to support your mental health. They are not
+        therapy or clinical treatment. If you are in crisis, think you might harm yourself or someone else, or your
+        symptoms worsen, contact local emergency services or a qualified mental health professional.<br><br>
 
-      Over 18 months, our international team from Bulgaria, France, and Türkiye created, tested, and shared a VR tool
-      designed to enhance the quality and accessibility of mental health assistance. Sixty displaced young people took
-      part in the pilot phase, receiving personalised, high-quality VR-based support, while six trained mental health
-      professionals learned to integrate this tool into their practice. InnerWorld’s approach removes common barriers
-      such as language, cost, and geography, enabling more young people to
-      access help when and where they need it. The project also invested in long-term impact, ensuring the VR method can
-      be adopted widely in Europe and beyond. By combining digital innovation, mental health expertise, and
-      international collaboration, InnerWorld promotes
-      inclusion, supports recovery, and empowers young people to build skills for learning, work, and community life in
-      their new environments.
-    </p>
-  </section>
+        Choose a safe, comfortable place where you can sit or lie down. If you feel dizzy, nauseous,
+        numb, or disconnected at any point, stop the video, open your eyes, look around the room, and
+        switch to the grounding exercise below. If you are using headphones or a VR headset, remove
+        them immediately if you feel unwell. If you have a respiratory or cardiac condition, are pregnant,
+        or find breath‑holding uncomfortable, shorten the counts or skip breath‑hold steps.
+      </p>
 
-  <!-- Partners -->
-  <section class="partners">
-    <div class="partners__container">
-      <h2 class="partners__title">Partner Organizations</h2>
-      <div class="partners__list">
-        <div class="partners__card">
-          <a target="_blank" href="https://opendoors.center/">
+      <div class="about__cards">
+        <a href="{% static 'docs/VR videos guide for direct users.pdf' %}" target="_blank">
+          <div class="about__card">
+            📄 Guide for direct users.pdf
+          </div>
+        </a>
 
-            <img src="{% static 'img/partner_OpenDoors.jpg' %}" alt="Ortak Logo" class="partners__image"/>
-            <h1 class="partners__header">Situational Center Open Doors</h1>
-            <p class="partners__description">
-              Our mission is to help the people displaced by the war in Ukraine find security and stability in host
-              societies in a way that promotes their independence, self-sufficiency, and active civic participation.
-            </p>
+        <a href="{% static 'docs/VR videos guide for professionals.pdf' %}" target="_blank">
+          <div class="about__card">
+            📄 Guide for professionals.pdf
+          </div>
+        </a>
 
-          </a>
-        </div>
-        <div class="partners__card">
-          <a target="_blank" href="https://ankarabilim.edu.tr/en/index">
-
-            <img src="{% static 'img/partner_AnkaraScienceUniversity.jpg' %}" alt="Ortak Logo" class="partners__image"/>
-            <h1 class="partners__header">Ankara Science University</h1>
-            <p class="partners__description">
-              Ankara Bilim University is a foundation university established 21 April 2016 by the Turkish Efficiency
-              Foundation, which aims to develop the awareness and culture extending "sustainable development" at the
-              individual and institutional level.
-            </p>
-          </a>
-        </div>
-        <div class="partners__card">
-          <a target="_blank" href="https://www.instagram.com/ukrrcenter/">
-
-            <img src="{% static 'img/partner_CentreDeRessourcesUkrainen.png' %}" alt="Ortak Logo"
-                 class="partners__image"/>
-            <h1 class="partners__header">Centre de ressources ukrainen</h1>
-            <p class="partners__description">
-              Established in October 2022, the CRU acted initially as an informal group, until it gained official status
-              in September 2023. CRU's mission is to support Ukrainian displaced people through comprehensive programs
-              and
-              community initiatives, to bridge barriers and facilitate adaptation.
-            </p>
-          </a>
-        </div>
       </div>
     </div>
   </section>
@@ -360,8 +326,6 @@
         }
     }
 </script>
-
-
 
 </body>
 </html>

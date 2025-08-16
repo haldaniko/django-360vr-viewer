@@ -21,3 +21,19 @@ def video_view(request):
         'triangle_dash_manifest_url': '/media/ua_triangle/manifest.mpd',
         'waterfall_dash_manifest_url': '/media/ua_waterfall/manifest.mpd',
     })
+
+
+def about_view(request):
+    lang = request.GET.get('lang', 'en')
+
+    template_map = {
+        'en': 'about_en.html',
+        'fr': 'about_fr.html',
+        'tr': 'about_tr.html',
+        'ua': 'about_ua.html',
+        'bg': 'about_bg.html',
+    }
+
+    template_name = template_map.get(lang, 'about_en.html')
+
+    return render(request, template_name)
