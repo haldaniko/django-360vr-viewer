@@ -221,6 +221,7 @@
     const video = document.getElementById('video360');
     const playButton = document.getElementById('playButton');
     const videosphere = document.getElementById('videosphere');
+    const camera = document.querySelector('a-camera');
 
     let player = dashjs.MediaPlayer().create();
     player.updateSettings({
@@ -238,7 +239,7 @@
     player.initialize(video, currentUrl, false);
 
     player.on(dashjs.MediaPlayer.events.ERROR, (e) => {
-        console.error('Erreur Dash.js :', e);
+        console.error('Dash.js error:', e);
         if (e.error && e.error.code === 'QuotaExceededError') {
             player.reset();
             player.initialize(video, currentUrl, false);
@@ -253,11 +254,43 @@
     });
 
     playButton.addEventListener('click', () => {
+        startVideo();
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.code === 'Space') {
+            e.preventDefault();
+            toggleVideo();
+        }
+    });
+
+    if (videosphere) {
+        videosphere.addEventListener('click', () => {
+            if (video.paused) {
+                startVideo(false);
+            }
+        });
+    }
+
+    function startVideo() {
         player.play();
         video.muted = false;
-        video.play().catch(e => console.error('La lecture vidéo a échoué :', e));
+        video.play().catch(e => console.error('Video play failed:', e));
         playButton.style.display = 'none';
-    });
+    }
+
+    function pauseVideo() {
+        video.pause();
+        playButton.style.display = '';
+    }
+
+    function toggleVideo() {
+        if (video.paused) {
+            startVideo();
+        } else {
+            pauseVideo();
+        }
+    }
 
     const urlMap = {
         0: "{{ cinema_dash_manifest_url }}",
@@ -285,6 +318,14 @@
             playButton.style.display = '';
         });
     });
+
+    if (camera) {
+        const controls = camera.components['look-controls'];
+        if (controls) {
+            controls.pointerLockEnabled = false;
+            controls.mouseEnabled = true;
+        }
+    }
 </script>
 
 </body>
