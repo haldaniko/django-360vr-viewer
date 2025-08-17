@@ -2,7 +2,7 @@ from django.shortcuts import render
 
 
 def video_view(request):
-    lang = request.GET.get('lang', 'en')
+    lang = request.GET.get('lang', 'ua')
 
     template_map = {
         'en': 'video_en.html',
@@ -51,14 +51,13 @@ def video_view(request):
     }
 
     template_name = template_map.get(lang, 'video_en.html')
-    context = videos_map.get(lang, videos_map['en'])
+    context = videos_map.get(lang, videos_map['ua'])
 
     return render(request, template_name, context)
 
 
-
 def about_view(request):
-    lang = request.GET.get('lang', 'en')
+    lang = request.GET.get('lang', 'ua')
 
     template_map = {
         'en': 'about_en.html',
