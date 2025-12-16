@@ -42,12 +42,20 @@ header {
 }
 
 .header__erasmus {
+    margin-top: 2px;
     max-height: 56px;
 }
 
 .header__logo {
-    margin: 0;
-    max-width: 40px;
+    max-height: 56px;
+}
+
+.header__tua-logo {
+    max-height: 56px;
+}
+
+.header__yazisiz-logo {
+    max-height: 56px;
 }
 
 .header__title {
