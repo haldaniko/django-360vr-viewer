@@ -14,11 +14,11 @@ def video_view(request):
 
     videos_map = {
         'en': {
-            'cinema_dash_manifest_url': '/media/en_cinema/manifest.mpd',
-            'grounding_dash_manifest_url': '/media/en_grounding/manifest.mpd',
-            'scan_dash_manifest_url': '/media/en_scan/manifest.mpd',
-            'triangle_dash_manifest_url': '/media/en_triangle/manifest.mpd',
-            'waterfall_dash_manifest_url': '/media/en_waterfall/manifest.mpd',
+            'cinema_dash_manifest_url': '/media/tr_cinema/manifest.mpd',
+            'grounding_dash_manifest_url': '/media/tr_grounding/manifest.mpd',
+            'scan_dash_manifest_url': '/media/tr_scan/manifest.mpd',
+            'triangle_dash_manifest_url': '/media/tr_triangle/manifest.mpd',
+            'waterfall_dash_manifest_url': '/media/tr_waterfall/manifest.mpd',
         },
         'fr': {
             'cinema_dash_manifest_url': '/media/fr_cinema/manifest.mpd',
