@@ -146,29 +146,27 @@ header {
     }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 768px) {
     .header__container {
         flex-direction: column;
-        align-items: center;
         padding: 0.8rem;
         gap: 0.6rem;
     }
 
     .header__info {
         flex-direction: row;
-        justify-content: center;
+        flex-wrap: wrap;
         align-items: center;
         gap: 0.6rem;
         width: 100%;
     }
 
-    .header__erasmus {
-        max-height: 50px;
-        height: auto;
+    .header__info .header__logo {
+        height: 90px;
     }
 
-    .header__logo {
-        max-width: 40px;
+    .header__info img {
+        height: 30px
     }
 
     .header__title {
