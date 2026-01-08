@@ -1,0 +1,155 @@
+{% load static %}
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inner World</title>
+  <link rel="icon" type="image/x-icon" href="{% static 'img/favicon.ico' %}">
+  <link rel="stylesheet" href="{% static 'css/video360.css' %}">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+  <script src="https://cdn.dashjs.org/latest/dash.all.min.js"></script>
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+  <div class="header__container">
+    <a href="{% url 'website:about' %}?lang=en">
+      <div class="header__info">
+        <img class="header__logo" alt="logo" src="{% static 'img/logo-en2.png' %}">
+        <img class="header__tua-logo" alt="tua-logo" src="{% static 'img/tua-logo.png' %}">
+        <img class="header__yazisiz-logo" alt="yazisiz-logo" src="{% static 'img/yazisiz-logo.jpg' %}">
+        <img class="header__erasmus" alt="eu-log" src="{% static 'img/eu-logo-en.jpg' %}">
+      </div>
+    </a>
+    <nav class="header__nav">
+      <ul class="header__nav-list">
+        <li class="header__nav-item">
+          <a href="{% url 'website:video' %}?lang=en" class="header__nav-link">Home</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="{% url 'website:about' %}?lang=en" class="header__nav-link">About</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="{% url 'website:howitworks' %}?lang=en" class="header__nav-link header__nav-link--active">How it works</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="{% url 'website:guides' %}?lang=en" class="header__nav-link">Guides</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="{% url 'website:results' %}?lang=en" class="header__nav-link">Results</a>
+        </li>
+      </ul>
+    </nav>
+    <nav class="header__lang">
+      <ul class="header__lang-list">
+        <li class="header__lang-item"><a href="?lang=en" class="header__lang-link--active">EN</a></li>
+        <li class="header__lang-item"><a href="?lang=tr" class="header__lang-link">TR</a></li>
+        <li class="header__lang-item"><a href="?lang=fr" class="header__lang-link">FR</a></li>
+        <li class="header__lang-item"><a href="?lang=ua" class="header__lang-link">UA</a></li>
+        <li class="header__lang-item"><a href="?lang=bg" class="header__lang-link">BG</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- Main Content -->
+<main>
+  <!-- All the staff here -->
+  <h1>How it works</h1>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__container">
+      <div class="footer__column">
+        <h3 class="footer__title">ABU contacts</h3>
+        <p class="footer__text">Email: info@ankarabilim.edu.tr</p>
+        <p class="footer__text">Phone: +90 552 899 84 11</p>
+        <p class="footer__text">Website:
+          <a class="footer__link" target="_blank" href="https://ankarabilim.edu.tr/en/index">
+            ankarabilim.edu.tr
+          </a>
+        </p>
+
+      </div>
+      <div class="footer__column">
+        <h3 class="footer__title">FSCOD contacts</h3>
+        <p class="footer__text">Email: contact@opendoors.center</p>
+        <p class="footer__text">Phone: +359 884 013 786</p>
+        <p class="footer__text">Website:
+          <a class="footer__link" target="_blank" href="https://opendoors.center/">
+            opendoors.center
+          </a>
+        </p>
+
+      </div>
+      <div class="footer__column">
+        <h3 class="footer__title">URC contacts</h3>
+        <p class="footer__text">Email: olena.vyshnev@gmail.com</p>
+        <p class="footer__text">Phone: +33 065 245 56 39</p>
+        <p class="footer__text">Instagram:
+          <a class="footer__link" target="_blank" href="https://www.instagram.com/ukrrcenter/">
+            @ukrrcenter
+          </a>
+        </p>
+
+      </div>
+      <div class="footer__column">
+        <h3 class="footer__title">Guides & Docs</h3>
+        <p class="footer__text">
+          <a href="{% static 'docs/VR videos guide for direct users.pdf' %}" target="_blank">
+            📄 Guide for direct users.pdf
+          </a>
+        </p>
+        <p class="footer__text">
+          <a href="{% static 'docs/VR videos guide for professionals.pdf' %}" target="_blank">
+            📄 Guide for professionals.pdf
+          </a>
+        </p>
+        <p class="footer__text">
+          <a href="{% static 'docs/Who-5English.pdf' %}" target="_blank">
+            📄 Who-5English.pdf
+          </a>
+        </p>
+      </div>
+      <div class="footer__column">
+        <h3 class="footer__title">Regulations</h3>
+        <p class="footer__text">
+          <a href="{% static 'docs/Privacy Policy.pdf' %}" target="_blank">
+            📄 Privacy Policy.pdf
+          </a>
+        </p>
+        <p class="footer__text">
+          <a href="{% static 'docs/Terms of Use.pdf' %}" target="_blank">
+            📄 Terms of Use.pdf
+          </a>
+        </p>
+        <p class="footer__text">
+          <a href="{% static 'docs/Incident Report template.docx' %}" target="_blank">
+            📄 Incident Report template.docx
+          </a>
+        </p>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <hr class="footer__divider">
+      <p class="footer__copy">
+        InnerWorld: Virtual Reality for Psychosocial Support<br>
+      <p>Funded by the European Union. The views and opinions expressed herein are those of the author(s) alone and do
+        not necessarily reflect the position of the European Union or the Education and Culture Executive Agency
+        (EACEA).<br>Neither the European Union nor the EACEA can be held responsible for them.
+        2023-3-TR01-KA210-YOU-000181712<br>
+        © 2025 All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+</main>
+
+</body>
+</html>

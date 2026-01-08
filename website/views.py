@@ -70,3 +70,52 @@ def about_view(request):
     template_name = template_map.get(lang, 'about_en.html')
 
     return render(request, template_name)
+
+
+def howitworks_view(request):
+    lang = request.GET.get('lang', 'ua')
+
+    template_map = {
+        'en': 'howitworks_en.html',
+        'fr': 'howitworks_fr.html',
+        'tr': 'howitworks_tr.html',
+        'ua': 'howitworks_ua.html',
+        'bg': 'howitworks_bg.html',
+    }
+
+    template_name = template_map.get(lang, 'howitworks_en.html')
+
+    return render(request, template_name)
+
+
+def guides_view(request):
+    lang = request.GET.get('lang', 'ua')
+
+    template_map = {
+        'en': 'guides_en.html',
+        'fr': 'guides_fr.html',
+        'tr': 'guides_tr.html',
+        'ua': 'guides_ua.html',
+        'bg': 'guides_bg.html',
+    }
+
+    template_name = template_map.get(lang, 'guides_en.html')
+
+    return render(request, template_name)
+
+
+def results_view(request):
+    lang = request.GET.get('lang', 'ua')
+
+    template_map = {
+        'en': 'results_en.html',
+        'fr': 'results_fr.html',
+        'tr': 'results_tr.html',
+        'ua': 'results_ua.html',
+        'bg': 'results_bg.html',
+    }
+
+    template_name = template_map.get(lang, 'results_en.html')
+
+    return render(request, template_name)
+
