@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 
-def video_view(request):
+def home_view(request):
     lang = request.GET.get('lang', 'ua')
 
     template_map = {

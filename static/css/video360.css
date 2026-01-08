@@ -31,9 +31,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
     margin: 0 auto;
-    padding: 0.6rem 1rem;
+    padding: 0.6rem 2rem;
 }
 
 .header__info {
@@ -59,14 +58,81 @@ header {
     max-height: 56px;
 }
 
-.header__title {
-    font-size: 20px;
-    margin: 0;
+.header__nav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.header__nav-list {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header__nav-link {
+  position: relative;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #555;
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.3s ease;
+}
+
+.header__nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background-color: #04a1c4;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.header__nav-link:hover,
+.header__nav-link:focus {
+  color: #04a1c4;
+  outline: none;
+}
+
+.header__nav-link:hover::after,
+.header__nav-link:focus::after {
+  opacity: 1;
+}
+
+.header__nav-link--active {
+  font-weight: 700;
+  color: #04a1c4;
+}
+
+.header__nav-link--active::after {
+  opacity: 1;
 }
 
 .header__lang {
     display: flex;
     justify-content: flex-end;
+    position: relative;
+    padding-left: 32px;
+}
+
+.header__lang::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 1.4px;
+  height: 24px;
+
+  background-color: #ccc;
 }
 
 .header__lang-list {
