@@ -30,10 +30,10 @@
     <nav class="header__nav">
       <ul class="header__nav-list">
         <li class="header__nav-item">
-          <a href="{% url 'website:video' %}?lang=en" class="header__nav-link">Home</a>
+          <a href="{% url 'website:about' %}?lang=en" class="header__nav-link header__nav-link--active">Home</a>
         </li>
         <li class="header__nav-item">
-          <a href="{% url 'website:about' %}?lang=en" class="header__nav-link header__nav-link--active">About</a>
+          <a href="{% url 'website:video' %}?lang=en" class="header__nav-link">VR experiences</a>
         </li>
         <li class="header__nav-item">
           <a href="{% url 'website:howitworks' %}?lang=en" class="header__nav-link">How it works</a>
@@ -62,102 +62,103 @@
 <main>
   <!-- About -->
   <section class="about">
-  <div class="about__container">
+    <div class="about__container">
 
-    <div class="about__block">
-      <h3 class="about__heading">What is InnerWorld?</h3>
-      <p class="about__text">
-        InnerWorld is an innovative project that uses Virtual Reality (VR) to support the emotional
-        well-being of young people affected by war, displacement, and prolonged stress. It offers
-        accessible, low-barrier emotional support for youth work, community settings, and education.
-      </p>
+      <div class="about__block">
+        <h3 class="about__heading">What is InnerWorld?</h3>
+        <p class="about__text">
+          InnerWorld is an innovative project that uses Virtual Reality (VR) to support the emotional
+          well-being of young people affected by war, displacement, and prolonged stress. It offers
+          accessible, low-barrier emotional support for youth work, community settings, and education.
+        </p>
 
-      <ul class="about__list">
-        <li>Calm the nervous system</li>
-        <li>Reduce stress and emotional overload</li>
-        <li>Improve focus and self-regulation</li>
-        <li>Feel safer and more grounded</li>
-      </ul>
-
-      <p class="about__note">
-        InnerWorld was developed within the Erasmus+ KA210 programme by teams from Türkiye, Bulgaria,
-        and France.
-      </p>
-
-      <p class="about__warning">
-        InnerWorld does not replace professional psychological support or therapy.
-      </p>
-    </div>
-
-    <div class="about__block about__block--highlight">
-      <h3 class="about__heading">What makes InnerWorld different?</h3>
-
-      <ul class="about__features">
-        <li>Trauma-informed by design</li>
-        <li>Engaging and non-stigmatizing for youth</li>
-        <li>Short VR sessions (3–6 minutes)</li>
-        <li>Culturally adaptable and easy to localize</li>
-        <li>Designed for organizations, not individuals</li>
-      </ul>
-    </div>
-
-    <div class="about__grid">
-      <div class="about__card">
-        <h3 class="about__heading">Young people (15–29)</h3>
         <ul class="about__list">
-          <li>Experiencing stress or anxiety</li>
-          <li>Difficulty concentrating or resting</li>
-          <li>Limited access to psychological support</li>
-          <li>Preference for practical, non-verbal tools</li>
+          <li>Calm the nervous system</li>
+          <li>Reduce stress and emotional overload</li>
+          <li>Improve focus and self-regulation</li>
+          <li>Feel safer and more grounded</li>
         </ul>
-        <p class="about__small">
-          No prior VR or meditation experience needed.
+
+        <p class="about__note">
+          InnerWorld was developed within the Erasmus+ KA210 programme by teams from Türkiye, Bulgaria,
+          and France.
+        </p>
+
+        <p class="about__warning">
+          InnerWorld does not replace professional psychological support or therapy.
         </p>
       </div>
 
-      <div class="about__card">
-        <h3 class="about__heading">Professionals</h3>
-        <ul class="about__list">
-          <li>Youth workers</li>
-          <li>Psychologists</li>
-          <li>Social workers</li>
-          <li>Educators & facilitators</li>
+       <div class="about__block">
+        <h3 class="about__heading">What makes InnerWorld different?</h3>
+
+        <ul class="about__features">
+          <li>Trauma-informed by design</li>
+          <li>Engaging and non-stigmatizing for youth</li>
+          <li>Short VR sessions (3–6 minutes)</li>
+          <li>Culturally adaptable and easy to localize</li>
+          <li>Designed for organizations, not individuals</li>
         </ul>
-        <p class="about__small">
-          Easy to facilitate without previous VR experience.
-        </p>
       </div>
 
-      <div class="about__card">
-        <h3 class="about__heading">Organizations</h3>
-        <ul class="about__list">
-          <li>NGOs and youth organizations</li>
-          <li>Community & cultural centers</li>
-          <li>Schools and learning hubs</li>
-          <li>Shelters and integration programs</li>
-        </ul>
-        <p class="about__small">
-          Includes guides, safety protocols, and materials.
+      <h1>Who is InnerWorld for?</h1>
+      <div class="about__grid">
+        <div class="about__card">
+          <h3 class="about__heading">Young people (15–29)</h3>
+          <ul class="about__list">
+            <li>Experiencing stress or anxiety</li>
+            <li>Difficulty concentrating or resting</li>
+            <li>Limited access to psychological support</li>
+            <li>Preference for practical, non-verbal tools</li>
+          </ul>
+          <p class="about__small">
+            No prior VR or meditation experience needed.
+          </p>
+        </div>
+
+        <div class="about__card">
+          <h3 class="about__heading">Professionals working with youth</h3>
+          <ul class="about__list">
+            <li>Youth workers</li>
+            <li>Psychologists</li>
+            <li>Social workers</li>
+            <li>Educators & facilitators</li>
+          </ul>
+          <p class="about__small">
+            Easy to facilitate without previous VR experience.
+          </p>
+        </div>
+
+        <div class="about__card">
+          <h3 class="about__heading">Organizations </h3>
+          <ul class="about__list">
+            <li>NGOs and youth organizations</li>
+            <li>Community & cultural centers</li>
+            <li>Schools and learning hubs</li>
+            <li>Shelters and integration programs</li>
+          </ul>
+          <p class="about__small">
+            Includes guides, safety protocols, and materials.
+          </p>
+        </div>
+      </div>
+
+      <div class="about__block">
+        <h3 class="about__heading">Why VR for psychosocial support?</h3>
+        <p class="about__text">
+          Virtual Reality creates a sense of presence — the feeling of “being there”. This makes it
+          especially effective for emotional regulation and stress reduction.
         </p>
+
+        <ul class="about__list">
+          <li>Disconnect from external stressors</li>
+          <li>Focus attention more easily</li>
+          <li>Engage senses in calming environments</li>
+          <li>Practice grounding and breathing techniques</li>
+        </ul>
       </div>
     </div>
-
-    <div class="about__block">
-      <h3 class="about__heading">Why VR for psychosocial support?</h3>
-      <p class="about__text">
-        Virtual Reality creates a sense of presence — the feeling of “being there”. This makes it
-        especially effective for emotional regulation and stress reduction.
-      </p>
-
-      <ul class="about__list">
-        <li>Disconnect from external stressors</li>
-        <li>Focus attention more easily</li>
-        <li>Engage senses in calming environments</li>
-        <li>Practice grounding and breathing techniques</li>
-      </ul>
-    </div>
-  </div>
-</section>
+  </section>
 
   <!-- Partners -->
   <section class="partners">

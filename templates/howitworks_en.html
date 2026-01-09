@@ -30,13 +30,14 @@
     <nav class="header__nav">
       <ul class="header__nav-list">
         <li class="header__nav-item">
-          <a href="{% url 'website:video' %}?lang=en" class="header__nav-link">Home</a>
+          <a href="{% url 'website:about' %}?lang=en" class="header__nav-link">Home</a>
         </li>
         <li class="header__nav-item">
-          <a href="{% url 'website:about' %}?lang=en" class="header__nav-link">About</a>
+          <a href="{% url 'website:video' %}?lang=en" class="header__nav-link">VR experiences</a>
         </li>
         <li class="header__nav-item">
-          <a href="{% url 'website:howitworks' %}?lang=en" class="header__nav-link header__nav-link--active">How it works</a>
+          <a href="{% url 'website:howitworks' %}?lang=en" class="header__nav-link header__nav-link--active">How it
+            works</a>
         </li>
         <li class="header__nav-item">
           <a href="{% url 'website:guides' %}?lang=en" class="header__nav-link">Guides</a>
@@ -60,8 +61,118 @@
 
 <!-- Main Content -->
 <main>
-  <!-- All the staff here -->
-  <h1>How it works</h1>
+  <!-- How it works -->
+  <section class="how">
+    <div class="how__container">
+      <div>
+        <h2 class="how__title">How It Works</h2>
+        <p class="how__subtitle">
+          A simple, safe, and guided VR experience — step by step
+        </p>
+      </div>
+      <div class="how__intro">
+        <p>
+          InnerWorld is designed to be easy to use, even with no prior experience
+          in VR or mental health tools. The experience is short, gentle, and fully optional.
+        </p>
+      </div>
+
+      <div class="how__block">
+        <h3 class="how__heading">What is the InnerWorld VR experience?</h3>
+        <p class="how__text">
+          A brief immersive session (3–6 minutes) inside Virtual Reality that guides you through:
+        </p>
+
+        <ul class="how__list">
+          <li>Breathing exercises</li>
+          <li>Grounding techniques</li>
+          <li>Body awareness</li>
+          <li>Calming visual environments</li>
+        </ul>
+
+        <p class="how__text">
+          There is no performance, no “right way”, and no pressure to talk.
+        </p>
+      </div>
+
+      <div class="how__block how__block--compact">
+        <h3 class="how__heading">What it is not</h3>
+        <ul class="how__list how__list--inline">
+          <li>Not therapy</li>
+          <li>Not a game</li>
+          <li>Not a replacement for professional support</li>
+        </ul>
+      </div>
+
+      <div class="how__steps">
+        <h3 class="how__heading">What happens during a session?</h3>
+
+        <ol class="how__steps-list">
+          <li>
+            <strong>Before:</strong> Sit comfortably, remove distractions, check in with yourself.
+          </li>
+          <li>
+            <strong>Entering VR:</strong> A calm environment, slow guidance, freedom to engage or rest.
+          </li>
+          <li>
+            <strong>VR session:</strong> 3–6 minutes of breathing, grounding, or body awareness.
+          </li>
+          <li>
+            <strong>After:</strong> Grounding and optional reflection or sharing.
+          </li>
+        </ol>
+      </div>
+
+      <div class="how__block">
+        <h3 class="how__heading">How long does it take?</h3>
+        <ul class="how__list">
+          <li>3–6 minutes — VR experience</li>
+          <li>5–10 minutes — preparation & grounding</li>
+          <li>Optional — short reflection</li>
+        </ul>
+
+        <p class="how__text">
+          Total time: around <strong>10–20 minutes</strong>.
+        </p>
+      </div>
+
+      <div class="how__block">
+        <h3 class="how__heading">Is InnerWorld safe?</h3>
+        <p class="how__text">
+          Safety is built into every step: preparation, short sessions, clear stop rules,
+          and facilitator protocols.
+        </p>
+      </div>
+
+      <div class="how__faq">
+        <h3 class="how__heading">FAQs — Before You Start</h3>
+
+        <div class="faq-item">
+          <button class="faq-item__question">Can I stop at any time?</button>
+          <div class="faq-item__answer">
+            Yes. You can stop the experience at any moment. You stay in control at all times.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__question">What if I feel emotional or dizzy?</button>
+          <div class="faq-item__answer">
+            Emotional reactions or mild dizziness can happen and are usually temporary.
+            You can pause, stop, or ask for support at any time.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__question">Is InnerWorld therapy?</button>
+          <div class="faq-item__answer">
+            No. InnerWorld is a psychosocial support tool and does not replace therapy.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
 
   <!-- Footer -->
   <footer class="footer">
