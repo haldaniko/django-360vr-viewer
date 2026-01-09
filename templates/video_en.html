@@ -59,40 +59,6 @@
 
 <!-- Main Content -->
 <main>
-
-  <!-- Instructions -->
-  <section class="about">
-    <h2 class="about__title">VRPS Instructions</h2>
-    <div class="about__description">
-      <p>The InnerWorld project developed accessible, youth‑friendly mental-health support methods. These five short VR
-        videos are simple, skills‑based tools you can use on your own to support your mental health. They are not
-        therapy or clinical treatment. If you are in crisis, think you might harm yourself or someone else, or your
-        symptoms worsen, contact local emergency services or a qualified mental health professional.<br><br>
-
-        Choose a safe, comfortable place where you can sit or lie down. If you feel dizzy, nauseous,
-        numb, or disconnected at any point, stop the video, open your eyes, look around the room, and
-        switch to the grounding exercise below. If you are using headphones or a VR headset, remove
-        them immediately if you feel unwell. If you have a respiratory or cardiac condition, are pregnant,
-        or find breath‑holding uncomfortable, shorten the counts or skip breath‑hold steps.
-      </p>
-
-      <div class="about__cards">
-        <a href="{% static 'docs/VR videos guide for direct users.pdf' %}" target="_blank">
-          <div class="about__card">
-            📄 Guide for direct users.pdf
-          </div>
-        </a>
-
-        <a href="{% static 'docs/VR videos guide for professionals.pdf' %}" target="_blank">
-          <div class="about__card">
-            📄 Guide for professionals.pdf
-          </div>
-        </a>
-
-      </div>
-    </div>
-  </section>
-
   <!-- Video -->
   <section class="video">
     <div class="video__container">
@@ -148,6 +114,136 @@
 
         <div class="video__play-button" id="playButton" aria-label="Play"></div>
       </div>
+    </div>
+  </section>
+
+  <!-- Sections -->
+  <section class="practices">
+    <div class="practices__container">
+      <div class="practices__grid">
+
+        <article class="practice-card">
+          <h3 class="practice-card__title">Triangle Breathing</h3>
+          <p class="practice-card__intro">For calming your body and slowing down.</p>
+
+          <p class="practice-card__label">Use this when:</p>
+          <p class="practice-card__text">You feel stressed, rushed, or tense.</p>
+
+          <p class="practice-card__label">What it does:</p>
+          <ul class="practice-card__list">
+            <li>Slows your breathing</li>
+            <li>Helps your body relax</li>
+            <li>Reduces stress reactions</li>
+          </ul>
+
+          <p class="practice-card__note">
+            Breathe gently. If you feel light-headed, stop and switch to grounding.
+          </p>
+        </article>
+
+        <article class="practice-card">
+          <h3 class="practice-card__title">Square Breathing</h3>
+          <p class="practice-card__intro">For focus, balance, and steady attention.</p>
+
+          <p class="practice-card__label">Use this when:</p>
+          <p class="practice-card__text">You need to concentrate or feel anxious.</p>
+
+          <p class="practice-card__label">What it does:</p>
+          <ul class="practice-card__list">
+            <li>Brings rhythm to your breathing</li>
+            <li>Helps steady your thoughts</li>
+            <li>Supports focus</li>
+          </ul>
+
+          <p class="practice-card__note">
+            Comfort matters more than precision. You can shorten or skip breath holds.
+          </p>
+        </article>
+
+        <article class="practice-card">
+          <h3 class="practice-card__title">Body Scan</h3>
+          <p class="practice-card__intro">For releasing tension and relaxing deeply.</p>
+
+          <p class="practice-card__label">Use this when:</p>
+          <p class="practice-card__text">Your body feels tight or restless.</p>
+
+          <p class="practice-card__label">What it does:</p>
+          <ul class="practice-card__list">
+            <li>Helps you notice your body safely</li>
+            <li>Supports relaxation and rest</li>
+            <li>Can improve sleep</li>
+          </ul>
+
+          <p class="practice-card__note">
+            If discomfort appears, open your eyes or switch to grounding.
+          </p>
+        </article>
+
+        <article class="practice-card practice-card--caution">
+          <h3 class="practice-card__title">Cinema (Worries as a Movie)</h3>
+          <p class="practice-card__intro">For stepping back from worrying thoughts.</p>
+
+          <p class="practice-card__label">Use this when:</p>
+          <p class="practice-card__text">Worries are looping in your mind.</p>
+
+          <p class="practice-card__label">What it does:</p>
+          <ul class="practice-card__list">
+            <li>Creates distance from thoughts</li>
+            <li>Reduces emotional intensity</li>
+            <li>Supports mental clarity</li>
+          </ul>
+
+          <p class="practice-card__warning">
+            Keep this exercise short. Avoid if worries feel overwhelming or traumatic.
+          </p>
+        </article>
+
+        <article class="practice-card practice-card--safe">
+          <h3 class="practice-card__title">Grounding Exercise</h3>
+          <p class="practice-card__intro">For feeling present and stable again.</p>
+
+          <p class="practice-card__label">Use this when:</p>
+          <p class="practice-card__text">
+            You feel overwhelmed, disconnected, or spaced out.
+          </p>
+
+          <p class="practice-card__label">What it does:</p>
+          <ul class="practice-card__list">
+            <li>Reconnects you with the present moment</li>
+            <li>Helps you feel safe in your body</li>
+            <li>Reduces emotional overload</li>
+          </ul>
+
+          <p class="practice-card__note">
+            This is the safest exercise. You can return to grounding at any time.
+          </p>
+        </article>
+
+      </div>
+
+      <div class="practices__guide">
+        <h3 class="practices__guide-title">Which exercise should I choose?</h3>
+
+        <ul class="practices__guide-list">
+          <li><strong>Anxious or stressed?</strong> Triangle or Square Breathing</li>
+          <li><strong>Thoughts won’t stop?</strong> Cinema → or Grounding if intense</li>
+          <li><strong>Disconnected or overwhelmed?</strong> Grounding (best choice)</li>
+          <li><strong>Body feels tense?</strong> Body Scan</li>
+          <li><strong>Want to relax or sleep?</strong> Body Scan or Triangle Breathing</li>
+        </ul>
+
+        <p class="practices__guide-note">
+          Still unsure? Choose Grounding — it’s the simplest and safest option.
+        </p>
+      </div>
+
+      <div class="practices__safety">
+        <p>
+          You can stop any exercise at any time. If you feel dizzy or distressed,
+          pause, remove the headset, and ground yourself.
+        </p>
+      </div>
+
     </div>
   </section>
 
@@ -228,7 +324,9 @@
       <hr class="footer__divider">
       <p class="footer__copy">
         InnerWorld: Virtual Reality for Psychosocial Support<br>
-        <p>Funded by the European Union. The views and opinions expressed herein are those of the author(s) alone and do not necessarily reflect the position of the European Union or the Education and Culture Executive Agency (EACEA).<br>Neither the European Union nor the EACEA can be held responsible for them.
+      <p>Funded by the European Union. The views and opinions expressed herein are those of the author(s) alone and do
+        not necessarily reflect the position of the European Union or the Education and Culture Executive Agency
+        (EACEA).<br>Neither the European Union nor the EACEA can be held responsible for them.
         2023-3-TR01-KA210-YOU-000181712<br>
         © 2025 All rights reserved.
       </p>

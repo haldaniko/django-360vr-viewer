@@ -267,23 +267,129 @@ header {
 
 /* region About styles */
 .about {
-    padding: 0 20px;
-    text-align: center;
+  padding: 20px 0 0 0;
+  background-color: #fff;
+}
+
+.about__container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.about__header {
+  text-align: center;
+  margin-bottom: 56px;
 }
 
 .about__title {
-    font-size: 2.25rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
+  font-size: 40px;
+  margin-bottom: 12px;
 }
 
-.about__description {
-    max-width: 1100px;
-    margin: 0 auto;
-    font-size: 1.125rem;
-    line-height: 1.6;
-    color: #555;
+.about__subtitle {
+  font-size: 18px;
+  color: #555;
 }
+
+.about__block {
+  margin-bottom: 48px;
+}
+
+.about__block--highlight {
+  background-color: #ffffff;
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+}
+
+.about__heading {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.about__text {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.about__list,
+.about__features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px 0;
+}
+
+.about__list li,
+.about__features li {
+  padding-left: 20px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.about__list li::before,
+.about__features li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #04a1c4;
+  font-weight: bold;
+}
+
+.about__note {
+  font-size: 14px;
+  color: #666;
+}
+
+.about__warning {
+  margin-top: 16px;
+  padding: 12px 16px;
+  background-color: #fff4f4;
+  color: #a94442;
+  border-left: 4px solid #e04b4b;
+  font-size: 14px;
+}
+
+.about__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.about__grid .about__card {
+  background-color: #ffffff;
+  padding: 28px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+}
+
+.about__small {
+  font-size: 14px;
+  color: #666;
+}
+
+.about__cta {
+  text-align: center;
+  margin-top: 56px;
+}
+
+.about__button {
+  display: inline-block;
+  padding: 14px 32px;
+  background-color: #04a1c4;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 999px;
+  transition: background-color 0.3s ease;
+}
+
+.about__button:hover {
+  background-color: #0389a8;
+}
+
 
 /* Cards */
 .about__cards {
@@ -294,18 +400,9 @@ header {
     flex-wrap: wrap;
 }
 
-.about__card {
-    background: #f9f9f9;
-    padding: 20px 25px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    font-size: 1.125rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
 
-.about__card:hover {
+
+.about__partnercard:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
@@ -337,7 +434,7 @@ header {
 
 /* region Partners styles */
 .partners {
-    padding: 20px 20px 100px;
+    padding: 10px 20px 100px;
     background-color: #f9fafc;
 }
 
@@ -415,6 +512,135 @@ header {
 /* endregion */
 
 /* region Video styles */
+/* Practices */
+.practices {
+  padding: 48px 0;
+  background-color: #ffffff;
+}
+
+.practices__container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 12px;
+}
+
+.practices__title {
+  font-size: 32px;
+  margin-bottom: 6px;
+}
+
+.practices__subtitle {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 32px;
+}
+
+.practices__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.practice-card {
+  background-color: #f8fafc;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+}
+
+.practice-card__title {
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+.practice-card__intro {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.practice-card__label {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.practice-card__text {
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+.practice-card__list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 8px 0;
+}
+
+.practice-card__list li {
+  padding-left: 14px;
+  position: relative;
+  margin-bottom: 4px;
+  font-size: 13px;
+}
+
+.practice-card__list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #04a1c4;
+}
+
+.practice-card__note,
+.practice-card__warning {
+  font-size: 12px;
+  color: #666;
+  margin-top: 4px;
+}
+
+.practices__guide {
+  background-color: #f8fafc;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+}
+
+.practices__guide-title {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.practices__guide-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.practices__guide-list li {
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+.practices__guide-note {
+  margin-top: 8px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.practices__safety {
+  text-align: center;
+  font-size: 12px;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .practices__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* Videos */
 .video {
     padding: 4rem 1rem;
     background-color: #fff;
