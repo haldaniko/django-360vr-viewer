@@ -37,7 +37,7 @@ header {
 
 .header__info {
     display: flex;
-    gap: 15px;
+    gap: 6px;
     align-items: flex-end;
 }
 
