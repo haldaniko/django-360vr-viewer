@@ -26,6 +26,25 @@
         <img class="header__erasmus" alt="eu-log" src="{% static 'img/eu-logo-tr.jpg' %}">
       </div>
     </a>
+        <nav class="header__nav">
+      <ul class="header__nav-list">
+        <li class="header__nav-item">
+          <a href="{% url 'website:about' %}?lang=tr" class="header__nav-link header__nav-link--active">Ana Sayfa</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="{% url 'website:video' %}?lang=tr" class="header__nav-link">VR</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="{% url 'website:howitworks' %}?lang=tr" class="header__nav-link">Nasıl Çalışır</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="{% url 'website:guides' %}?lang=tr" class="header__nav-link">Rehberler</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="{% url 'website:results' %}?lang=tr" class="header__nav-link">Sonuçlar</a>
+        </li>
+      </ul>
+    </nav>
     <nav class="header__lang">
       <ul class="header__lang-list">
         <li class="header__lang-item"><a href="?lang=en" class="header__lang-link">EN</a></li>
