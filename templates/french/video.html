@@ -26,6 +26,25 @@
         <img class="header__erasmus" alt="eu-log" src="{% static 'img/eu-logo-fr.jpg' %}">
       </div>
     </a>
+    <nav class="header__nav">
+      <ul class="header__nav-list">
+        <li class="header__nav-item">
+          <a href="{% url 'website:about' %}?lang=fr" class="header__nav-link">Maison</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="{% url 'website:video' %}?lang=fr" class="header__nav-link header__nav-link--active">VR</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="{% url 'website:howitworks' %}?lang=fr" class="header__nav-link">Comment ça marche</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="{% url 'website:guides' %}?lang=fr" class="header__nav-link">Guides</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="{% url 'website:results' %}?lang=fr" class="header__nav-link">Résultats</a>
+        </li>
+      </ul>
+    </nav>
     <nav class="header__lang">
       <ul class="header__lang-list">
         <li class="header__lang-item"><a href="?lang=en" class="header__lang-link">EN</a></li>
@@ -210,9 +229,12 @@
       <hr class="footer__divider">
       <p class="footer__copy">
         InnerWorld: Virtual Reality for Psychosocial Support
-        <p>Financé par l’Union européenne. Les points de vue et avis exprimés n’engagent toutefois que leur(s) auteur(s) et ne reflètent pas nécessairement ceux de l’Union européenne ou de l’Agence<br> exécutive européenne pour l’éducation et la culture (EACEA). Ni l’Union européenne ni l’EACEA ne sauraient en être tenues pour responsables.</p>
-        2023-3-TR01-KA210-YOU-000181712<br>
-        © 2025 Tous droits réservés.
+      <p>Financé par l’Union européenne. Les points de vue et avis exprimés n’engagent toutefois que leur(s) auteur(s)
+        et ne reflètent pas nécessairement ceux de l’Union européenne ou de l’Agence<br> exécutive européenne pour
+        l’éducation et la culture (EACEA). Ni l’Union européenne ni l’EACEA ne sauraient en être tenues pour
+        responsables.</p>
+      2023-3-TR01-KA210-YOU-000181712<br>
+      © 2025 Tous droits réservés.
       </p>
     </div>
   </footer>
