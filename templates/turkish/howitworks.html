@@ -1,0 +1,357 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inner World</title>
+  <link rel="icon" type="image/x-icon" href="{% static 'img/favicon.ico' %}">
+  <link rel="stylesheet" href="{% static 'css/video360.css' %}">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+  <script src="https://cdn.dashjs.org/latest/dash.all.min.js"></script>
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+  <div class="header__container">
+    <a href="{% url 'website:about' %}?lang=tr">
+      <div class="header__info">
+        <img class="header__logo" alt="logo" src="{% static 'img/logo-tr2.png' %}">
+        <img class="header__tua-logo" alt="tua-logo" src="{% static 'img/tua-logo.png' %}">
+        <img class="header__yazisiz-logo" alt="yazisiz-logo" src="{% static 'img/yazisiz-logo.jpg' %}">
+        <img class="header__erasmus" alt="eu-log" src="{% static 'img/eu-logo-tr.jpg' %}">
+      </div>
+    </a>
+    <nav class="header__nav">
+      <ul class="header__nav-list">
+        <li class="header__nav-item">
+          <a href="{% url 'website:about' %}?lang=tr" class="header__nav-link">Ana Sayfa</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="{% url 'website:video' %}?lang=tr" class="header__nav-link">VR</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="{% url 'website:howitworks' %}?lang=tr" class="header__nav-link header__nav-link--active">Nasıl
+            Çalışır</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="{% url 'website:guides' %}?lang=tr" class="header__nav-link">Rehberler</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="{% url 'website:results' %}?lang=tr" class="header__nav-link">Sonuçlar</a>
+        </li>
+      </ul>
+    </nav>
+    <nav class="header__lang">
+      <ul class="header__lang-list">
+        <li class="header__lang-item"><a href="?lang=en" class="header__lang-link">EN</a></li>
+        <li class="header__lang-item"><a href="?lang=tr" class="header__lang-link--active">TR</a></li>
+        <li class="header__lang-item"><a href="?lang=fr" class="header__lang-link">FR</a></li>
+        <li class="header__lang-item"><a href="?lang=ua" class="header__lang-link">UA</a></li>
+        <li class="header__lang-item"><a href="?lang=bg" class="header__lang-link">BG</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- Main Content -->
+<main>
+  <!-- Nasıl Çalışır -->
+  <section class="how">
+    <div class="how__container">
+      <div>
+        <h2 class="how__title">Nasıl Çalışır</h2>
+        <p class="how__subtitle">
+          Basit, güvenli ve rehberli bir VR deneyimi — adım adım
+        </p>
+      </div>
+      <div class="how__intro">
+        <p>
+          InnerWorld, VR veya ruh sağlığı araçlarında önceden deneyiminiz olmasa bile kolay kullanılacak şekilde
+          tasarlanmıştır. Deneyim kısa, nazik ve tamamen isteğe bağlıdır.
+        </p>
+      </div>
+      <div class="how__row">
+        <div class="how__block">
+          <h3 class="how__heading">InnerWorld VR deneyimi nedir?</h3>
+          <p class="how__text">
+            Sanal Gerçeklik içinde kısa bir immersif oturum (3–6 dakika) ve sizi şu konularda yönlendirir:
+          </p>
+
+          <ul class="how__list">
+            <li>Nefes egzersizleri</li>
+            <li>Grounding teknikleri</li>
+            <li>Vücut farkındalığı</li>
+            <li>Sakinleştirici görsel ortamlar</li>
+          </ul>
+
+          <p class="how__text">
+            Performans, “doğru yol” veya konuşma zorunluluğu yoktur.
+          </p>
+        </div>
+
+        <div class="how__block how__block--compact">
+          <h3 class="how__heading">Ne değildir?</h3>
+          <ul class="how__list">
+            <li>Terapi değildir</li>
+            <li>Oyun değildir</li>
+            <li>Profesyonel desteğin yerine geçmez</li>
+          </ul>
+        </div>
+      </div>
+      <div class="how__steps">
+        <h3 class="how__heading">Bir oturum sırasında ne olur?</h3>
+
+        <ol class="how__steps-list">
+          <li>
+            <strong>Öncesi:</strong> Rahat oturun, dikkat dağıtıcıları kaldırın, kendinizi kontrol edin.
+          </li>
+          <li>
+            <strong>VR’e giriş:</strong> Sakin bir ortam, yavaş rehberlik, katılım veya dinlenme özgürlüğü.
+          </li>
+          <li>
+            <strong>VR oturumu:</strong> 3–6 dakika nefes, grounding veya vücut farkındalığı.
+          </li>
+          <li>
+            <strong>Sonrası:</strong> Grounding ve isteğe bağlı refleksiyon veya paylaşım.
+          </li>
+        </ol>
+      </div>
+
+      <div class="how__block">
+        <h3 class="how__heading">Ne kadar sürer?</h3>
+        <ul class="how__list">
+          <li>3–6 dakika — VR deneyimi</li>
+          <li>5–10 dakika — hazırlık & grounding</li>
+          <li>İsteğe bağlı — kısa refleksiyon</li>
+        </ul>
+
+        <p class="how__text">
+          Toplam süre: yaklaşık <strong>10–20 dakika</strong>.
+        </p>
+        <h3 class="how__heading">InnerWorld güvenli mi?</h3>
+        <p class="how__text">
+          Güvenlik her adımda sağlanır: hazırlık, kısa oturumlar, net durdurma kuralları ve kolaylaştırıcı protokolleri.
+        </p>
+        <h3 class="how__heading">Kullanıcılar genellikle ne hisseder?</h3>
+        <p class="how__text">
+          Çoğu katılımcı daha sakin, odaklanmış, daha az bunalmış ve bedenine daha bağlı hisseder. Başlangıçta hafif baş
+          dönmesi (genellikle geçici), derin gevşemeden sonra duygusal rahatlama ve yorgunluk hissedebilir. Bunların
+          tümü normaldir ve projenin güvenlik yaklaşımı ile izlenir.
+        </p>
+        <h3 class="how__heading">Kimler InnerWorld kullanabilir?</h3>
+        <p class="how__text">
+          InnerWorld şu şekilde tasarlanmıştır:
+        </p>
+        <ul class="how__list">
+          <li>Kuruluşlar kolayca uygulayabilir</li>
+          <li>Kolaylaştırıcılar hızlı öğrenebilir</li>
+          <li>Kullanıcılar ilk oturumdan itibaren güvende hissedebilir</li>
+        </ul>
+      </div>
+
+      <div class="how__faq">
+        <h3 class="how__heading">Sıkça Sorulan Sorular — Başlamadan Önce</h3>
+        <div class="faq-item">
+          <button class="faq-item__question">Her zaman durabilir miyim?</button>
+          <div class="faq-item__answer">
+            Evet. Deneyimi istediğiniz an durdurabilirsiniz. Her zaman kontrol sizdedir.
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-item__question">InnerWorld tek başına mı yoksa bir kolaylaştırıcı ile mi kullanılabilir?
+          </button>
+          <div class="faq-item__answer">
+            Evet, InnerWorld hem tek başına hem de kolaylaştırıcı ile kullanılabilir. Genellikle bir kolaylaştırıcı ile
+            kullanılır; deneyimi tanıtır, duygusal güvenliği sağlar ve oturum sonrası isteğe bağlı destek sunar. Klinik
+            geçmiş gerekmez, net rehberlik sağlanır.
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-item__question">Duygusal hissedersem ne olacak?</button>
+          <div class="faq-item__answer">
+            Bu tamamen normaldir. Bazı insanlar duygusal rahatlama, sakinlik veya hafifleme, beklenmedik anılar veya
+            hisler yaşayabilir. InnerWorld deneyimleri nazik ve kısadır; duygusal tepkiler normal ve geçicidir.
+            Gerekirse bir kolaylaştırıcı destek sağlayabilir ve paylaşım her zaman isteğe bağlıdır.
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-item__question">Baş dönmesi veya rahatsızlık hissedersem?</button>
+          <div class="faq-item__answer">
+            Hemen duraklatabilir veya durdurabilirsiniz. VR oturumları rahatsızlığı azaltmak için kısadır ve çoğu kişi
+            hızlıca uyum sağlar. Herhangi bir sorun hissederseniz, başlığı çıkarın ve mola verin.
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-item__question">VR veya meditasyon deneyimi gerekli mi?</button>
+          <div class="faq-item__answer">
+            Önce deneyim gerekmez. InnerWorld, ilk kez kullanıcılar için tasarlanmıştır. Her şey adım adım rehberlidir
+            ve kendi hızınızda takip edebilirsiniz.
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-item__question">InnerWorld terapi mi?</button>
+          <div class="faq-item__answer">
+            Hayır. InnerWorld bir psiko-sosyal destek aracıdır, terapi değildir. Duygusal düzenlemeyi destekleyebilir
+            ama profesyonel ruh sağlığı tedavisinin yerine geçmez.
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-item__question">Sonrasında konuşmam gerekiyor mu?</button>
+          <div class="faq-item__answer">
+            Hayır. Refleksiyon veya paylaşım her zaman isteğe bağlıdır. Konuşabilir, sessiz kalabilir veya sadece
+            dinlenebilirsiniz — size uygun olanı seçin.
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-item__question">InnerWorld güvenli mi?</button>
+          <div class="faq-item__answer">
+            Evet, rehberlik ile kullanıldığında. Güvenlik protokolleri, hazırlık adımları ve net durdurma kuralları her
+            oturumun parçasıdır. InnerWorld herkes için uygun olmayabilir; bu nedenle tarama önerilir.
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-item__question">Kaç oturum yapabilirim?</button>
+          <div class="faq-item__answer">
+            Sabit bir sayı yoktur. Bazı kişiler InnerWorld’ü bir kez kullanır, bazıları düzenli olarak geri döner.
+            Deneyim esnektir ve kullanıcı odaklıdır.
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-item__question">Gizlilik ve veri durumu nedir?</button>
+          <div class="faq-item__answer">
+            Gizliliğiniz korunur. InnerWorld, VR oturumları sırasında ses, video veya kişisel veri kaydetmez. Tüm
+            değerlendirmeler anonim ve etik olarak yapılır.
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-item__question">Hâlâ emin değil misiniz?</button>
+          <div class="faq-item__answer">
+            Bu normaldir. InnerWorld isteğe bağlı, nazik ve kişisel sınırları gözeten şekilde tasarlanmıştır. Her zaman
+            kontrol sizdedir.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__container">
+      <div class="footer__column">
+        <h3 class="footer__title">ABU İletişim</h3>
+        <p class="footer__text">E-posta: info@ankarabilim.edu.tr</p>
+        <p class="footer__text">Telefon: +90 552 899 84 11</p>
+        <p class="footer__text">Web sitesi:
+          <a class="footer__link" target="_blank" href="https://ankarabilim.edu.tr/en/index">
+            ankarabilim.edu.tr
+          </a>
+        </p>
+
+      </div>
+      <div class="footer__column">
+        <h3 class="footer__title">FSCOD İletişim</h3>
+        <p class="footer__text">E-posta: contact@opendoors.center</p>
+        <p class="footer__text">Telefon: +359 884 013 786</p>
+        <p class="footer__text">Web sitesi:
+          <a class="footer__link" target="_blank" href="https://opendoors.center/">
+            opendoors.center
+          </a>
+        </p>
+
+      </div>
+      <div class="footer__column">
+        <h3 class="footer__title">URC İletişim</h3>
+        <p class="footer__text">E-posta: olena.vyshnev@gmail.com</p>
+        <p class="footer__text">Telefon: +33 065 245 56 39</p>
+        <p class="footer__text">Instagram:
+          <a class="footer__link" target="_blank" href="https://www.instagram.com/ukrrcenter/">
+            @ukrrcenter
+          </a>
+        </p>
+
+      </div>
+      <div class="footer__column">
+        <h3 class="footer__title">Kılavuzlar & Belgeler</h3>
+        <p class="footer__text">
+          <a href="{% static 'docs/VR videos guide for direct users.pdf' %}" target="_blank">
+            📄 Guide for direct users.pdf
+          </a>
+        </p>
+        <p class="footer__text">
+          <a href="{% static 'docs/VR videos guide for professionals.pdf' %}" target="_blank">
+            📄 Guide for professionals.pdf
+          </a>
+        </p>
+        <p class="footer__text">
+          <a href="{% static 'docs/Who-5Turkish.pdf' %}" target="_blank">
+            📄 Who-5Turkish.pdf
+          </a>
+        </p>
+      </div>
+      <div class="footer__column">
+        <h3 class="footer__title">Yönetmelikler</h3>
+        <p class="footer__text">
+          <a href="{% static 'docs/Privacy Policy.pdf' %}" target="_blank">
+            📄 Privacy Policy.pdf
+          </a>
+        </p>
+        <p class="footer__text">
+          <a href="{% static 'docs/Terms of Use.pdf' %}" target="_blank">
+            📄 Terms of Use.pdf
+          </a>
+        </p>
+        <p class="footer__text">
+          <a href="{% static 'docs/Incident Report template.docx' %}" target="_blank">
+            📄 Incident Report template.docx
+          </a>
+        </p>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <hr class="footer__divider">
+      <p class="footer__copy">
+        InnerWorld: Virtual Reality for Psychosocial Support
+      <p>Erasmus+ / Avrupa Dayanışma Programı kapsamında Avrupa Komisyonu tarafından desteklenmektedir.<br>Burada yer
+        alan içerik yazarın görüşlerini yansıtmaktadır ve bu görüşlerden Avrupa Komisyonu ve Türkiye Ulusal Ajansı
+        sorumlu tutulamaz.</p>
+      2023-3-TR01-KA210-YOU-000181712<br>
+      © 2025 Tüm hakları saklıdır.
+    </div>
+  </footer>
+
+</main>
+
+</body>
+
+<script>
+    document.querySelectorAll('.faq-item__question').forEach(button => {
+        button.addEventListener('click', () => {
+            const item = button.parentElement
+            const answer = item.querySelector('.faq-item__answer')
+            const isOpen = item.classList.contains('active')
+
+            if (isOpen) {
+                answer.style.height = answer.scrollHeight + 'px'
+                requestAnimationFrame(() => {
+                    answer.style.height = '0'
+                })
+                item.classList.remove('active')
+            } else {
+                item.classList.add('active')
+                answer.style.height = answer.scrollHeight + 'px'
+
+                answer.addEventListener('transitionend', function handler() {
+                    answer.style.height = 'auto'
+                    answer.removeEventListener('transitionend', handler)
+                })
+            }
+        })
+    })
+
+</script>
+</html>
