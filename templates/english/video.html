@@ -31,7 +31,8 @@
           <a href="{% url 'website:about' %}?lang=en" class="header__nav-link">Home</a>
         </li>
         <li class="header__nav-item">
-          <a href="{% url 'website:video' %}?lang=en" class="header__nav-link header__nav-link--active">VR experiences</a>
+          <a href="{% url 'website:video' %}?lang=en" class="header__nav-link header__nav-link--active">VR
+            experiences</a>
         </li>
         <li class="header__nav-item">
           <a href="{% url 'website:howitworks' %}?lang=en" class="header__nav-link">How it works</a>
@@ -58,6 +59,31 @@
 
 <!-- Main Content -->
 <main>
+  <!-- VRPS text -->
+  <section class="vrps">
+    <div class="vrps__container">
+      <h2 class="vrps__title">Inner World VR Experiences</h2>
+
+      <p class="vrps__text">
+        The InnerWorld project has developed accessible, youth-friendly mental health support methods.
+        These five short VR videos are simple, skill-based tools you can use on your own to support your
+        mental wellbeing. They are not therapy or clinical treatment. If you are in crisis, believe you
+        may harm yourself or someone else, or your symptoms are getting worse, please contact your local
+        emergency services or a qualified mental health professional.
+      </p>
+
+      <p class="vrps__text">
+        Choose a safe, comfortable place where you can sit or lie down. If you feel dizzy, nauseous,
+        numb, or disconnected at any time, stop the video, open your eyes, look around the room, and
+        switch to the grounding exercise below. If you are using headphones or a VR headset, remove them
+        immediately if you feel unwell. If you have a respiratory or heart condition, are pregnant, or
+        feel uncomfortable holding your breath, reduce the number of counts or skip the breath-holding
+        steps.
+      </p>
+    </div>
+  </section>
+
+
   <!-- Video -->
   <section class="video">
     <div class="video__container">

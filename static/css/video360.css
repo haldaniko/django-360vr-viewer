@@ -303,7 +303,6 @@ header {
 }
 
 .about__heading {
-    font-size: 24px;
     margin-bottom: 16px;
 }
 
@@ -511,91 +510,128 @@ header {
 
 /* region Guides styles */
 .guides {
-  padding: 48px 0;
-  background: linear-gradient(180deg, #f8fafc 0%, #f3f7fb 100%);
+    padding: 48px 0;
+    background: linear-gradient(180deg, #f8fafc 0%, #f3f7fb 100%);
 }
 
 .guides__title {
-  text-align: center;
-  font-size: 34px;
-  margin-bottom: 32px;
-  letter-spacing: -0.4px;
+    text-align: center;
+    font-size: 34px;
+    margin-bottom: 32px;
+    letter-spacing: -0.4px;
 }
 
 .guides__grid {
-  max-width: 1380px;
-  margin: 0 auto;
-  padding: 0 20px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+    max-width: 1380px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
 }
 
 .guide-card {
-  background: #ffffff;
-  border-radius: 14px;
-  padding: 24px 26px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
-  border: 1px solid rgba(4, 161, 196, 0.08);
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 24px 26px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(4, 161, 196, 0.08);
 }
 
 .guide-card h3 {
-  font-size: 22px;
-  margin-bottom: 4px;
-  letter-spacing: -0.3px;
+    font-size: 22px;
+    margin-bottom: 4px;
+    letter-spacing: -0.3px;
 }
 
 .guide-card .subtitle {
-  font-size: 14px;
-  color: #04a1c4;
-  margin-bottom: 10px;
+    font-size: 14px;
+    color: #04a1c4;
+    margin-bottom: 10px;
 }
 
 .guide-card h4 {
-  font-size: 15px;
-  margin-top: 14px;
-  margin-bottom: 4px;
-  letter-spacing: -0.2px;
-  color: #222;
+    font-size: 15px;
+    margin-top: 14px;
+    margin-bottom: 4px;
+    letter-spacing: -0.2px;
+    color: #222;
 }
 
 .guide-card p {
-  font-size: 14px;
-  line-height: 1.55;
-  color: #444;
+    font-size: 14px;
+    line-height: 1.55;
+    color: #444;
 }
 
 .guide-card strong {
-  color: #111;
+    color: #111;
 }
 
 @media (max-width: 900px) {
-  .guides__grid {
-    grid-template-columns: 1fr;
-  }
+    .guides__grid {
+        grid-template-columns: 1fr;
+    }
 
-  .guide-card {
-    padding: 20px;
-  }
+    .guide-card {
+        padding: 20px;
+    }
 
-  .guides__title {
-    font-size: 28px;
-  }
+    .guides__title {
+        font-size: 28px;
+    }
 }
-
 
 
 /* endregion */
 
 /* region Video styles */
+/* VRPS styles */
+.vrps {
+    padding: 20px 40px;
+}
+
+.vrps__container {
+    max-width: 1260px;
+    margin: 0 auto;
+}
+
+.vrps__title {
+    font-size: 38px;
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+    text-align: center;
+}
+
+.vrps__text {
+    font-size: 16px;
+    line-height: 1.7;
+    opacity: 0.9;
+    margin-bottom: 18px;
+}
+
+@media (max-width: 768px) {
+    .vrps {
+        padding: 60px 16px 40px;
+    }
+
+    .vrps__title {
+        font-size: 26px;
+    }
+
+    .vrps__text {
+        font-size: 15px;
+    }
+}
+
+
 /* Practices */
 .practices {
     padding: 48px 0;
-    background-color: #ffffff;
 }
 
 .practices__container {
-    max-width: 960px;
+    max-width: 1160px;
     margin: 0 auto;
     padding: 0 12px;
 }
@@ -612,17 +648,21 @@ header {
 }
 
 .practices__grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
     gap: 16px;
     margin-bottom: 32px;
+    justify-content: center;
 }
 
 .practice-card {
-    background-color: #f8fafc;
     padding: 16px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    flex: 0 0 calc(33.333% - 10.7px);
+    box-sizing: border-box;
+    background-color: #ffffff;
+    border-radius: 16px;
+    margin-bottom: 4px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
 }
 
 .practice-card__title {
@@ -643,7 +683,7 @@ header {
 }
 
 .practice-card__text {
-    font-size: 13px;
+    font-size: 16px;
     margin-bottom: 6px;
 }
 
@@ -718,8 +758,7 @@ header {
 
 /* Videos */
 .video {
-    padding: 4rem 1rem;
-    background-color: #fff;
+    padding: 35px;
 }
 
 .video__container {
