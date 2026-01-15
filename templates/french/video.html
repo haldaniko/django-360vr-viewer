@@ -59,40 +59,33 @@
 
 <!-- Contenu principal -->
 <main>
+  <!-- VRPS text -->
+  <section class="vrps">
+    <div class="vrps__container">
+      <h2 class="vrps__title">Expériences VR InnerWorld</h2>
 
-  <!-- Instructions -->
-  <section class="about">
-    <h2 class="about__title">VRPS Instructions</h2>
-    <div class="about__description">
-      <p>Le projet InnerWorld a développé des méthodes de soutien en santé mentale accessibles et adaptées aux jeunes.
-        Ces cinq courtes vidéos de réalité virtuelle sont des outils simples et axés sur les compétences que vous pouvez
-        utiliser seul pour soutenir votre santé mentale. Elles ne constituent ni une thérapie ni un traitement clinique.
-        Si vous êtes en crise, si vous pensez que vous pourriez vous faire du mal ou faire du mal à quelqu'un d'autre,
-        ou si vos symptômes s'aggravent, contactez les services d'urgence locaux ou un professionnel de la santé mentale
-        qualifié.<br><br>
-
-        Choisissez un endroit sûr et confortable où vous pouvez vous asseoir ou vous allonger. Si vous ressentez des
-        étourdissements, des nausées, un engourdissement ou une perte de connexion, arrêtez la vidéo, ouvrez les yeux,
-        regardez autour de vous et passez à l'exercice d'ancrage ci-dessous. Si vous utilisez un casque audio ou un
-        casque de réalité virtuelle, retirez-le immédiatement en cas de malaise. Si vous souffrez d'une affection
-        respiratoire ou cardiaque, si vous êtes enceinte ou si vous trouvez l'apnée inconfortable, réduisez le nombre de
-        secondes ou sautez les étapes d'apnée.
+      <p class="vrps__text">
+        Le projet InnerWorld a développé des méthodes de soutien à la santé mentale accessibles et adaptées aux jeunes.
+        Ces cinq courtes vidéos en VR sont des outils simples et basés sur des compétences que vous pouvez utiliser seul
+        pour soutenir
+        votre bien-être mental. Elles ne constituent pas une thérapie ni un traitement clinique. Si vous êtes en crise,
+        pensez que vous
+        pourriez vous faire du mal ou faire du mal à quelqu'un d'autre, ou si vos symptômes s'aggravent, veuillez
+        contacter les services
+        d'urgence locaux ou un professionnel qualifié de la santé mentale.
       </p>
 
-      <div class="about__cards">
-        <a href="{% static 'docs/VR videos guide for direct users.pdf' %}" target="_blank">
-          <div class="about__card">
-            📄 Guide for direct users.pdf
-          </div>
-        </a>
-
-        <a href="{% static 'docs/VR videos guide for professionals.pdf' %}" target="_blank">
-          <div class="about__card">
-            📄 Guide for professionals.pdf
-          </div>
-        </a>
-
-      </div>
+      <p class="vrps__text">
+        Choisissez un endroit sûr et confortable où vous pouvez vous asseoir ou vous allonger. Si vous ressentez des
+        vertiges, des nausées,
+        un engourdissement ou une déconnexion à tout moment, arrêtez la vidéo, ouvrez les yeux, regardez autour de vous
+        et
+        passez à l'exercice de mise à la terre ci-dessous. Si vous utilisez un casque audio ou un casque VR, retirez-le
+        immédiatement
+        si vous ne vous sentez pas bien. Si vous avez des problèmes respiratoires ou cardiaques, êtes enceinte ou
+        vous sentez mal à l'aise en retenant votre respiration, réduisez le nombre de comptages ou sautez les étapes de
+        rétention du souffle.
+      </p>
     </div>
   </section>
 
@@ -152,6 +145,136 @@
 
         <div class="video__play-button" id="playButton" aria-label="Lecture"></div>
       </div>
+    </div>
+  </section>
+
+  <!-- Sections -->
+  <section class="practices">
+    <div class="practices__container">
+      <div class="practices__grid">
+
+        <article class="practice-card">
+          <h3 class="practice-card__title">Respiration Triangle</h3>
+          <p class="practice-card__intro">Pour calmer votre corps et ralentir.</p>
+
+          <p class="practice-card__label">À utiliser lorsque :</p>
+          <p class="practice-card__text">Vous vous sentez stressé, pressé ou tendu.</p>
+
+          <p class="practice-card__label">Ce que cela fait :</p>
+          <ul class="practice-card__list">
+            <li>Ralentit votre respiration</li>
+            <li>Aide votre corps à se détendre</li>
+            <li>Réduit les réactions au stress</li>
+          </ul>
+
+          <p class="practice-card__note">
+            Respirez doucement. Si vous avez des étourdissements, arrêtez et passez à l'exercice de mise à la terre.
+          </p>
+        </article>
+
+        <article class="practice-card">
+          <h3 class="practice-card__title">Respiration Carré</h3>
+          <p class="practice-card__intro">Pour la concentration, l'équilibre et l'attention stable.</p>
+
+          <p class="practice-card__label">À utiliser lorsque :</p>
+          <p class="practice-card__text">Vous avez besoin de vous concentrer ou vous sentez anxieux.</p>
+
+          <p class="practice-card__label">Ce que cela fait :</p>
+          <ul class="practice-card__list">
+            <li>Apporte un rythme à votre respiration</li>
+            <li>Aide à stabiliser vos pensées</li>
+            <li>Favorise la concentration</li>
+          </ul>
+
+          <p class="practice-card__note">
+            Le confort est plus important que la précision. Vous pouvez raccourcir ou sauter les retenues de souffle.
+          </p>
+        </article>
+
+        <article class="practice-card">
+          <h3 class="practice-card__title">Scan Corporel</h3>
+          <p class="practice-card__intro">Pour relâcher la tension et se détendre profondément.</p>
+
+          <p class="practice-card__label">À utiliser lorsque :</p>
+          <p class="practice-card__text">Votre corps se sent tendu ou agité.</p>
+
+          <p class="practice-card__label">Ce que cela fait :</p>
+          <ul class="practice-card__list">
+            <li>Vous aide à percevoir votre corps en toute sécurité</li>
+            <li>Favorise la relaxation et le repos</li>
+            <li>Peut améliorer le sommeil</li>
+          </ul>
+
+          <p class="practice-card__note">
+            Si un inconfort apparaît, ouvrez les yeux ou passez à la mise à la terre.
+          </p>
+        </article>
+
+        <article class="practice-card practice-card--caution">
+          <h3 class="practice-card__title">Cinéma (Inquiétudes comme un Film)</h3>
+          <p class="practice-card__intro">Pour prendre du recul face aux pensées inquiétantes.</p>
+
+          <p class="practice-card__label">À utiliser lorsque :</p>
+          <p class="practice-card__text">Les inquiétudes tournent en boucle dans votre esprit.</p>
+
+          <p class="practice-card__label">Ce que cela fait :</p>
+          <ul class="practice-card__list">
+            <li>Crée une distance avec les pensées</li>
+            <li>Réduit l'intensité émotionnelle</li>
+            <li>Favorise la clarté mentale</li>
+          </ul>
+
+          <p class="practice-card__warning">
+            Gardez cet exercice court. Évitez-le si les inquiétudes sont accablantes ou traumatisantes.
+          </p>
+        </article>
+
+        <article class="practice-card practice-card--safe">
+          <h3 class="practice-card__title">Exercice de Mise à la Terre</h3>
+          <p class="practice-card__intro">Pour se sentir présent et stable à nouveau.</p>
+
+          <p class="practice-card__label">À utiliser lorsque :</p>
+          <p class="practice-card__text">
+            Vous vous sentez dépassé, déconnecté ou dans la lune.
+          </p>
+
+          <p class="practice-card__label">Ce que cela fait :</p>
+          <ul class="practice-card__list">
+            <li>Vous reconnecte avec le moment présent</li>
+            <li>Vous aide à vous sentir en sécurité dans votre corps</li>
+            <li>Réduit la surcharge émotionnelle</li>
+          </ul>
+
+          <p class="practice-card__note">
+            C'est l'exercice le plus sûr. Vous pouvez revenir à la mise à la terre à tout moment.
+          </p>
+        </article>
+
+      </div>
+
+      <div class="practices__guide">
+        <h3 class="practices__guide-title">Quel exercice choisir ?</h3>
+
+        <ul class="practices__guide-list">
+          <li><strong>Anxieux ou stressé ?</strong> Respiration Triangle ou Carré</li>
+          <li><strong>Les pensées ne s'arrêtent pas ?</strong> Cinéma → ou Mise à la Terre si intense</li>
+          <li><strong>Déconnecté ou submergé ?</strong> Mise à la Terre (meilleur choix)</li>
+          <li><strong>Le corps est tendu ?</strong> Scan Corporel</li>
+          <li><strong>Envie de se détendre ou de dormir ?</strong> Scan Corporel ou Respiration Triangle</li>
+        </ul>
+
+        <p class="practices__guide-note">
+          Encore incertain ? Choisissez la Mise à la Terre — c'est l'option la plus simple et la plus sûre.
+        </p>
+      </div>
+
+      <div class="practices__safety">
+        <p>
+          Vous pouvez arrêter n'importe quel exercice à tout moment. Si vous vous sentez étourdi ou mal à l'aise,
+          faites une pause, retirez le casque et reconnectez-vous à vos sensations corporelles.
+        </p>
+      </div>
+
     </div>
   </section>
 
