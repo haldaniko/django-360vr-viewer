@@ -96,7 +96,7 @@ def guides_view(request):
         'fr': 'french/guides.html',
         'tr': 'turkish/guides.html',
         'ua': 'ukrainian/guides.html',
-        'bg': 'bulgarian/.html',
+        'bg': 'bulgarian/guides.html',
     }
 
     template_name = template_map.get(lang, 'guides.html')
