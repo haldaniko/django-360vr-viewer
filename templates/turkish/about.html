@@ -61,29 +61,101 @@
 <main>
   <!-- About -->
   <section class="about">
-    <h2 class="about__title">Hakkında</h2>
-    <p class="about__description">
-      Psikososyal Destek için Sanal Gerçeklik, Erasmus+ programı kapsamında oluşturulan KA210 projesidir ve savaş
-      nedeniyle yerinden edilmiş gençlere yönelik ruh sağlığı desteğinin sunulma biçimini dönüştürmeyi amaçlamaktadır.
-      Proje, özellikle Ukrayna'daki savaşın etkilediği gençlere odaklanmaktadır. Yenilikçi sanal gerçeklik (VR)
-      teknolojisi kullanımıyla, projenin amacı 13–20 yaş aralığındaki kişilerin çeşitli ihtiyaçlarına yanıt veren
-      güvenli, çekici ve engellerden arınmış bir psikososyal destek ortamı oluşturmaktır.<br><br>
+  <div class="about__container">
 
-      18 ay boyunca Bulgaristan, Fransa ve Türkiye'den oluşan uluslararası ekibimiz, ruh sağlığı desteğinin kalitesini
-      ve erişilebilirliğini artırmak için bir VR aracı tasarladı, test etti ve paylaştı. Altmış yerinden edilmiş genç,
-      pilot aşamada kişiselleştirilmiş, yüksek kaliteli VR tabanlı destek aldı. Altı eğitimli ruh sağlığı uzmanı ise bu
-      aracı uygulamalarına entegre etmeyi öğrendi. InnerWorld yaklaşımı, dil, maliyet ve coğrafya gibi yaygın engelleri
-      ortadan kaldırarak, daha fazla gencin ihtiyaç duyduğu anda ve yerde desteğe ulaşmasını sağlıyor. Proje, VR
-      yönteminin Avrupa’da ve ötesinde geniş çapta benimsenmesini sağlamak için uzun vadeli etkiye de yatırım yaptı.
-      Dijital yenilik, ruh sağlığı uzmanlığı ve uluslararası işbirliğini birleştirerek InnerWorld, kapsayıcılığı teşvik
-      eder, iyileşmeyi destekler ve gençlerin yeni ortamlarında öğrenme, çalışma ve toplumsal yaşam becerileri
-      geliştirmelerini güçlendirir.
-    </p>
+    <div class="about__block">
+      <h1 class="about__heading">InnerWorld Nedir?</h1>
+      <p class="about__text">
+        InnerWorld, savaş, yerinden edilme ve uzun süreli stresten etkilenen gençlerin duygusal
+        iyi oluşunu desteklemek için Sanal Gerçeklik (VR) kullanan yenilikçi bir projedir. Gençlik çalışmaları, topluluk ortamları ve eğitim için erişilebilir, düşük engelli duygusal destek sunar.
+      </p>
 
-    <div class="proceed-button-container">
-      <a href="{% url 'website:video' %}?lang=tr" class="proceed-button">Videoya Devam Et</a>
+      <ul class="about__list">
+        <li>Sinir sistemini sakinleştirir</li>
+        <li>Stresi ve duygusal yükü azaltır</li>
+        <li>Odaklanmayı ve öz-düzenlemeyi geliştirir</li>
+        <li>Daha güvende ve ayakları yere basan hissettirir</li>
+      </ul>
+
+      <p class="about__note">
+        InnerWorld, Türkiye, Bulgaristan ve Fransa'dan ekipler tarafından Erasmus+ KA210 programı kapsamında geliştirilmiştir.
+      </p>
+
+      <p class="about__warning">
+        InnerWorld, profesyonel psikolojik destek veya terapinin yerine geçmez.
+      </p>
     </div>
-  </section>
+
+    <div class="about__block">
+      <h3 class="about__heading">InnerWorld’ü farklı kılan nedir?</h3>
+
+      <ul class="about__features">
+        <li>Tasarımında travma bilinci gözetilmiş</li>
+        <li>Gençler için ilgi çekici ve damgalamayan</li>
+        <li>Kısa VR seansları (3–6 dakika)</li>
+        <li>Kültürel olarak uyarlanabilir ve yerelleştirmesi kolay</li>
+        <li>Bireyler için değil, organizasyonlar için tasarlanmış</li>
+      </ul>
+    </div>
+
+    <h1>InnerWorld kimler için?</h1>
+    <div class="about__grid">
+      <div class="about__card">
+        <h3 class="about__heading">Gençler (15–29)</h3>
+        <ul class="about__list">
+          <li>Stres veya kaygı yaşıyor</li>
+          <li>Odaklanma veya dinlenmede zorluk</li>
+          <li>Psikolojik desteğe sınırlı erişim</li>
+          <li>Pratik, sözsüz araçları tercih ediyor</li>
+        </ul>
+        <p class="about__small">
+          Önceden VR veya meditasyon deneyimi gerekmez.
+        </p>
+      </div>
+
+      <div class="about__card">
+        <h3 class="about__heading">Gençlerle çalışan profesyoneller</h3>
+        <ul class="about__list">
+          <li>Gençlik çalışanları</li>
+          <li>Psikologlar</li>
+          <li>Sosyal hizmet uzmanları</li>
+          <li>Eğitmenler ve kolaylaştırıcılar</li>
+        </ul>
+        <p class="about__small">
+          Önceki VR deneyimi olmadan kolayca uygulanabilir.
+        </p>
+      </div>
+
+      <div class="about__card">
+        <h3 class="about__heading">Organizasyonlar</h3>
+        <ul class="about__list">
+          <li>STK’lar ve gençlik organizasyonları</li>
+          <li>Toplum ve kültür merkezleri</li>
+          <li>Okullar ve öğrenim merkezleri</li>
+          <li>Barınaklar ve entegrasyon programları</li>
+        </ul>
+        <p class="about__small">
+          Rehberler, güvenlik protokolleri ve materyaller dahildir.
+        </p>
+      </div>
+    </div>
+
+    <div class="about__block">
+      <h3 class="about__heading">Psikososyal destek için neden VR?</h3>
+      <p class="about__text">
+        Sanal Gerçeklik, “orada olma” hissi — bir varlık hissi — yaratır. Bu, duygusal düzenleme ve stres azaltımı için özellikle etkili kılar.
+      </p>
+
+      <ul class="about__list">
+        <li>Dış stres faktörlerinden kopma</li>
+        <li>Dikkati daha kolay odaklama</li>
+        <li>Sakinleştirici ortamlarda duyuları harekete geçirme</li>
+        <li>Ancrage ve nefes tekniklerini uygulama</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
 
   <!-- Partners -->
   <section class="partners">
@@ -212,7 +284,6 @@
       <p>Erasmus+ / Avrupa Dayanışma Programı kapsamında Avrupa Komisyonu tarafından desteklenmektedir.<br>Burada yer alan içerik yazarın görüşlerini yansıtmaktadır ve bu görüşlerden Avrupa Komisyonu ve Türkiye Ulusal Ajansı sorumlu tutulamaz.</p>
         2023-3-TR01-KA210-YOU-000181712<br>
         © 2025 Tüm hakları saklıdır.
-      </p>
     </div>
   </footer>
 
