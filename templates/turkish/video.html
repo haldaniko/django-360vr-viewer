@@ -59,37 +59,30 @@
 
 <!-- Main Content -->
 <main>
-
   <!-- Instructions -->
-  <section class="about">
-    <h2 class="about__title">VRPS Talimatları</h2>
-    <div class="about__description">
-      <p>InnerWorld projesi, erişilebilir ve genç dostu ruh sağlığı destek yöntemleri geliştirdi. Bu beş kısa VR
-        videosu, ruh sağlığınızı desteklemek için kendi başınıza kullanabileceğiniz basit, beceriye dayalı araçlardır.
-        Terapi veya klinik tedavi değildirler. Krizdeyseniz, kendinize veya bir başkasına zarar verebileceğinizi
-        düşünüyorsanız veya semptomlarınız kötüleşirse, yerel acil servislerle veya kalifiye bir ruh sağlığı uzmanıyla
-        iletişime geçin.<br><br>
+  <section class="vrps">
+    <div class="vrps__container">
+      <h2 class="vrps__title">Inner World VR Deneyimleri</h2>
 
-        Oturabileceğiniz veya uzanabileceğiniz güvenli ve rahat bir yer seçin. Herhangi bir noktada başınız dönerse,
-        mide bulantısı hissederseniz, uyuşukluk hissederseniz veya bağlantınız kesilirse, videoyu durdurun, gözlerinizi
-        açın, odanın etrafına bakın ve aşağıdaki topraklama egzersizine geçin. Kulaklık veya VR başlığı kullanıyorsanız
-        ve kendinizi iyi hissetmiyorsanız, bunları hemen çıkarın. Solunum veya kalp rahatsızlığınız varsa, hamileyseniz
-        veya nefes tutmayı rahatsız edici buluyorsanız, sayımları kısaltın veya nefes tutma adımlarını atlayın.</p>
+      <p class="vrps__text">
+        InnerWorld projesi, erişilebilir ve genç dostu ruh sağlığı destek yöntemleri geliştirdi.
+        Bu beş kısa VR videosu, kendi başınıza zihinsel iyi oluşunuzu desteklemek için kullanabileceğiniz basit, beceri
+        odaklı araçlardır.
+        Bunlar terapi veya klinik tedavi değildir. Eğer kriz durumundaysanız, kendinize veya bir başkasına zarar
+        verebileceğinizi düşünüyorsanız veya semptomlarınız kötüleşiyorsa,
+        lütfen yerel acil servisler veya nitelikli bir ruh sağlığı profesyoneli ile iletişime geçin.
+      </p>
 
-      <div class="about__cards">
-        <a href="{% static 'docs/VR videos guide for direct users.pdf' %}" target="_blank">
-          <div class="about__card">
-            📄 Guide for direct users.pdf
-          </div>
-        </a>
-
-        <a href="{% static 'docs/VR videos guide for professionals.pdf' %}" target="_blank">
-          <div class="about__card">
-            📄 Guide for professionals.pdf
-          </div>
-        </a>
-
-      </div>
+      <p class="vrps__text">
+        Oturabileceğiniz veya uzanabileceğiniz güvenli ve rahat bir yer seçin. Herhangi bir zamanda baş dönmesi, mide
+        bulantısı,
+        uyuşma veya kopukluk hissederseniz, videoyu durdurun, gözlerinizi açın, odada etrafa bakın ve aşağıdaki
+        grounding egzersizine geçin.
+        Kulaklık veya VR başlığı kullanıyorsanız ve kendinizi kötü hissederseniz hemen çıkarın. Solunum veya kalp
+        rahatsızlığınız varsa,
+        hamileyseniz veya nefes tutarken rahatsızlık hissediyorsanız, sayıları azaltın veya nefes tutma adımlarını
+        atlayın.
+      </p>
     </div>
   </section>
 
@@ -149,6 +142,136 @@
 
         <div class="video__play-button" id="playButton" aria-label="Oynat"></div>
       </div>
+    </div>
+  </section>
+
+  <!-- Sections -->
+  <section class="practices">
+    <div class="practices__container">
+      <div class="practices__grid">
+
+        <article class="practice-card">
+          <h3 class="practice-card__title">Üçgen Nefesi</h3>
+          <p class="practice-card__intro">Vücudunuzu sakinleştirmek ve yavaşlamak için.</p>
+
+          <p class="practice-card__label">Ne zaman kullanılır:</p>
+          <p class="practice-card__text">Stresli, aceleci veya gergin hissettiğinizde.</p>
+
+          <p class="practice-card__label">Ne yapar:</p>
+          <ul class="practice-card__list">
+            <li>Nefesinizi yavaşlatır</li>
+            <li>Vücudunuzun rahatlamasına yardımcı olur</li>
+            <li>Stres tepkilerini azaltır</li>
+          </ul>
+
+          <p class="practice-card__note">
+            Nazikçe nefes alın. Baş dönmesi hissederseniz durun ve grounding egzersizine geçin.
+          </p>
+        </article>
+
+        <article class="practice-card">
+          <h3 class="practice-card__title">Kare Nefesi</h3>
+          <p class="practice-card__intro">Odaklanma, denge ve sabit dikkat için.</p>
+
+          <p class="practice-card__label">Ne zaman kullanılır:</p>
+          <p class="practice-card__text">Yoğunlaşmanız gerektiğinde veya kaygılı hissettiğinizde.</p>
+
+          <p class="practice-card__label">Ne yapar:</p>
+          <ul class="practice-card__list">
+            <li>Nefesinize ritim kazandırır</li>
+            <li>Düşüncelerinizi dengeler</li>
+            <li>Odaklanmayı destekler</li>
+          </ul>
+
+          <p class="practice-card__note">
+            Rahatlık, doğruluktan daha önemlidir. Nefes tutma sürelerini kısaltabilir veya atlayabilirsiniz.
+          </p>
+        </article>
+
+        <article class="practice-card">
+          <h3 class="practice-card__title">Vücut Taraması</h3>
+          <p class="practice-card__intro">Gerginliği serbest bırakmak ve derin gevşeme için.</p>
+
+          <p class="practice-card__label">Ne zaman kullanılır:</p>
+          <p class="practice-card__text">Vücudunuz gergin veya huzursuz hissettiğinde.</p>
+
+          <p class="practice-card__label">Ne yapar:</p>
+          <ul class="practice-card__list">
+            <li>Vücudunuzu güvenli bir şekilde fark etmenize yardımcı olur</li>
+            <li>Rahatlama ve dinlenmeyi destekler</li>
+            <li>Uykuyu iyileştirebilir</li>
+          </ul>
+
+          <p class="practice-card__note">
+            Rahatsızlık hissederseniz gözlerinizi açın veya grounding egzersizine geçin.
+          </p>
+        </article>
+
+        <article class="practice-card practice-card--caution">
+          <h3 class="practice-card__title">Sinema (Kaygıları Film Gibi İzlemek)</h3>
+          <p class="practice-card__intro">Kaygılı düşüncelerden bir adım geri atmak için.</p>
+
+          <p class="practice-card__label">Ne zaman kullanılır:</p>
+          <p class="practice-card__text">Düşünceler zihninizde sürekli dönüyorsa.</p>
+
+          <p class="practice-card__label">Ne yapar:</p>
+          <ul class="practice-card__list">
+            <li>Düşüncelerden mesafe yaratır</li>
+            <li>Duygusal yoğunluğu azaltır</li>
+            <li>Zihinsel açıklığı destekler</li>
+          </ul>
+
+          <p class="practice-card__warning">
+            Bu egzersizi kısa tutun. Kaygılar çok yoğun veya travmatik hissettiriyorsa kullanmayın.
+          </p>
+        </article>
+
+        <article class="practice-card practice-card--safe">
+          <h3 class="practice-card__title">Grounding Egzersizi</h3>
+          <p class="practice-card__intro">Tekrar mevcut ve dengede hissetmek için.</p>
+
+          <p class="practice-card__label">Ne zaman kullanılır:</p>
+          <p class="practice-card__text">
+            Kendinizi bunalmış, kopuk veya dalgın hissettiğinizde.
+          </p>
+
+          <p class="practice-card__label">Ne yapar:</p>
+          <ul class="practice-card__list">
+            <li>Şu anki ana yeniden bağlanmanıza yardımcı olur</li>
+            <li>Vücudunuzda güvenli hissetmenizi sağlar</li>
+            <li>Duygusal yükü azaltır</li>
+          </ul>
+
+          <p class="practice-card__note">
+            Bu en güvenli egzersizdir. İstediğiniz zaman grounding’e dönebilirsiniz.
+          </p>
+        </article>
+
+      </div>
+
+      <div class="practices__guide">
+        <h3 class="practices__guide-title">Hangi egzersizi seçmeliyim?</h3>
+
+        <ul class="practices__guide-list">
+          <li><strong>Kaygılı veya stresli misiniz?</strong> Üçgen veya Kare Nefesi</li>
+          <li><strong>Düşünceler durmuyor mu?</strong> Sinema → veya yoğun ise Grounding</li>
+          <li><strong>Kopuk veya bunalmış hissediyor musunuz?</strong> Grounding (en iyi seçenek)</li>
+          <li><strong>Vücut gergin mi?</strong> Vücut Taraması</li>
+          <li><strong>Rahatlamak veya uyumak mı istiyorsunuz?</strong> Vücut Taraması veya Üçgen Nefesi</li>
+        </ul>
+
+        <p class="practices__guide-note">
+          Hâlâ emin değil misiniz? Grounding’i seçin — en basit ve en güvenli seçenektir.
+        </p>
+      </div>
+
+      <div class="practices__safety">
+        <p>
+          Egzersizi istediğiniz zaman durdurabilirsiniz. Baş dönmesi veya rahatsızlık hissederseniz,
+          duraklatın, başlığı çıkarın ve grounding yapın.
+        </p>
+      </div>
+
     </div>
   </section>
 
@@ -234,7 +357,6 @@
         sorumlu tutulamaz.</p>
       2023-3-TR01-KA210-YOU-000181712<br>
       © 2025 Tüm hakları saklıdır.
-      </p>
     </div>
   </footer>
 
