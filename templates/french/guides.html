@@ -1,0 +1,264 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inner World</title>
+  <link rel="icon" type="image/x-icon" href="{% static 'img/favicon.ico' %}">
+  <link rel="stylesheet" href="{% static 'css/video360.css' %}">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+  <script src="https://cdn.dashjs.org/latest/dash.all.min.js"></script>
+</head>
+<body>
+
+<!-- En-tête -->
+<header class="header">
+  <div class="header__container">
+    <a href="{% url 'website:about' %}?lang=fr">
+      <div class="header__info">
+        <img class="header__logo" alt="logo" src="{% static 'img/logo-fr2.png' %}">
+        <img class="header__tua-logo" alt="tua-logo" src="{% static 'img/tua-logo.png' %}">
+        <img class="header__yazisiz-logo" alt="yazisiz-logo" src="{% static 'img/yazisiz-logo.jpg' %}">
+        <img class="header__erasmus" alt="eu-log" src="{% static 'img/eu-logo-fr.jpg' %}">
+      </div>
+    </a>
+    <nav class="header__nav">
+      <ul class="header__nav-list">
+        <li class="header__nav-item">
+          <a href="{% url 'website:about' %}?lang=fr" class="header__nav-link">Maison</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="{% url 'website:video' %}?lang=fr" class="header__nav-link">VR</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="{% url 'website:howitworks' %}?lang=fr" class="header__nav-link">Comment ça marche</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="{% url 'website:guides' %}?lang=fr" class="header__nav-link header__nav-link--active">Guides</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="{% url 'website:results' %}?lang=fr" class="header__nav-link">Résultats</a>
+        </li>
+      </ul>
+    </nav>
+    <nav class="header__lang">
+      <ul class="header__lang-list">
+        <li class="header__lang-item"><a href="?lang=en" class="header__lang-link">EN</a></li>
+        <li class="header__lang-item"><a href="?lang=tr" class="header__lang-link">TR</a></li>
+        <li class="header__lang-item"><a href="?lang=fr" class="header__lang-link--active">FR</a></li>
+        <li class="header__lang-item"><a href="?lang=ua" class="header__lang-link">UA</a></li>
+        <li class="header__lang-item"><a href="?lang=bg" class="header__lang-link">BG</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- Contenu principal -->
+<main>
+  <!-- Guides -->
+  <section class="guides">
+    <h2 class="guides__title">Guides</h2>
+
+    <div class="guides__grid">
+      <article class="guide-card">
+        <h3>Pour les jeunes</h3>
+        <p class="subtitle">Outils VR simples pour vous aider à vous calmer, vous concentrer et vous sentir plus
+          ancré</p>
+
+        <p>InnerWorld propose de courtes pratiques en VR et en vidéo que vous pouvez utiliser pour soutenir votre santé
+          mentale dans la vie quotidienne. Elles sont faciles à suivre, adaptées aux jeunes et conçues pour de courts
+          moments de stress ou de surcharge. Ces outils ne sont pas une thérapie. Ce sont des pratiques
+          d'auto-assistance simples qui peuvent vous soutenir lorsque vous avez besoin d'une pause.</p>
+
+        <h4>Qui devrait utiliser ces outils ?</h4>
+        <p>Ce guide est pour vous si vous êtes un jeune (env. 15–29 ans), que vous vous sentez stressé, anxieux, agité
+          ou dépassé, que vous voulez quelque chose de pratique et non compliqué, et que vous préférez des exercices
+          courts aux longues explications. Les outils sont particulièrement utiles si vous étudiez ou travaillez sous
+          pression, vous adaptez à un nouveau pays ou environnement, ou faites face à des inquiétudes qui ne s'arrêtent
+          pas. Aucune expérience préalable en VR, méditation ou exercices de respiration n'est nécessaire.</p>
+
+        <h4>Quand utiliser InnerWorld (et quand ne pas l'utiliser)</h4>
+        <p>Utilisez InnerWorld lorsque vous vous sentez stressé ou tendu, avez besoin d'une courte réinitialisation
+          mentale, avez du mal à vous concentrer, vous sentez émotionnellement surchargé, ou voulez calmer votre corps
+          et vos pensées. Les pratiques courtes fonctionnent mieux dans les situations quotidiennes.</p>
+
+        <p>N'utilisez pas InnerWorld si vous êtes en crise, si vous pensez pouvoir vous faire du mal ou faire du mal à
+          quelqu'un d'autre, si vos symptômes s'aggravent, ou si vous ne vous sentez pas en sécurité seul. Dans ces
+          situations, contactez les services d'urgence locaux, un adulte de confiance ou un professionnel de santé
+          mentale. InnerWorld ne remplace pas l'aide professionnelle en santé mentale.</p>
+
+        <h4>Avant de commencer</h4>
+        <p>Créez un espace sûr : choisissez un endroit calme et confortable, asseyez-vous ou allongez-vous en sécurité
+          et éliminez les distractions. Retirez immédiatement le casque ou les écouteurs si vous ne vous sentez pas
+          bien.</p>
+
+        <h4>Si vous vous sentez pire</h4>
+        <p>Faites une pause ou arrêtez la vidéo, ouvrez les yeux, regardez autour de vous, appuyez vos pieds sur le sol.
+          Vous pouvez également vous ancrer en nommant 5 choses que vous voyez, 4 que vous sentez, 3 que vous entendez,
+          2 que vous sentez par l'odorat, et 1 que vous goûtez.</p>
+
+        <h4>Les pratiques InnerWorld</h4>
+        <p><strong>Respiration triangulaire :</strong> pour la tension et les pensées qui s'emballent. Aide à calmer la
+          respiration et le rythme cardiaque. Arrêtez si vous avez des étourdissements.</p>
+        <p><strong>Respiration carrée :</strong> pour la concentration et l'anxiété. Raccourcissez les temps de
+          respiration si inconfortable.</p>
+        <p><strong>Scan corporel :</strong> pour la tension physique et le sommeil. Passez à l'ancrage si un inconfort
+          apparaît.</p>
+        <p><strong>Cinéma (inquiétudes comme un film) :</strong> pour les inquiétudes récurrentes. Gardez court si lié à
+          un traumatisme.</p>
+        <p><strong>Ancrage :</strong> pour la surcharge ou la dissociation. La pratique la plus sûre pour y revenir.</p>
+
+        <h4>À quelle fréquence ?</h4>
+        <p>La respiration peut être utilisée plusieurs fois par jour, le scan corporel une fois par jour ou avant le
+          sommeil, le cinéma seulement lorsque les inquiétudes sont gérables. Terminez toujours par l'ancrage si
+          nécessaire. Aucun calendrier fixe.</p>
+
+        <h4>Utilisation seul ou avec d'autres</h4>
+        <p>Vous pouvez utiliser InnerWorld seul si vous vous sentez en sécurité, ou avec un facilitateur en groupe ou en
+          organisation. Si vous avez moins de 18 ans, utilisez-le avec un adulte de confiance.</p>
+
+        <h4>Notes de sécurité</h4>
+        <p>Arrêtez immédiatement si vous vous sentez étourdi, engourdi, stressé ou essoufflé. Buvez de l'eau,
+          reconnectez-vous à votre environnement, et demandez une aide professionnelle en cas de difficultés
+          persistantes.</p>
+      </article>
+
+      <article class="guide-card">
+        <h3>Pour les professionnels</h3>
+        <p class="subtitle">Guide pratique pour utiliser les outils VR InnerWorld avec les jeunes</p>
+
+        <p>InnerWorld propose de courtes pratiques VR à faible intensité que les professionnels peuvent intégrer dans
+          des sessions psychosociales, de travail avec les jeunes et éducatives. Les outils sont basés sur des
+          compétences, faciles à intégrer, soutiennent la régulation émotionnelle et ne constituent pas un traitement
+          clinique. InnerWorld complète le travail professionnel mais ne remplace pas la thérapie, les premiers secours
+          psychologiques ou l'intervention en situation de crise.</p>
+
+        <h4>Pour qui ?</h4>
+        <p>Les professionnels travaillant avec des jeunes déplacés ou stressés (env. 14–29 ans), y compris travailleurs
+          jeunesse, psychologues, travailleurs sociaux, éducateurs et facilitateurs communautaires. Aucune expérience
+          préalable en VR n'est requise.</p>
+
+        <h4>Quand utiliser — et quand ne pas utiliser</h4>
+        <p>Utilisez lorsque les jeunes sont stables mais stressés, anxieux, en rumination, ou ont besoin d'ancrage. Ne
+          pas utiliser en cas d'intention suicidaire, de crise aiguë, de psychose ou de dissociation non résolue. Suivez
+          les procédures de crise et orientez vers les soins cliniques.</p>
+
+        <h4>Limites éthiques et sécurité</h4>
+        <p>La participation est volontaire, les jeunes peuvent arrêter à tout moment, aucun enregistrement n'est
+          autorisé, et la confidentialité s'applique. Surveillez les nausées liées à la VR, l'escalade émotionnelle ou
+          la dissociation et passez à l'ancrage si nécessaire.</p>
+
+        <h4>Facilitation</h4>
+        <p>L'utilisation individuelle convient aux utilisateurs débutants ou sensibles. L'utilisation en groupe
+          fonctionne pour les ateliers et programmes avec réflexion optionnelle et sortie facile.</p>
+
+        <h4>Structure des sessions</h4>
+        <p>Vidéo VR : 3–6 minutes. Préparation et ancrage : 5–10 minutes. Réflexion optionnelle : 5 minutes. Utilisez
+          1–3 vidéos par session, hebdomadaire ou bimensuelle.</p>
+
+        <h4>Choix des pratiques</h4>
+        <p>Respiration pour l'anxiété, Cinéma pour la rumination, Scan corporel pour la tension, Ancrage pour la
+          surcharge ou la dissociation.</p>
+
+        <h4>Si quelqu'un se sent pire</h4>
+        <p>Arrêtez immédiatement, ouvrez les yeux, utilisez l'ancrage des 5 sens, respirez lentement, offrez de l'eau et
+          continuez seulement si le jeune le souhaite.</p>
+
+        <h4>Documentation</h4>
+        <p>Enregistrez la présence, les niveaux de stress, les pauses, les incidents et escaladez les événements graves
+          selon le protocole.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Pied de page -->
+  <footer class="footer">
+    <div class="footer__container">
+      <div class="footer__column">
+        <h3 class="footer__title">Contacts ABU</h3>
+        <p class="footer__text">Email : info@ankarabilim.edu.tr</p>
+        <p class="footer__text">Téléphone : +90 552 899 84 11</p>
+        <p class="footer__text">Site web :
+          <a class="footer__link" target="_blank" href="https://ankarabilim.edu.tr/en/index">
+            ankarabilim.edu.tr
+          </a>
+        </p>
+      </div>
+      <div class="footer__column">
+        <h3 class="footer__title">Contacts FSCOD</h3>
+        <p class="footer__text">Email : contact@opendoors.center</p>
+        <p class="footer__text">Téléphone : +359 884 013 786</p>
+        <p class="footer__text">Site web :
+          <a class="footer__link" target="_blank" href="https://opendoors.center/">
+            opendoors.center
+          </a>
+        </p>
+      </div>
+      <div class="footer__column">
+        <h3 class="footer__title">Contacts URC</h3>
+        <p class="footer__text">Email : olena.vyshnev@gmail.com</p>
+        <p class="footer__text">Téléphone : +33 065 245 56 39</p>
+        <p class="footer__text">Instagram :
+          <a class="footer__link" target="_blank" href="https://www.instagram.com/ukrrcenter/">
+            @ukrrcenter
+          </a>
+        </p>
+      </div>
+      <div class="footer__column">
+        <h3 class="footer__title">Guides & Documents</h3>
+        <p class="footer__text">
+          <a href="{% static 'docs/VR videos guide for direct users.pdf' %}" target="_blank">
+            📄 Guide for direct users.pdf
+          </a>
+        </p>
+        <p class="footer__text">
+          <a href="{% static 'docs/VR videos guide for professionals.pdf' %}" target="_blank">
+            📄 Guide for professionals.pdf
+          </a>
+        </p>
+        <p class="footer__text">
+          <a href="{% static 'docs/Who-5French.pdf' %}" target="_blank">
+            📄 Who-5French.pdf
+          </a>
+        </p>
+      </div>
+      <div class="footer__column">
+        <h3 class="footer__title">Règlements</h3>
+        <p class="footer__text">
+          <a href="{% static 'docs/Privacy Policy.pdf' %}" target="_blank">
+            📄 Privacy Policy.pdf
+          </a>
+        </p>
+        <p class="footer__text">
+          <a href="{% static 'docs/Terms of Use.pdf' %}" target="_blank">
+            📄 Terms of Use.pdf
+          </a>
+        </p>
+        <p class="footer__text">
+          <a href="{% static 'docs/Incident Report template.docx' %}" target="_blank">
+            📄 Incident Report template.docx
+          </a>
+        </p>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <hr class="footer__divider">
+      <p class="footer__copy">
+        InnerWorld: Virtual Reality for Psychosocial Support
+      <p>Financé par l’Union européenne. Les points de vue et avis exprimés n’engagent toutefois que leur(s) auteur(s)
+        et ne reflètent pas nécessairement ceux de l’Union européenne ou de l’Agence<br> exécutive européenne pour
+        l’éducation et la culture (EACEA). Ni l’Union européenne ni l’EACEA ne sauraient en être tenues pour
+        responsables.</p>
+      2023-3-TR01-KA210-YOU-000181712<br>
+      © 2025 Tous droits réservés.
+    </div>
+  </footer>
+
+</main>
+
+</body>
+</html>
