@@ -10,8 +10,9 @@ from .views import (
 )
 
 urlpatterns = [
-    path('about/', about_view, name='about'),
+    path('', home_view, name='video'),
     path('home/', home_view, name='video'),
+    path('about/', about_view, name='about'),
     path('howitworks/', howitworks_view, name='howitworks'),
     path('guides/', guides_view, name='guides'),
     path('results/', results_view, name='results'),
