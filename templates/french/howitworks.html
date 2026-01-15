@@ -1,0 +1,364 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inner World</title>
+  <link rel="icon" type="image/x-icon" href="{% static 'img/favicon.ico' %}">
+  <link rel="stylesheet" href="{% static 'css/video360.css' %}">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+  <script src="https://cdn.dashjs.org/latest/dash.all.min.js"></script>
+</head>
+<body>
+
+<!-- En-tête -->
+<header class="header">
+  <div class="header__container">
+    <a href="{% url 'website:about' %}?lang=fr">
+      <div class="header__info">
+        <img class="header__logo" alt="logo" src="{% static 'img/logo-fr2.png' %}">
+        <img class="header__tua-logo" alt="tua-logo" src="{% static 'img/tua-logo.png' %}">
+        <img class="header__yazisiz-logo" alt="yazisiz-logo" src="{% static 'img/yazisiz-logo.jpg' %}">
+        <img class="header__erasmus" alt="eu-log" src="{% static 'img/eu-logo-fr.jpg' %}">
+      </div>
+    </a>
+    <nav class="header__nav">
+      <ul class="header__nav-list">
+        <li class="header__nav-item">
+          <a href="{% url 'website:about' %}?lang=fr" class="header__nav-link">Maison</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="{% url 'website:video' %}?lang=fr" class="header__nav-link">VR</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="{% url 'website:howitworks' %}?lang=fr" class="header__nav-link header__nav-link--active">Comment ça
+            marche</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="{% url 'website:guides' %}?lang=fr" class="header__nav-link">Guides</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="{% url 'website:results' %}?lang=fr" class="header__nav-link">Résultats</a>
+        </li>
+      </ul>
+    </nav>
+    <nav class="header__lang">
+      <ul class="header__lang-list">
+        <li class="header__lang-item"><a href="?lang=en" class="header__lang-link">EN</a></li>
+        <li class="header__lang-item"><a href="?lang=tr" class="header__lang-link">TR</a></li>
+        <li class="header__lang-item"><a href="?lang=fr" class="header__lang-link--active">FR</a></li>
+        <li class="header__lang-item"><a href="?lang=ua" class="header__lang-link">UA</a></li>
+        <li class="header__lang-item"><a href="?lang=bg" class="header__lang-link">BG</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- Contenu principal -->
+<main>
+  <!-- How it works -->
+  <section class="how">
+    <div class="how__container">
+      <div>
+        <h2 class="how__title">Comment ça marche</h2>
+        <p class="how__subtitle">
+          Une expérience VR simple, sûre et guidée — étape par étape
+        </p>
+      </div>
+      <div class="how__intro">
+        <p>
+          InnerWorld est conçu pour être facile à utiliser, même sans expérience préalable
+          en VR ou en outils de santé mentale. L’expérience est courte, douce et entièrement optionnelle.
+        </p>
+      </div>
+      <div class="how__row">
+        <div class="how__block">
+          <h3 class="how__heading">Qu’est-ce que l’expérience VR InnerWorld ?</h3>
+          <p class="how__text">
+            Une brève session immersive (3–6 minutes) en réalité virtuelle qui vous guide à travers :
+          </p>
+
+          <ul class="how__list">
+            <li>Exercices de respiration</li>
+            <li>Techniques d’ancrage</li>
+            <li>Prise de conscience corporelle</li>
+            <li>Environnements visuels apaisants</li>
+          </ul>
+
+          <p class="how__text">
+            Il n’y a pas de performance, pas de « bonne manière », et aucune pression pour parler.
+          </p>
+        </div>
+
+        <div class="how__block how__block--compact">
+          <h3 class="how__heading">Ce que ce n’est pas</h3>
+          <ul class="how__list">
+            <li>Ce n’est pas une thérapie</li>
+            <li>Ce n’est pas un jeu</li>
+            <li>Ce n’est pas un remplacement du soutien professionnel</li>
+          </ul>
+        </div>
+      </div>
+      <div class="how__steps">
+        <h3 class="how__heading">Que se passe-t-il pendant une session ?</h3>
+
+        <ol class="how__steps-list">
+          <li>
+            <strong>Avant :</strong> Asseyez-vous confortablement, éliminez les distractions, prenez un moment pour
+            vous.
+          </li>
+          <li>
+            <strong>Entrée en VR :</strong> Un environnement calme, des instructions lentes, liberté d’interagir ou de
+            se reposer.
+          </li>
+          <li>
+            <strong>Session VR :</strong> 3–6 minutes de respiration, d’ancrage ou de conscience corporelle.
+          </li>
+          <li>
+            <strong>Après :</strong> Ancrage et réflexion ou partage facultatif.
+          </li>
+        </ol>
+      </div>
+
+      <div class="how__block">
+        <h3 class="how__heading">Combien de temps cela prend-il ?</h3>
+        <ul class="how__list">
+          <li>3–6 minutes — expérience VR</li>
+          <li>5–10 minutes — préparation et ancrage</li>
+          <li>Optionnel — courte réflexion</li>
+        </ul>
+
+        <p class="how__text">
+          Temps total : environ <strong>10–20 minutes</strong>.
+        </p>
+        <h3 class="how__heading">InnerWorld est-il sûr ?</h3>
+        <p class="how__text">
+          La sécurité est intégrée à chaque étape : préparation, sessions courtes, règles claires d’arrêt,
+          et protocoles de facilitateur.
+        </p>
+        <h3 class="how__heading">Que ressentent généralement les utilisateurs ?</h3>
+        <p class="how__text">
+          La plupart des participants rapportent se sentir plus calmes, plus concentrés, moins submergés et plus
+          connectés à leur corps.
+          Certains peuvent ressentir de légers étourdissements au début (habituellement temporaires), une libération
+          émotionnelle et de la fatigue après une relaxation profonde.
+          Tout cela est normal et suivi grâce à l’approche de sécurité du projet.
+        </p>
+        <h3 class="how__heading">Qui peut commencer à utiliser InnerWorld ?</h3>
+        <p class="how__text">
+          InnerWorld est conçu pour que :
+        </p>
+        <ul class="how__list">
+          <li>Les organisations puissent l’implémenter facilement</li>
+          <li>Les facilitateurs puissent apprendre rapidement</li>
+          <li>Les utilisateurs se sentent en sécurité dès la première session</li>
+        </ul>
+      </div>
+
+      <div class="how__faq">
+        <h3 class="how__heading">FAQ — Avant de commencer</h3>
+        <div class="faq-item">
+          <button class="faq-item__question">Puis-je arrêter à tout moment ?</button>
+          <div class="faq-item__answer">
+            Oui. Vous pouvez interrompre l’expérience à tout moment. Vous restez maître de la situation en permanence.
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-item__question">Puis-je utiliser InnerWorld seul ou avec un facilitateur ?</button>
+          <div class="faq-item__answer">
+            Oui, InnerWorld peut être utilisé seul ou avec un facilitateur. Il est le plus souvent utilisé avec un
+            facilitateur qui présente l’expérience, assure la sécurité émotionnelle et offre un soutien optionnel après
+            la session. Aucune formation clinique n’est nécessaire, des instructions claires sont fournies.
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-item__question">Que faire si je ressens des émotions fortes ?</button>
+          <div class="faq-item__answer">
+            C’est parfaitement normal. Certaines personnes ressentent une libération émotionnelle, du calme ou du
+            soulagement, des souvenirs ou sensations inattendus. Les expériences InnerWorld sont douces et courtes, et
+            les réactions émotionnelles sont normales et temporaires. Un facilitateur peut vous soutenir si nécessaire,
+            et le partage reste toujours optionnel.
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-item__question">Que faire si je me sens étourdi ou mal à l’aise ?</button>
+          <div class="faq-item__answer">
+            Vous pouvez faire une pause ou arrêter immédiatement. Les sessions VR sont courtes pour réduire l’inconfort,
+            et la plupart des personnes s’adaptent rapidement. Si quelque chose ne va pas, retirez simplement le casque
+            et reposez-vous.
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-item__question">Ai-je besoin d’expérience en VR ou méditation ?</button>
+          <div class="faq-item__answer">
+            Aucune expérience nécessaire. InnerWorld est conçu pour les débutants. Tout est guidé étape par étape, et
+            vous pouvez suivre à votre rythme.
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-item__question">InnerWorld est-il une thérapie ?</button>
+          <div class="faq-item__answer">
+            Non. InnerWorld est un outil de soutien psychosocial, pas une thérapie. Il peut aider à réguler les émotions
+            mais ne remplace pas un traitement professionnel en santé mentale.
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-item__question">Dois-je parler après ?</button>
+          <div class="faq-item__answer">
+            Non. La réflexion ou le partage est toujours optionnel. Vous pouvez parler, rester silencieux ou simplement
+            vous reposer — selon ce qui vous convient.
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-item__question">InnerWorld est-il sûr ?</button>
+          <div class="faq-item__answer">
+            Oui, lorsqu’il est utilisé avec les directives. Les protocoles de sécurité, les étapes de préparation et les
+            règles claires d’arrêt font partie de chaque session. InnerWorld peut ne pas convenir à tout le monde, c’est
+            pourquoi un dépistage est recommandé.
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-item__question">Combien de sessions puis-je faire ?</button>
+          <div class="faq-item__answer">
+            Il n’y a pas de nombre fixe. Certaines personnes utilisent InnerWorld une seule fois, d’autres reviennent
+            régulièrement. L’expérience est flexible et dirigée par l’utilisateur.
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-item__question">Qu’en est-il de la vie privée et des données ?</button>
+          <div class="faq-item__answer">
+            Votre vie privée est respectée. InnerWorld n’enregistre ni audio, ni vidéo, ni données personnelles pendant
+            les sessions VR. Toute évaluation est anonyme et éthique.
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-item__question">Toujours incertain ?</button>
+          <div class="faq-item__answer">
+            C’est normal. InnerWorld est conçu pour être optionnel, doux et respectueux des limites personnelles. Vous
+            avez toujours le contrôle.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Pied de page -->
+  <footer class="footer">
+    <div class="footer__container">
+      <div class="footer__column">
+        <h3 class="footer__title">Contacts ABU</h3>
+        <p class="footer__text">Email : info@ankarabilim.edu.tr</p>
+        <p class="footer__text">Téléphone : +90 552 899 84 11</p>
+        <p class="footer__text">Site web :
+          <a class="footer__link" target="_blank" href="https://ankarabilim.edu.tr/en/index">
+            ankarabilim.edu.tr
+          </a>
+        </p>
+      </div>
+      <div class="footer__column">
+        <h3 class="footer__title">Contacts FSCOD</h3>
+        <p class="footer__text">Email : contact@opendoors.center</p>
+        <p class="footer__text">Téléphone : +359 884 013 786</p>
+        <p class="footer__text">Site web :
+          <a class="footer__link" target="_blank" href="https://opendoors.center/">
+            opendoors.center
+          </a>
+        </p>
+      </div>
+      <div class="footer__column">
+        <h3 class="footer__title">Contacts URC</h3>
+        <p class="footer__text">Email : olena.vyshnev@gmail.com</p>
+        <p class="footer__text">Téléphone : +33 065 245 56 39</p>
+        <p class="footer__text">Instagram :
+          <a class="footer__link" target="_blank" href="https://www.instagram.com/ukrrcenter/">
+            @ukrrcenter
+          </a>
+        </p>
+      </div>
+      <div class="footer__column">
+        <h3 class="footer__title">Guides & Documents</h3>
+        <p class="footer__text">
+          <a href="{% static 'docs/VR videos guide for direct users.pdf' %}" target="_blank">
+            📄 Guide for direct users.pdf
+          </a>
+        </p>
+        <p class="footer__text">
+          <a href="{% static 'docs/VR videos guide for professionals.pdf' %}" target="_blank">
+            📄 Guide for professionals.pdf
+          </a>
+        </p>
+        <p class="footer__text">
+          <a href="{% static 'docs/Who-5French.pdf' %}" target="_blank">
+            📄 Who-5French.pdf
+          </a>
+        </p>
+      </div>
+      <div class="footer__column">
+        <h3 class="footer__title">Règlements</h3>
+        <p class="footer__text">
+          <a href="{% static 'docs/Privacy Policy.pdf' %}" target="_blank">
+            📄 Privacy Policy.pdf
+          </a>
+        </p>
+        <p class="footer__text">
+          <a href="{% static 'docs/Terms of Use.pdf' %}" target="_blank">
+            📄 Terms of Use.pdf
+          </a>
+        </p>
+        <p class="footer__text">
+          <a href="{% static 'docs/Incident Report template.docx' %}" target="_blank">
+            📄 Incident Report template.docx
+          </a>
+        </p>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <hr class="footer__divider">
+      <p class="footer__copy">
+        InnerWorld: Virtual Reality for Psychosocial Support
+      <p>Financé par l’Union européenne. Les points de vue et avis exprimés n’engagent toutefois que leur(s) auteur(s)
+        et ne reflètent pas nécessairement ceux de l’Union européenne ou de l’Agence<br> exécutive européenne pour
+        l’éducation et la culture (EACEA). Ni l’Union européenne ni l’EACEA ne sauraient en être tenues pour
+        responsables.</p>
+      2023-3-TR01-KA210-YOU-000181712<br>
+      © 2025 Tous droits réservés.
+    </div>
+  </footer>
+
+</main>
+
+</body>
+
+<script>
+    document.querySelectorAll('.faq-item__question').forEach(button => {
+        button.addEventListener('click', () => {
+            const item = button.parentElement
+            const answer = item.querySelector('.faq-item__answer')
+            const isOpen = item.classList.contains('active')
+
+            if (isOpen) {
+                answer.style.height = answer.scrollHeight + 'px'
+                requestAnimationFrame(() => {
+                    answer.style.height = '0'
+                })
+                item.classList.remove('active')
+            } else {
+                item.classList.add('active')
+                answer.style.height = answer.scrollHeight + 'px'
+
+                answer.addEventListener('transitionend', function handler() {
+                    answer.style.height = 'auto'
+                    answer.removeEventListener('transitionend', handler)
+                })
+            }
+        })
+    })
+
+</script>
+</html>
