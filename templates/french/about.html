@@ -59,37 +59,102 @@
 
 <!-- Contenu principal -->
 <main>
-  <!-- À propos -->
-  <section class="about">
-    <h2 class="about__title">À propos</h2>
-    <p class="about__description">
-      La Réalité Virtuelle pour le Soutien Psychosocial est un projet KA210 créé dans le cadre du programme Erasmus+,
-      dédié à transformer la manière dont le soutien en santé mentale est apporté aux jeunes déplacés.
-      Le projet se concentre sur les jeunes touchés par la guerre en Ukraine.
-      Grâce à l’utilisation innovante de la technologie de réalité virtuelle (VR),
-      le projet vise à construire un environnement sûr, engageant et sans barrières pour le soutien psychosocial,
-      répondant aux besoins variés des personnes âgées de 13 à 20 ans.<br><br>
+  <!-- About -->
+<section class="about">
+  <div class="about__container">
 
-      Pendant 18 mois, notre équipe internationale composée de membres de Bulgarie, de France et de Turquie a créé,
-      testé et partagé un outil VR conçu pour améliorer la qualité et l’accessibilité de l’assistance en santé mentale.
-      Soixante jeunes déplacés ont participé à la phase pilote, recevant un soutien personnalisé et de haute qualité
-      basé sur la VR,
-      tandis que six professionnels de santé mentale formés ont appris à intégrer cet outil dans leur pratique.
-      L’approche d’InnerWorld supprime les barrières courantes telles que la langue, le coût et la géographie,
-      permettant à davantage de jeunes d’accéder à l’aide quand et où ils en ont besoin.
-      Le projet a également investi dans un impact à long terme, en veillant à ce que la méthode VR puisse être
-      largement adoptée
-      en Europe et au-delà. En combinant l’innovation numérique, l’expertise en santé mentale et la collaboration
-      internationale,
-      InnerWorld promeut l’inclusion, soutient le rétablissement et donne aux jeunes les moyens de développer
-      des compétences pour l’apprentissage, le travail et la vie communautaire dans leurs nouveaux environnements.
-    </p>
+    <div class="about__block">
+      <h1 class="about__heading">Qu'est-ce qu'InnerWorld ?</h1>
+      <p class="about__text">
+        InnerWorld est un projet innovant qui utilise la Réalité Virtuelle (VR) pour soutenir le bien-être émotionnel des jeunes touchés par la guerre, le déplacement et le stress prolongé. Il offre un soutien émotionnel accessible et sans barrières pour le travail avec les jeunes, les milieux communautaires et l'éducation.
+      </p>
 
-    <div class="proceed-button-container">
-      <a href="{% url 'website:video' %}?lang=fr" class="proceed-button">Passer à la vidéo</a>
+      <ul class="about__list">
+        <li>Calmer le système nerveux</li>
+        <li>Réduire le stress et la surcharge émotionnelle</li>
+        <li>Améliorer la concentration et l'auto-régulation</li>
+        <li>Se sentir plus en sécurité et ancré</li>
+      </ul>
+
+      <p class="about__note">
+        InnerWorld a été développé dans le cadre du programme Erasmus+ KA210 par des équipes de Turquie, Bulgarie et France.
+      </p>
+
+      <p class="about__warning">
+        InnerWorld ne remplace pas le soutien psychologique professionnel ni la thérapie.
+      </p>
     </div>
 
-  </section>
+     <div class="about__block">
+      <h3 class="about__heading">Qu'est-ce qui rend InnerWorld différent ?</h3>
+
+      <ul class="about__features">
+        <li>Conçu en tenant compte des traumatismes</li>
+        <li>Engageant et non stigmatisant pour les jeunes</li>
+        <li>Sessions VR courtes (3–6 minutes)</li>
+        <li>Adaptable culturellement et facile à localiser</li>
+        <li>Conçu pour les organisations, pas pour les individus</li>
+      </ul>
+    </div>
+
+    <h1>Pour qui est InnerWorld ?</h1>
+    <div class="about__grid">
+      <div class="about__card">
+        <h3 class="about__heading">Jeunes (15–29 ans)</h3>
+        <ul class="about__list">
+          <li>Souffrant de stress ou d'anxiété</li>
+          <li>Difficulté à se concentrer ou à se reposer</li>
+          <li>Accès limité au soutien psychologique</li>
+          <li>Préférence pour des outils pratiques et non verbaux</li>
+        </ul>
+        <p class="about__small">
+          Aucune expérience préalable en VR ou méditation nécessaire.
+        </p>
+      </div>
+
+      <div class="about__card">
+        <h3 class="about__heading">Professionnels travaillant avec les jeunes</h3>
+        <ul class="about__list">
+          <li>Travailleurs jeunesse</li>
+          <li>Psychologues</li>
+          <li>Travailleurs sociaux</li>
+          <li>Éducateurs et facilitateurs</li>
+        </ul>
+        <p class="about__small">
+          Facile à mettre en place sans expérience VR préalable.
+        </p>
+      </div>
+
+      <div class="about__card">
+        <h3 class="about__heading">Organisations</h3>
+        <ul class="about__list">
+          <li>ONG et organisations de jeunesse</li>
+          <li>Centres communautaires et culturels</li>
+          <li>Écoles et centres d'apprentissage</li>
+          <li>Abris et programmes d'intégration</li>
+        </ul>
+        <p class="about__small">
+          Comprend des guides, protocoles de sécurité et matériels.
+        </p>
+      </div>
+    </div>
+
+    <div class="about__block">
+      <h3 class="about__heading">Pourquoi la VR pour le soutien psychosocial ?</h3>
+      <p class="about__text">
+        La Réalité Virtuelle crée un sentiment de présence — la sensation « d'être là ». Cela la rend particulièrement efficace pour la régulation émotionnelle et la réduction du stress.
+      </p>
+
+      <ul class="about__list">
+        <li>Se déconnecter des facteurs de stress externes</li>
+        <li>Concentrer plus facilement l'attention</li>
+        <li>Stimuler les sens dans des environnements apaisants</li>
+        <li>Pratiquer des techniques de mise à la terre et de respiration</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
 
   <!-- Partenaires -->
   <section class="partners">
