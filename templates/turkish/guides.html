@@ -1,0 +1,262 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inner World</title>
+  <link rel="icon" type="image/x-icon" href="{% static 'img/favicon.ico' %}">
+  <link rel="stylesheet" href="{% static 'css/video360.css' %}">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+  <script src="https://cdn.dashjs.org/latest/dash.all.min.js"></script>
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+  <div class="header__container">
+    <a href="{% url 'website:about' %}?lang=tr">
+      <div class="header__info">
+        <img class="header__logo" alt="logo" src="{% static 'img/logo-tr2.png' %}">
+        <img class="header__tua-logo" alt="tua-logo" src="{% static 'img/tua-logo.png' %}">
+        <img class="header__yazisiz-logo" alt="yazisiz-logo" src="{% static 'img/yazisiz-logo.jpg' %}">
+        <img class="header__erasmus" alt="eu-log" src="{% static 'img/eu-logo-tr.jpg' %}">
+      </div>
+    </a>
+    <nav class="header__nav">
+      <ul class="header__nav-list">
+        <li class="header__nav-item">
+          <a href="{% url 'website:about' %}?lang=tr" class="header__nav-link">Ana Sayfa</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="{% url 'website:video' %}?lang=tr" class="header__nav-link">VR</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="{% url 'website:howitworks' %}?lang=tr" class="header__nav-link">Nasıl Çalışır</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="{% url 'website:guides' %}?lang=tr" class="header__nav-link header__nav-link--active">Rehberler</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="{% url 'website:results' %}?lang=tr" class="header__nav-link">Sonuçlar</a>
+        </li>
+      </ul>
+    </nav>
+    <nav class="header__lang">
+      <ul class="header__lang-list">
+        <li class="header__lang-item"><a href="?lang=en" class="header__lang-link">EN</a></li>
+        <li class="header__lang-item"><a href="?lang=tr" class="header__lang-link--active">TR</a></li>
+        <li class="header__lang-item"><a href="?lang=fr" class="header__lang-link">FR</a></li>
+        <li class="header__lang-item"><a href="?lang=ua" class="header__lang-link">UA</a></li>
+        <li class="header__lang-item"><a href="?lang=bg" class="header__lang-link">BG</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- Main Content -->
+<main>
+  <!-- Guides -->
+  <section class="guides">
+    <h2 class="guides__title">Rehberler</h2>
+
+    <div class="guides__grid">
+      <article class="guide-card">
+        <h3>Gençler için</h3>
+        <p class="subtitle">Sakinleşmenize, odaklanmanıza ve daha dengede hissetmenize yardımcı olacak basit VR
+          araçları</p>
+
+        <p>InnerWorld, günlük hayatta zihinsel sağlığınızı desteklemek için kullanabileceğiniz kısa VR ve video
+          uygulamaları sunar. Kolay takip edilebilir, genç dostu ve stres ya da aşırı yüklenme anları için
+          tasarlanmıştır. Bu araçlar terapi değildir. Sadece kısa bir mola gerektiğinde size destek olabilecek basit
+          öz-yardım uygulamalarıdır.</p>
+
+        <h4>Bu araçları kimler kullanmalı?</h4>
+        <p>Bu rehber, gençseniz (yaklaşık 15–29 yaş), stresli, kaygılı, huzursuz veya bunalmış hissediyorsanız, pratik
+          ve karmaşık olmayan çözümler arıyorsanız ve uzun açıklamalar yerine kısa egzersizleri tercih ediyorsanız sizin
+          için uygundur. Araçlar, baskı altında çalışıyor veya öğreniyor, yeni bir ülkeye/ortama uyum sağlıyor veya
+          sürekli zihninizi meşgul eden kaygılarla uğraşıyorsanız özellikle faydalıdır. VR, meditasyon veya nefes
+          egzersizi deneyimi gerekmez.</p>
+
+        <h4>InnerWorld ne zaman kullanılmalı (ve ne zaman kullanılmamalı)</h4>
+        <p>Stresli veya gergin hissediyorsanız, kısa bir zihinsel reset ihtiyacınız varsa, odaklanmakta zorlanıyorsanız,
+          duygusal olarak aşırı yüklenmiş hissediyorsanız veya bedeninizi ve düşüncelerinizi sakinleştirmek istiyorsanız
+          InnerWorld’ü kullanın. Kısa uygulamalar günlük durumlar için en iyisidir.</p>
+
+        <p>Crisis durumunda, kendinize veya bir başkasına zarar verebileceğinizi düşünüyorsanız, semptomlarınız
+          kötüleşiyorsa veya yalnızken güvende hissetmiyorsanız InnerWorld’ü kullanmayın. Bu durumlarda yerel acil
+          servisler, güvenilir bir yetişkin veya bir ruh sağlığı profesyoneli ile iletişime geçin. InnerWorld
+          profesyonel ruh sağlığı desteğinin yerine geçmez.</p>
+
+        <h4>Başlamadan önce</h4>
+        <p>Güvenli bir alan oluşturun: sessiz ve rahat bir yer seçin, güvenli bir şekilde oturun veya uzanın ve dikkat
+          dağıtıcıları kaldırın. Kendinizi kötü hissederseniz, hemen başlığı veya kulaklığı çıkarın.</p>
+
+        <h4>Kendinizi kötü hissederseniz</h4>
+        <p>Videoyu duraklatın veya durdurun, gözlerinizi açın, odada etrafa bakın, ayaklarınızı yere bastırın. Ayrıca 5
+          şeyi görün, 4 şeyi hissedin, 3 şeyi duyun, 2 şeyi koklayın ve 1 şeyi tadın diyerek grounding
+          yapabilirsiniz.</p>
+
+        <h4>InnerWorld uygulamaları</h4>
+        <p><strong>Üçgen Nefesi:</strong> gerginlik ve hızlı düşünceler için. Nefes ve kalp atışını sakinleştirir. Baş
+          dönmesi hissederseniz durun.</p>
+        <p><strong>Kare Nefesi:</strong> odaklanma ve kaygı için. Rahatsız hissederseniz nefes tutmayı kısaltın.</p>
+        <p><strong>Vücut Taraması:</strong> fiziksel gerginlik ve uyku için. Rahatsızlık hissederseniz grounding’e
+          geçin.</p>
+        <p><strong>Sinema (Kaygıları Film Gibi İzlemek):</strong> sürekli kaygılar için. Travma ile bağlantılı ise kısa
+          tutun.</p>
+        <p><strong>Grounding:</strong> bunalmışlık veya dissosiyasyon için. En güvenli uygulamadır ve her zaman geri
+          dönülebilir.</p>
+
+        <h4>Ne sıklıkla?</h4>
+        <p>Nefes egzersizleri gün içinde birkaç kez kullanılabilir, vücut taraması günde bir kez veya uyumadan önce,
+          sinema sadece kaygılar yönetilebilir olduğunda. Gerekirse her zaman grounding ile bitirin. Sabit bir program
+          yoktur.</p>
+
+        <h4>Tek başına veya başkalarıyla kullanmak</h4>
+        <p>InnerWorld’ü kendinizi güvende hissediyorsanız tek başınıza kullanabilirsiniz veya
+          gruplarda/organizasyonlarda bir kolaylaştırıcı ile birlikte. 18 yaşından küçükseniz, güvenilir bir yetişkin
+          ile kullanın.</p>
+
+        <h4>Güvenlik notları</h4>
+        <p>Baş dönmesi, uyuşma, rahatsızlık veya nefes darlığı hissederseniz hemen durun. Su için, çevrenizle yeniden
+          bağlantı kurun ve devam eden zorluklar için profesyonel yardım alın.</p>
+      </article>
+
+      <article class="guide-card">
+        <h3>Profesyoneller için</h3>
+        <p class="subtitle">InnerWorld VR araçlarını gençlerle kullanmak için pratik rehber</p>
+
+        <p>InnerWorld, profesyonellerin psiko-sosyal, gençlik çalışması ve eğitim oturumlarına entegre edebileceği kısa
+          ve düşük yoğunluklu VR uygulamaları sunar. Araçlar beceri temellidir, kolayca entegre edilebilir, duygusal
+          düzenlemeyi destekler ve klinik tedavi değildir. InnerWorld, profesyonel çalışmayı tamamlar ancak terapi, PFA
+          veya kriz müdahalesinin yerini almaz.</p>
+
+        <h4>Kimler için?</h4>
+        <p>Yerinden edilmiş veya stresli gençlerle çalışan profesyoneller (yaklaşık 14–29 yaş), gençlik çalışanları,
+          psikologlar, sosyal hizmet uzmanları, eğitimciler ve topluluk kolaylaştırıcıları dahil. Önceki VR deneyimi
+          gerekmez.</p>
+
+        <h4>Ne zaman kullanılmalı — ve ne zaman kullanılmamalı</h4>
+        <p>Gençler stabil ama stresli, kaygılı, ruminatif veya grounding’e ihtiyaç duyuyorsa kullanın. İntihar niyeti,
+          akut kriz, psikoz veya çözülmemiş dissosiyasyon durumlarında kullanmayın. Kriz protokollerini takip edin ve
+          klinik bakıma yönlendirin.</p>
+
+        <h4>Etik sınırlar & güvenlik</h4>
+        <p>Katılım gönüllüdür, gençler istediği zaman durabilir, kayıt alınamaz ve gizlilik geçerlidir. Sibernetik
+          rahatsızlık, duygusal yükselme veya dissosiyasyon için izleyin ve gerekirse grounding’e geçin.</p>
+
+        <h4>Kolaylaştırma</h4>
+        <p>Bireysel kullanım, ilk kez deneyimleyen veya hassas kullanıcılar için uygundur. Grup kullanımı, isteğe bağlı
+          refleksiyon ve kolay çıkış ile atölye ve programlar için uygundur.</p>
+
+        <h4>Oturum yapısı</h4>
+        <p>VR video: 3–6 dakika. Hazırlık ve grounding: 5–10 dakika. İsteğe bağlı refleksiyon: 5 dakika. Oturum başına
+          1–3 video, haftalık veya iki haftada bir kullanılabilir.</p>
+
+        <h4>Uygulamaları seçmek</h4>
+        <p>Kaygı için nefes, ruminasyon için Sinema, gerginlik için Vücut Taraması, bunalmışlık veya dissosiyasyon için
+          Grounding.</p>
+
+        <h4>Birisi kendini kötü hissederse</h4>
+        <p>Hemen durdurun, gözleri açın, 5-duyu grounding uygulayın, nefesi yavaşlatın, su verin ve sadece genç isterse
+          devam edin.</p>
+
+        <h4>Dokümantasyon</h4>
+        <p>Katılım, stres puanları, duraklamalar, olaylar kaydedilir ve ciddi durumlar protokole göre yükseltilir.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__container">
+      <div class="footer__column">
+        <h3 class="footer__title">ABU İletişim</h3>
+        <p class="footer__text">E-posta: info@ankarabilim.edu.tr</p>
+        <p class="footer__text">Telefon: +90 552 899 84 11</p>
+        <p class="footer__text">Web sitesi:
+          <a class="footer__link" target="_blank" href="https://ankarabilim.edu.tr/en/index">
+            ankarabilim.edu.tr
+          </a>
+        </p>
+
+      </div>
+      <div class="footer__column">
+        <h3 class="footer__title">FSCOD İletişim</h3>
+        <p class="footer__text">E-posta: contact@opendoors.center</p>
+        <p class="footer__text">Telefon: +359 884 013 786</p>
+        <p class="footer__text">Web sitesi:
+          <a class="footer__link" target="_blank" href="https://opendoors.center/">
+            opendoors.center
+          </a>
+        </p>
+
+      </div>
+      <div class="footer__column">
+        <h3 class="footer__title">URC İletişim</h3>
+        <p class="footer__text">E-posta: olena.vyshnev@gmail.com</p>
+        <p class="footer__text">Telefon: +33 065 245 56 39</p>
+        <p class="footer__text">Instagram:
+          <a class="footer__link" target="_blank" href="https://www.instagram.com/ukrrcenter/">
+            @ukrrcenter
+          </a>
+        </p>
+
+      </div>
+      <div class="footer__column">
+        <h3 class="footer__title">Kılavuzlar & Belgeler</h3>
+        <p class="footer__text">
+          <a href="{% static 'docs/VR videos guide for direct users.pdf' %}" target="_blank">
+            📄 Guide for direct users.pdf
+          </a>
+        </p>
+        <p class="footer__text">
+          <a href="{% static 'docs/VR videos guide for professionals.pdf' %}" target="_blank">
+            📄 Guide for professionals.pdf
+          </a>
+        </p>
+        <p class="footer__text">
+          <a href="{% static 'docs/Who-5Turkish.pdf' %}" target="_blank">
+            📄 Who-5Turkish.pdf
+          </a>
+        </p>
+      </div>
+      <div class="footer__column">
+        <h3 class="footer__title">Yönetmelikler</h3>
+        <p class="footer__text">
+          <a href="{% static 'docs/Privacy Policy.pdf' %}" target="_blank">
+            📄 Privacy Policy.pdf
+          </a>
+        </p>
+        <p class="footer__text">
+          <a href="{% static 'docs/Terms of Use.pdf' %}" target="_blank">
+            📄 Terms of Use.pdf
+          </a>
+        </p>
+        <p class="footer__text">
+          <a href="{% static 'docs/Incident Report template.docx' %}" target="_blank">
+            📄 Incident Report template.docx
+          </a>
+        </p>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <hr class="footer__divider">
+      <p class="footer__copy">
+        InnerWorld: Virtual Reality for Psychosocial Support
+      <p>Erasmus+ / Avrupa Dayanışma Programı kapsamında Avrupa Komisyonu tarafından desteklenmektedir.<br>Burada yer
+        alan içerik yazarın görüşlerini yansıtmaktadır ve bu görüşlerden Avrupa Komisyonu ve Türkiye Ulusal Ajansı
+        sorumlu tutulamaz.</p>
+      2023-3-TR01-KA210-YOU-000181712<br>
+      © 2025 Tüm hakları saklıdır.
+    </div>
+  </footer>
+
+</main>
+
+</body>
+</html>
