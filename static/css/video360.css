@@ -1142,6 +1142,10 @@ header {
     margin: 0 0 12px 0;
 }
 
+.how__list .how__list-dangerous {
+    color: red;
+}
+
 .how__list li {
     position: relative;
     padding-left: 22px;
