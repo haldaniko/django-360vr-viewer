@@ -1,0 +1,301 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inner World</title>
+  <link rel="icon" type="image/x-icon" href="{% static 'img/favicon.ico' %}">
+  <link rel="stylesheet" href="{% static 'css/video360.css' %}">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+  <script src="https://cdn.dashjs.org/latest/dash.all.min.js"></script>
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+  <div class="header__container">
+    <a href="{% url 'website:about' %}?lang=tr">
+      <div class="header__info">
+        <img class="header__logo" alt="logo" src="{% static 'img/logo-tr2.png' %}">
+        <img class="header__tua-logo" alt="tua-logo" src="{% static 'img/tua-logo.png' %}">
+        <img class="header__yazisiz-logo" alt="yazisiz-logo" src="{% static 'img/yazisiz-logo.jpg' %}">
+        <img class="header__erasmus" alt="eu-log" src="{% static 'img/eu-logo-tr.jpg' %}">
+      </div>
+    </a>
+    <nav class="header__nav">
+      <ul class="header__nav-list">
+        <li class="header__nav-item">
+          <a href="{% url 'website:about' %}?lang=tr" class="header__nav-link">Ana Sayfa</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="{% url 'website:video' %}?lang=tr" class="header__nav-link">VR</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="{% url 'website:howitworks' %}?lang=tr" class="header__nav-link">Nasıl Çalışır</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="{% url 'website:guides' %}?lang=tr" class="header__nav-link">Rehberler</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="{% url 'website:results' %}?lang=tr" class="header__nav-link header__nav-link--active">Sonuçlar</a>
+        </li>
+      </ul>
+    </nav>
+    <nav class="header__lang">
+      <ul class="header__lang-list">
+        <li class="header__lang-item"><a href="?lang=en" class="header__lang-link">EN</a></li>
+        <li class="header__lang-item"><a href="?lang=tr" class="header__lang-link--active">TR</a></li>
+        <li class="header__lang-item"><a href="?lang=fr" class="header__lang-link">FR</a></li>
+        <li class="header__lang-item"><a href="?lang=ua" class="header__lang-link">UA</a></li>
+        <li class="header__lang-item"><a href="?lang=bg" class="header__lang-link">BG</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- Main Content -->
+<main>
+  <!-- Results -->
+  <section class="evidence">
+    <div class="evidence__container">
+
+      <h2 class="evidence__title">Bilimsel Dayanak ve Araştırma Kanıtları</h2>
+      <p class="evidence__subtitle">
+        InnerWorld, sanal gerçekliğin ve dijital müdahalelerin gevşeme,
+        duygu düzenleme ve psikolojik iyilik hali üzerindeki etkinliğini
+        gösteren hakemli bilimsel çalışmalara ve uluslararası raporlara dayanmaktadır.
+      </p>
+
+      <div class="evidence__grid">
+
+        <a class="evidence__card"
+           href="{% static 'docs/results/Digital transformation of mental health services.pdf' %}" target="_blank">
+          <h3>Ruh Sağlığı Hizmetlerinin Dijital Dönüşümü</h3>
+          <p>Dijital teknolojiler ve VR'ın psikolojik destek alanını nasıl dönüştürdüğü.</p>
+          <span class="evidence__download">PDF İndir</span>
+        </a>
+
+        <a class="evidence__card"
+           href="{% static 'docs/results/Effectiveness of Digital Mental Health Interventions.pdf' %}" target="_blank">
+          <h3>Dijital Ruh Sağlığı Müdahalelerinin Etkinliği</h3>
+          <p>Çevrimiçi terapötik araçların klinik sonuçları.</p>
+          <span class="evidence__download">PDF İndir</span>
+        </a>
+
+        <a class="evidence__card"
+           href="{% static 'docs/results/Effectiveness of virtual reality therapy in the treatment of anxiety disorders.pdf' %}"
+           target="_blank">
+          <h3>Anksiyete Bozukluklarında VR Terapisinin Etkinliği</h3>
+          <p>Sanal gerçeklik ile kaygının azaltılmasına dair bilimsel kanıtlar.</p>
+          <span class="evidence__download">PDF İndir</span>
+        </a>
+
+        <a class="evidence__card"
+           href="{% static 'docs/results/Exploring Youth Perspectives on Digital Mental Health Platforms.pdf' %}"
+           target="_blank">
+          <h3>Gençlerin Dijital Ruh Sağlığı Platformlarına Bakışı</h3>
+          <p>Dijital destek araçlarının algılanışı ve kullanımı.</p>
+          <span class="evidence__download">PDF İndir</span>
+        </a>
+
+        <a class="evidence__card" href="{% static 'docs/results/How VR is transforming mental health support.pdf' %}"
+           target="_blank">
+          <h3>VR Ruh Sağlığı Desteğini Nasıl Dönüştürüyor</h3>
+          <p>Terapi ve gevşemede sürükleyici ortamların rolü.</p>
+          <span class="evidence__download">PDF İndir</span>
+        </a>
+
+        <a class="evidence__card" href="{% static "docs/results/How's Life for Children in the Digital Age.pdf" %}"
+           target="_blank">
+          <h3>Dijital Çağda Çocukların Yaşamı</h3>
+          <p>Dijital ortamda refah ve duygusal gelişim.</p>
+          <span class="evidence__download">PDF İndir</span>
+        </a>
+
+        <a class="evidence__card" href="{% static 'docs/results/Internet Interventions.pdf' %}" target="_blank">
+          <h3>İnternet Tabanlı Psikolojik Müdahaleler</h3>
+          <p>Çevrimiçi destek programlarının etkinliği.</p>
+          <span class="evidence__download">PDF İndir</span>
+        </a>
+
+        <a class="evidence__card" href="{% static 'docs/results/Internet-related mental health difficulties.pdf' %}"
+           target="_blank">
+          <h3>İnternetle İlişkili Ruh Sağlığı Sorunları</h3>
+          <p>Dijital ortamın riskleri ve koruyucu faktörleri.</p>
+          <span class="evidence__download">PDF İndir</span>
+        </a>
+
+        <a class="evidence__card"
+           href="{% static 'docs/results/Psychological and Physiological Responses in Patients with Generalized Anxiety Disorder.pdf' %}"
+           target="_blank">
+          <h3>Yaygın Anksiyete Bozukluğunda Psikolojik ve Fizyolojik Tepkiler</h3>
+          <p>Stres mekanizmaları ve duygu düzenleme süreçleri.</p>
+          <span class="evidence__download">PDF İndir</span>
+        </a>
+
+        <a class="evidence__card"
+           href="{% static 'docs/results/Psychological interventions implementation manual.pdf' %}" target="_blank">
+          <h3>Psikolojik Müdahalelerin Uygulama Kılavuzu</h3>
+          <p>Kanıta dayalı terapiler için pratik rehber.</p>
+          <span class="evidence__download">PDF İndir</span>
+        </a>
+
+        <a class="evidence__card"
+           href="{% static 'docs/results/The Benefits of emotion Regulation Interventions in Virtual Reality.pdf' %}"
+           target="_blank">
+          <h3>VR'da Duygu Düzenleme Müdahalelerinin Faydaları</h3>
+          <p>Sakinleşme ve denge için sürükleyici ortamların katkısı.</p>
+          <span class="evidence__download">PDF İndir</span>
+        </a>
+
+        <a class="evidence__card" href="{% static 'docs/results/The Effectiveness of Virtual Reality Exposure.pdf' %}"
+           target="_blank">
+          <h3>Sanal Gerçeklik Maruziyetinin Etkinliği</h3>
+          <p>Maruziyet terapisinin klinik kanıtları.</p>
+          <span class="evidence__download">PDF İndir</span>
+        </a>
+
+        <a class="evidence__card"
+           href="{% static 'docs/results/The use of virtual reality in the treatment of mental disorders.pdf' %}"
+           target="_blank">
+          <h3>Ruhsal Bozuklukların Tedavisinde VR Kullanımı</h3>
+          <p>Sanal gerçekliğin terapötik uygulamalarına genel bakış.</p>
+          <span class="evidence__download">PDF İndir</span>
+        </a>
+
+        <a class="evidence__card"
+           href="{% static 'docs/results/Using VR Interventions to Promote Social and Emotional Learning.pdf' %}"
+           target="_blank">
+          <h3>Sosyal ve Duygusal Öğrenme için VR Müdahaleleri</h3>
+          <p>Duygusal farkındalık ve dayanıklılığın geliştirilmesi.</p>
+          <span class="evidence__download">PDF İndir</span>
+        </a>
+
+        <a class="evidence__card"
+           href="{% static 'docs/results/Virtual reality delivered exposure for fear of needles.pdf' %}"
+           target="_blank">
+          <h3>İğne Korkusu için VR Maruziyeti</h3>
+          <p>Kontrollü sanal ortamda fobilerin aşılması.</p>
+          <span class="evidence__download">PDF İndir</span>
+        </a>
+
+        <a class="evidence__card"
+           href="{% static 'docs/results/VR as a clinical tool in mental health research and practice.pdf' %}"
+           target="_blank">
+          <h3>Klinik Araştırma ve Uygulamada VR</h3>
+          <p>Bilimsel çalışmalar ve terapi süreçlerinde kullanımı.</p>
+          <span class="evidence__download">PDF İndir</span>
+        </a>
+
+        <a class="evidence__card"
+           href="{% static 'docs/results/VR relaxation for people with mental health conditions.pdf' %}"
+           target="_blank">
+          <h3>Ruh Sağlığı Sorunları Olan Bireyler için VR Gevşemesi</h3>
+          <p>Stresin azaltılması ve sinir sisteminin sakinleştirilmesi.</p>
+          <span class="evidence__download">PDF İndir</span>
+        </a>
+
+      </div>
+
+      <div class="evidence__note">
+        Bu bilimsel yayınlar, InnerWorld projesinde kullanılan
+        gevşeme, topraklanma ve duygu düzenleme odaklı VR deneyimlerinin
+        kanıta dayalı temelini oluşturmaktadır.
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__container">
+      <div class="footer__column">
+        <h3 class="footer__title">ABU İletişim</h3>
+        <p class="footer__text">E-posta: info@ankarabilim.edu.tr</p>
+        <p class="footer__text">Telefon: +90 552 899 84 11</p>
+        <p class="footer__text">Web sitesi:
+          <a class="footer__link" target="_blank" href="https://ankarabilim.edu.tr/en/index">
+            ankarabilim.edu.tr
+          </a>
+        </p>
+
+      </div>
+      <div class="footer__column">
+        <h3 class="footer__title">FSCOD İletişim</h3>
+        <p class="footer__text">E-posta: contact@opendoors.center</p>
+        <p class="footer__text">Telefon: +359 884 013 786</p>
+        <p class="footer__text">Web sitesi:
+          <a class="footer__link" target="_blank" href="https://opendoors.center/">
+            opendoors.center
+          </a>
+        </p>
+
+      </div>
+      <div class="footer__column">
+        <h3 class="footer__title">URC İletişim</h3>
+        <p class="footer__text">E-posta: olena.vyshnev@gmail.com</p>
+        <p class="footer__text">Telefon: +33 065 245 56 39</p>
+        <p class="footer__text">Instagram:
+          <a class="footer__link" target="_blank" href="https://www.instagram.com/ukrrcenter/">
+            @ukrrcenter
+          </a>
+        </p>
+
+      </div>
+      <div class="footer__column">
+        <h3 class="footer__title">Kılavuzlar & Belgeler</h3>
+        <p class="footer__text">
+          <a href="{% static 'docs/VR videos guide for direct users.pdf' %}" target="_blank">
+            📄 Guide for direct users.pdf
+          </a>
+        </p>
+        <p class="footer__text">
+          <a href="{% static 'docs/VR videos guide for professionals.pdf' %}" target="_blank">
+            📄 Guide for professionals.pdf
+          </a>
+        </p>
+        <p class="footer__text">
+          <a href="{% static 'docs/Who-5Turkish.pdf' %}" target="_blank">
+            📄 Who-5Turkish.pdf
+          </a>
+        </p>
+      </div>
+      <div class="footer__column">
+        <h3 class="footer__title">Yönetmelikler</h3>
+        <p class="footer__text">
+          <a href="{% static 'docs/Privacy Policy.pdf' %}" target="_blank">
+            📄 Privacy Policy.pdf
+          </a>
+        </p>
+        <p class="footer__text">
+          <a href="{% static 'docs/Terms of Use.pdf' %}" target="_blank">
+            📄 Terms of Use.pdf
+          </a>
+        </p>
+        <p class="footer__text">
+          <a href="{% static 'docs/Incident Report template.docx' %}" target="_blank">
+            📄 Incident Report template.docx
+          </a>
+        </p>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <hr class="footer__divider">
+      <p class="footer__copy">
+        InnerWorld: Virtual Reality for Psychosocial Support
+      <p>Erasmus+ / Avrupa Dayanışma Programı kapsamında Avrupa Komisyonu tarafından desteklenmektedir.<br>Burada yer
+        alan içerik yazarın görüşlerini yansıtmaktadır ve bu görüşlerden Avrupa Komisyonu ve Türkiye Ulusal Ajansı
+        sorumlu tutulamaz.</p>
+      2023-3-TR01-KA210-YOU-000181712<br>
+      © 2025 Tüm hakları saklıdır.
+    </div>
+  </footer>
+
+</main>
+
+</body>
+</html>
