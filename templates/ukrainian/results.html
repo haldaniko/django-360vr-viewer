@@ -1,0 +1,299 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inner World</title>
+  <link rel="icon" type="image/x-icon" href="{% static 'img/favicon.ico' %}">
+  <link rel="stylesheet" href="{% static 'css/video360.css' %}">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+  <script src="https://cdn.dashjs.org/latest/dash.all.min.js"></script>
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+  <div class="header__container">
+    <a href="{% url 'website:about' %}?lang=ua">
+      <div class="header__info">
+        <img class="header__logo" alt="logo" src="{% static 'img/logo-ua2.png' %}">
+        <img class="header__tua-logo" alt="tua-logo" src="{% static 'img/tua-logo.png' %}">
+        <img class="header__yazisiz-logo" alt="yazisiz-logo" src="{% static 'img/yazisiz-logo.jpg' %}">
+        <img class="header__erasmus" alt="eu-log" src="{% static 'img/eu-logo-ukr.jpg' %}">
+      </div>
+    </a>
+    <nav class="header__nav">
+      <ul class="header__nav-list">
+        <li class="header__nav-item">
+          <a href="{% url 'website:about' %}?lang=ua" class="header__nav-link">Головна</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="{% url 'website:video' %}?lang=ua" class="header__nav-link">VR</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="{% url 'website:howitworks' %}?lang=ua" class="header__nav-link">Як працює</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="{% url 'website:guides' %}?lang=ua" class="header__nav-link">Керівництва</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="{% url 'website:results' %}?lang=ua" class="header__nav-link header__nav-link--active">Результати</a>
+        </li>
+      </ul>
+    </nav>
+    <nav class="header__lang">
+      <ul class="header__lang-list">
+        <li class="header__lang-item"><a href="?lang=en" class="header__lang-link">EN</a></li>
+        <li class="header__lang-item"><a href="?lang=tr" class="header__lang-link">TR</a></li>
+        <li class="header__lang-item"><a href="?lang=fr" class="header__lang-link">FR</a></li>
+        <li class="header__lang-item"><a href="?lang=ua" class="header__lang-link--active">UA</a></li>
+        <li class="header__lang-item"><a href="?lang=bg" class="header__lang-link">BG</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- Main Content -->
+<main>
+  <!-- Results -->
+  <section class="evidence">
+    <div class="evidence__container">
+
+      <h2 class="evidence__title">Наукова база та дослідницькі докази</h2>
+      <p class="evidence__subtitle">
+        InnerWorld спирається на рецензовані наукові дослідження та міжнародні звіти,
+        що підтверджують ефективність віртуальної реальності та цифрових інтервенцій
+        для релаксації, емоційної регуляції та психологічного благополуччя.
+      </p>
+
+      <div class="evidence__grid">
+
+        <a class="evidence__card"
+           href="{% static 'docs/results/Digital transformation of mental health services.pdf' %}" target="_blank">
+          <h3>Цифрова трансформація служб психічного здоровʼя</h3>
+          <p>Як цифрові технології та VR змінюють психологічну допомогу.</p>
+          <span class="evidence__download">Завантажити PDF</span>
+        </a>
+
+        <a class="evidence__card"
+           href="{% static 'docs/results/Effectiveness of Digital Mental Health Interventions.pdf' %}" target="_blank">
+          <h3>Ефективність цифрових інтервенцій у психічному здоровʼї</h3>
+          <p>Клінічні результати онлайн-терапевтичних інструментів.</p>
+          <span class="evidence__download">Завантажити PDF</span>
+        </a>
+
+        <a class="evidence__card"
+           href="{% static 'docs/results/Effectiveness of virtual reality therapy in the treatment of anxiety disorders.pdf' %}"
+           target="_blank">
+          <h3>VR-терапія при тривожних розладах</h3>
+          <p>Наукові докази зменшення тривоги за допомогою віртуальної реальності.</p>
+          <span class="evidence__download">Завантажити PDF</span>
+        </a>
+
+        <a class="evidence__card"
+           href="{% static 'docs/results/Exploring Youth Perspectives on Digital Mental Health Platforms.pdf' %}"
+           target="_blank">
+          <h3>Погляд молоді на цифрові платформи підтримки</h3>
+          <p>Сприйняття та використання цифрових інструментів емоційної допомоги.</p>
+          <span class="evidence__download">Завантажити PDF</span>
+        </a>
+
+        <a class="evidence__card" href="{% static 'docs/results/How VR is transforming mental health support.pdf' %}"
+           target="_blank">
+          <h3>Як VR трансформує психологічну підтримку</h3>
+          <p>Роль імерсивних середовищ у терапії та релаксації.</p>
+          <span class="evidence__download">Завантажити PDF</span>
+        </a>
+
+        <a class="evidence__card" href="{% static "docs/results/How's Life for Children in the Digital Age.pdf" %}"
+           target="_blank">
+          <h3>Життя дітей у цифрову епоху</h3>
+          <p>Добробут та емоційний розвиток у цифровому середовищі.</p>
+          <span class="evidence__download">Завантажити PDF</span>
+        </a>
+
+        <a class="evidence__card" href="{% static 'docs/results/Internet Interventions.pdf' %}" target="_blank">
+          <h3>Психологічні інтервенції через Інтернет</h3>
+          <p>Ефективність онлайн-програм психологічної допомоги.</p>
+          <span class="evidence__download">Завантажити PDF</span>
+        </a>
+
+        <a class="evidence__card" href="{% static 'docs/results/Internet-related mental health difficulties.pdf' %}"
+           target="_blank">
+          <h3>Психічні труднощі, повʼязані з Інтернетом</h3>
+          <p>Ризики та захисні фактори цифрового середовища.</p>
+          <span class="evidence__download">Завантажити PDF</span>
+        </a>
+
+        <a class="evidence__card"
+           href="{% static 'docs/results/Psychological and Physiological Responses in Patients with Generalized Anxiety Disorder.pdf' %}"
+           target="_blank">
+          <h3>Психологічні та фізіологічні реакції при тривозі</h3>
+          <p>Механізми стресу та емоційної регуляції.</p>
+          <span class="evidence__download">Завантажити PDF</span>
+        </a>
+
+        <a class="evidence__card"
+           href="{% static 'docs/results/Psychological interventions implementation manual.pdf' %}" target="_blank">
+          <h3>Посібник з впровадження психологічних інтервенцій</h3>
+          <p>Практичні рекомендації доказової терапії.</p>
+          <span class="evidence__download">Завантажити PDF</span>
+        </a>
+
+        <a class="evidence__card"
+           href="{% static 'docs/results/The Benefits of emotion Regulation Interventions in Virtual Reality.pdf' %}"
+           target="_blank">
+          <h3>Емоційна регуляція у віртуальній реальності</h3>
+          <p>Користь імерсивних середовищ для заспокоєння.</p>
+          <span class="evidence__download">Завантажити PDF</span>
+        </a>
+
+        <a class="evidence__card" href="{% static 'docs/results/The Effectiveness of Virtual Reality Exposure.pdf' %}"
+           target="_blank">
+          <h3>Ефективність експозиції у VR</h3>
+          <p>Клінічне підтвердження імерсивної експозиційної терапії.</p>
+          <span class="evidence__download">Завантажити PDF</span>
+        </a>
+
+        <a class="evidence__card"
+           href="{% static 'docs/results/The use of virtual reality in the treatment of mental disorders.pdf' %}"
+           target="_blank">
+          <h3>Використання VR у лікуванні психічних розладів</h3>
+          <p>Огляд терапевтичних застосувань віртуальної реальності.</p>
+          <span class="evidence__download">Завантажити PDF</span>
+        </a>
+
+        <a class="evidence__card"
+           href="{% static 'docs/results/Using VR Interventions to Promote Social and Emotional Learning.pdf' %}"
+           target="_blank">
+          <h3>VR для розвитку соціально-емоційних навичок</h3>
+          <p>Формування стійкості та емоційної грамотності.</p>
+          <span class="evidence__download">Завантажити PDF</span>
+        </a>
+
+        <a class="evidence__card"
+           href="{% static 'docs/results/Virtual reality delivered exposure for fear of needles.pdf' %}"
+           target="_blank">
+          <h3>VR-експозиція для лікування фобій</h3>
+          <p>Подолання страхів за допомогою контрольованої імерсії.</p>
+          <span class="evidence__download">Завантажити PDF</span>
+        </a>
+
+        <a class="evidence__card"
+           href="{% static 'docs/results/VR as a clinical tool in mental health research and practice.pdf' %}"
+           target="_blank">
+          <h3>VR як клінічний інструмент</h3>
+          <p>Застосування у наукових дослідженнях та практиці.</p>
+          <span class="evidence__download">Завантажити PDF</span>
+        </a>
+
+        <a class="evidence__card"
+           href="{% static 'docs/results/VR relaxation for people with mental health conditions.pdf' %}"
+           target="_blank">
+          <h3>VR-релаксація при психічних розладах</h3>
+          <p>Заспокійливий вплив на нервову систему та рівень стресу.</p>
+          <span class="evidence__download">Завантажити PDF</span>
+        </a>
+
+      </div>
+
+      <div class="evidence__note">
+        Ці наукові публікації є доказовою основою для створення VR-досвідів
+        релаксації, заземлення та емоційної регуляції в проєкті InnerWorld.
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__container">
+      <div class="footer__column">
+        <h3 class="footer__title">ABU контакти</h3>
+        <p class="footer__text">Email: info@ankarabilim.edu.tr</p>
+        <p class="footer__text">Телефон: +90 552 899 84 11</p>
+        <p class="footer__text">Вебсайт:
+          <a class="footer__link" target="_blank" href="https://ankarabilim.edu.tr/en/index">
+            ankarabilim.edu.tr
+          </a>
+        </p>
+
+      </div>
+      <div class="footer__column">
+        <h3 class="footer__title">FSCOD контакти</h3>
+        <p class="footer__text">Email: contact@opendoors.center</p>
+        <p class="footer__text">Телефон: +359 884 013 786</p>
+        <p class="footer__text">Вебсайт:
+          <a class="footer__link" target="_blank" href="https://opendoors.center/">
+            opendoors.center
+          </a>
+        </p>
+
+      </div>
+      <div class="footer__column">
+        <h3 class="footer__title">URC контакти</h3>
+        <p class="footer__text">Email: olena.vyshnev@gmail.com</p>
+        <p class="footer__text">Телефон: +33 065 245 56 39</p>
+        <p class="footer__text">Інстаграм:
+          <a class="footer__link" target="_blank" href="https://www.instagram.com/ukrrcenter/">
+            @ukrrcenter
+          </a>
+        </p>
+
+      </div>
+      <div class="footer__column">
+        <h3 class="footer__title">Посібники & Документи</h3>
+        <p class="footer__text">
+          <a href="{% static 'docs/VR videos guide for direct users.pdf' %}" target="_blank">
+            📄 Guide for direct users.pdf
+          </a>
+        </p>
+        <p class="footer__text">
+          <a href="{% static 'docs/VR videos guide for professionals.pdf' %}" target="_blank">
+            📄 Guide for professionals.pdf
+          </a>
+        </p>
+        <p class="footer__text">
+          <a href="{% static 'docs/Who-5Ukrainian.pdf' %}" target="_blank">
+            📄 Who-5Ukrainian.pdf
+          </a>
+        </p>
+      </div>
+      <div class="footer__column">
+        <h3 class="footer__title">Регуляції</h3>
+        <p class="footer__text">
+          <a href="{% static 'docs/Privacy Policy.pdf' %}" target="_blank">
+            📄 Privacy Policy.pdf
+          </a>
+        </p>
+        <p class="footer__text">
+          <a href="{% static 'docs/Terms of Use.pdf' %}" target="_blank">
+            📄 Terms of Use.pdf
+          </a>
+        </p>
+        <p class="footer__text">
+          <a href="{% static 'docs/Incident Report template.docx' %}" target="_blank">
+            📄 Incident Report template.docx
+          </a>
+        </p>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <hr class="footer__divider">
+      <p class="footer__copy">
+        InnerWorld: Virtual Reality for Psychosocial Support
+      <p>Фінансується Європейським Союзом. Погляди та думки, висловлені тут, належать виключно автору (авторам) і не
+        обов’язково відображають<br> позицію Європейського Союзу чи Виконавчої агенції з питань освіти і культури
+        (EACEA). Ані Європейський Союз, ані EACEA не несуть за них відповідальності.</p>
+      2023-3-TR01-KA210-YOU-000181712<br>
+      © 2025 Всі права захищені.
+    </div>
+  </footer>
+</main>
+
+</body>
+</html>
