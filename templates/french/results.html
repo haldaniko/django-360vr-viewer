@@ -1,0 +1,298 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inner World</title>
+  <link rel="icon" type="image/x-icon" href="{% static 'img/favicon.ico' %}">
+  <link rel="stylesheet" href="{% static 'css/video360.css' %}">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+  <script src="https://cdn.dashjs.org/latest/dash.all.min.js"></script>
+</head>
+<body>
+
+<!-- En-tête -->
+<header class="header">
+  <div class="header__container">
+    <a href="{% url 'website:about' %}?lang=fr">
+      <div class="header__info">
+        <img class="header__logo" alt="logo" src="{% static 'img/logo-fr2.png' %}">
+        <img class="header__tua-logo" alt="tua-logo" src="{% static 'img/tua-logo.png' %}">
+        <img class="header__yazisiz-logo" alt="yazisiz-logo" src="{% static 'img/yazisiz-logo.jpg' %}">
+        <img class="header__erasmus" alt="eu-log" src="{% static 'img/eu-logo-fr.jpg' %}">
+      </div>
+    </a>
+    <nav class="header__nav">
+      <ul class="header__nav-list">
+        <li class="header__nav-item">
+          <a href="{% url 'website:about' %}?lang=fr" class="header__nav-link">Maison</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="{% url 'website:video' %}?lang=fr" class="header__nav-link">VR</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="{% url 'website:howitworks' %}?lang=fr" class="header__nav-link">Comment ça marche</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="{% url 'website:guides' %}?lang=fr" class="header__nav-link">Guides</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="{% url 'website:results' %}?lang=fr" class="header__nav-link header__nav-link--active">Résultats</a>
+        </li>
+      </ul>
+    </nav>
+    <nav class="header__lang">
+      <ul class="header__lang-list">
+        <li class="header__lang-item"><a href="?lang=en" class="header__lang-link">EN</a></li>
+        <li class="header__lang-item"><a href="?lang=tr" class="header__lang-link">TR</a></li>
+        <li class="header__lang-item"><a href="?lang=fr" class="header__lang-link--active">FR</a></li>
+        <li class="header__lang-item"><a href="?lang=ua" class="header__lang-link">UA</a></li>
+        <li class="header__lang-item"><a href="?lang=bg" class="header__lang-link">BG</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- Contenu principal -->
+<main>
+  <!-- Results -->
+  <section class="evidence">
+    <div class="evidence__container">
+
+      <h2 class="evidence__title">Base scientifique et preuves de recherche</h2>
+      <p class="evidence__subtitle">
+        InnerWorld s’appuie sur des recherches scientifiques évaluées par des pairs et des études
+        internationales démontrant l’efficacité de la réalité virtuelle et des interventions
+        numériques pour la relaxation, la régulation émotionnelle et le bien-être psychologique.
+      </p>
+
+      <div class="evidence__grid">
+
+        <a class="evidence__card"
+           href="{% static 'docs/results/Digital transformation of mental health services.pdf' %}" target="_blank">
+          <h3>Transformation numérique des services de santé mentale</h3>
+          <p>Comment les technologies numériques et la VR transforment le soutien psychologique.</p>
+          <span class="evidence__download">Télécharger le PDF</span>
+        </a>
+
+        <a class="evidence__card"
+           href="{% static 'docs/results/Effectiveness of Digital Mental Health Interventions.pdf' %}" target="_blank">
+          <h3>Efficacité des interventions numériques en santé mentale</h3>
+          <p>Résultats cliniques des outils thérapeutiques en ligne.</p>
+          <span class="evidence__download">Télécharger le PDF</span>
+        </a>
+
+        <a class="evidence__card"
+           href="{% static 'docs/results/Effectiveness of virtual reality therapy in the treatment of anxiety disorders.pdf' %}"
+           target="_blank">
+          <h3>Thérapie par réalité virtuelle pour les troubles anxieux</h3>
+          <p>Preuves scientifiques de l’efficacité de la VR dans la réduction de l’anxiété.</p>
+          <span class="evidence__download">Télécharger le PDF</span>
+        </a>
+
+        <a class="evidence__card"
+           href="{% static 'docs/results/Exploring Youth Perspectives on Digital Mental Health Platforms.pdf' %}"
+           target="_blank">
+          <h3>Point de vue des jeunes sur les plateformes numériques</h3>
+          <p>Perception et usage des outils numériques de soutien émotionnel.</p>
+          <span class="evidence__download">Télécharger le PDF</span>
+        </a>
+
+        <a class="evidence__card" href="{% static 'docs/results/How VR is transforming mental health support.pdf' %}"
+           target="_blank">
+          <h3>Comment la VR transforme le soutien en santé mentale</h3>
+          <p>Le rôle des environnements immersifs dans la relaxation et la thérapie.</p>
+          <span class="evidence__download">Télécharger le PDF</span>
+        </a>
+
+        <a class="evidence__card" href="{% static "docs/results/How's Life for Children in the Digital Age.pdf" %}"
+           target="_blank">
+          <h3>La vie des enfants à l’ère numérique</h3>
+          <p>Bien-être et développement émotionnel dans les environnements digitaux.</p>
+          <span class="evidence__download">Télécharger le PDF</span>
+        </a>
+
+        <a class="evidence__card" href="{% static 'docs/results/Internet Interventions.pdf' %}" target="_blank">
+          <h3>Interventions psychologiques en ligne</h3>
+          <p>Efficacité des programmes thérapeutiques basés sur Internet.</p>
+          <span class="evidence__download">Télécharger le PDF</span>
+        </a>
+
+        <a class="evidence__card" href="{% static 'docs/results/Internet-related mental health difficulties.pdf' %}"
+           target="_blank">
+          <h3>Difficultés psychologiques liées à Internet</h3>
+          <p>Risques et facteurs de protection dans les environnements numériques.</p>
+          <span class="evidence__download">Télécharger le PDF</span>
+        </a>
+
+        <a class="evidence__card"
+           href="{% static 'docs/results/Psychological and Physiological Responses in Patients with Generalized Anxiety Disorder.pdf' %}"
+           target="_blank">
+          <h3>Réponses psychologiques et physiologiques à l’anxiété</h3>
+          <p>Mécanismes de stress et de régulation émotionnelle.</p>
+          <span class="evidence__download">Télécharger le PDF</span>
+        </a>
+
+        <a class="evidence__card"
+           href="{% static 'docs/results/Psychological interventions implementation manual.pdf' %}" target="_blank">
+          <h3>Manuel de mise en œuvre des interventions psychologiques</h3>
+          <p>Recommandations pratiques pour les interventions fondées sur les preuves.</p>
+          <span class="evidence__download">Télécharger le PDF</span>
+        </a>
+
+        <a class="evidence__card"
+           href="{% static 'docs/results/The Benefits of emotion Regulation Interventions in Virtual Reality.pdf' %}"
+           target="_blank">
+          <h3>Régulation émotionnelle en réalité virtuelle</h3>
+          <p>Bénéfices des environnements immersifs pour l’apaisement.</p>
+          <span class="evidence__download">Télécharger le PDF</span>
+        </a>
+
+        <a class="evidence__card" href="{% static 'docs/results/The Effectiveness of Virtual Reality Exposure.pdf' %}"
+           target="_blank">
+          <h3>Efficacité de l’exposition en réalité virtuelle</h3>
+          <p>Validation clinique des thérapies d’exposition immersives.</p>
+          <span class="evidence__download">Télécharger le PDF</span>
+        </a>
+
+        <a class="evidence__card"
+           href="{% static 'docs/results/The use of virtual reality in the treatment of mental disorders.pdf' %}"
+           target="_blank">
+          <h3>Utilisation de la VR dans le traitement des troubles mentaux</h3>
+          <p>Revue des applications thérapeutiques de la réalité virtuelle.</p>
+          <span class="evidence__download">Télécharger le PDF</span>
+        </a>
+
+        <a class="evidence__card"
+           href="{% static 'docs/results/Using VR Interventions to Promote Social and Emotional Learning.pdf' %}"
+           target="_blank">
+          <h3>VR et apprentissage socio-émotionnel</h3>
+          <p>Développement de la résilience émotionnelle grâce à la VR.</p>
+          <span class="evidence__download">Télécharger le PDF</span>
+        </a>
+
+        <a class="evidence__card"
+           href="{% static 'docs/results/Virtual reality delivered exposure for fear of needles.pdf' %}"
+           target="_blank">
+          <h3>Exposition VR pour les phobies spécifiques</h3>
+          <p>Réduction des peurs par immersion contrôlée.</p>
+          <span class="evidence__download">Télécharger le PDF</span>
+        </a>
+
+        <a class="evidence__card"
+           href="{% static 'docs/results/VR as a clinical tool in mental health research and practice.pdf' %}"
+           target="_blank">
+          <h3>La VR comme outil clinique</h3>
+          <p>Applications en recherche et en pratique psychologique.</p>
+          <span class="evidence__download">Télécharger le PDF</span>
+        </a>
+
+        <a class="evidence__card"
+           href="{% static 'docs/results/VR relaxation for people with mental health conditions.pdf' %}"
+           target="_blank">
+          <h3>Relaxation en VR pour la santé mentale</h3>
+          <p>Effets apaisants sur le stress et le système nerveux.</p>
+          <span class="evidence__download">Télécharger le PDF</span>
+        </a>
+
+      </div>
+
+      <div class="evidence__note">
+        Ces publications scientifiques constituent la base de preuves pour la conception
+        des expériences VR de relaxation, d’ancrage et de régulation émotionnelle d’InnerWorld.
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Pied de page -->
+  <footer class="footer">
+    <div class="footer__container">
+      <div class="footer__column">
+        <h3 class="footer__title">Contacts ABU</h3>
+        <p class="footer__text">Email : info@ankarabilim.edu.tr</p>
+        <p class="footer__text">Téléphone : +90 552 899 84 11</p>
+        <p class="footer__text">Site web :
+          <a class="footer__link" target="_blank" href="https://ankarabilim.edu.tr/en/index">
+            ankarabilim.edu.tr
+          </a>
+        </p>
+      </div>
+      <div class="footer__column">
+        <h3 class="footer__title">Contacts FSCOD</h3>
+        <p class="footer__text">Email : contact@opendoors.center</p>
+        <p class="footer__text">Téléphone : +359 884 013 786</p>
+        <p class="footer__text">Site web :
+          <a class="footer__link" target="_blank" href="https://opendoors.center/">
+            opendoors.center
+          </a>
+        </p>
+      </div>
+      <div class="footer__column">
+        <h3 class="footer__title">Contacts URC</h3>
+        <p class="footer__text">Email : olena.vyshnev@gmail.com</p>
+        <p class="footer__text">Téléphone : +33 065 245 56 39</p>
+        <p class="footer__text">Instagram :
+          <a class="footer__link" target="_blank" href="https://www.instagram.com/ukrrcenter/">
+            @ukrrcenter
+          </a>
+        </p>
+      </div>
+      <div class="footer__column">
+        <h3 class="footer__title">Guides & Documents</h3>
+        <p class="footer__text">
+          <a href="{% static 'docs/VR videos guide for direct users.pdf' %}" target="_blank">
+            📄 Guide for direct users.pdf
+          </a>
+        </p>
+        <p class="footer__text">
+          <a href="{% static 'docs/VR videos guide for professionals.pdf' %}" target="_blank">
+            📄 Guide for professionals.pdf
+          </a>
+        </p>
+        <p class="footer__text">
+          <a href="{% static 'docs/Who-5French.pdf' %}" target="_blank">
+            📄 Who-5French.pdf
+          </a>
+        </p>
+      </div>
+      <div class="footer__column">
+        <h3 class="footer__title">Règlements</h3>
+        <p class="footer__text">
+          <a href="{% static 'docs/Privacy Policy.pdf' %}" target="_blank">
+            📄 Privacy Policy.pdf
+          </a>
+        </p>
+        <p class="footer__text">
+          <a href="{% static 'docs/Terms of Use.pdf' %}" target="_blank">
+            📄 Terms of Use.pdf
+          </a>
+        </p>
+        <p class="footer__text">
+          <a href="{% static 'docs/Incident Report template.docx' %}" target="_blank">
+            📄 Incident Report template.docx
+          </a>
+        </p>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <hr class="footer__divider">
+      <p class="footer__copy">
+        InnerWorld: Virtual Reality for Psychosocial Support
+      <p>Financé par l’Union européenne. Les points de vue et avis exprimés n’engagent toutefois que leur(s) auteur(s)
+        et ne reflètent pas nécessairement ceux de l’Union européenne ou de l’Agence<br> exécutive européenne pour
+        l’éducation et la culture (EACEA). Ni l’Union européenne ni l’EACEA ne sauraient en être tenues pour
+        responsables.</p>
+      2023-3-TR01-KA210-YOU-000181712<br>
+      © 2025 Tous droits réservés.
+    </div>
+  </footer>
+
+</main>
+
+</body>
+</html>
