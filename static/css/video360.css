@@ -1328,8 +1328,115 @@ header {
 
 /* region Evidence styles */
 .evidence {
-    padding: 80px 0;
+    padding: 80px 0 40px;
     background-color: #f9fafc;
+}
+
+.results-summary {
+    background: transparent;
+    border-radius: 0;
+    padding: 28px 0 8px;
+    box-shadow: none;
+}
+
+.results-summary__title {
+    text-align: center;
+    font-size: 28px;
+    margin: 0 0 10px 0;
+    color: #2f3b4a;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+}
+
+.results-summary .evidence__note {
+    margin: 0 0 18px 0;
+    text-align: center;
+    font-size: 15px;
+    color: #6b7687;
+}
+
+.results-summary__grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.results-summary__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    background: transparent;
+    border-radius: 0;
+    padding: 4px 8px;
+}
+
+.results-summary__icon {
+    width: 58px;
+    height: 58px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(4, 161, 196, 0.08);
+    flex: 0 0 58px;
+}
+
+.results-summary__icon img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+.results-summary__svg {
+    width: 32px;
+    height: 32px;
+    fill: none;
+    stroke: #04a1c4;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.results-summary__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.results-summary__value {
+    font-size: 20px;
+    font-weight: 700;
+    color: #04a1c4;
+    line-height: 1.2;
+}
+
+.results-summary__single {
+    font-size: 24px;
+    font-weight: 700;
+    color: #04a1c4;
+    line-height: 1.2;
+}
+
+.results-summary__label {
+    font-size: 14px;
+    color: #6b7687;
+    line-height: 1.45;
+}
+
+.results-summary img,
+.evidence img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 900px) {
+    .results-summary__grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 .evidence__container {
